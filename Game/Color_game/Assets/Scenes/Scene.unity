@@ -170,8 +170,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285560675
+  m_fontColor: {r: 0.3882353, g: 0.46666667, b: 0.4392157, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -635,8 +635,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'This game is developed for the Association
 
-    Internationale de la
-    Couleur (AIC) Study Group on Colour Education of
+    Internationale de la Couleur
+    (AIC) Study Group on Colour Education of
 
     International Colour Association.'
   m_isRightToLeft: 0
@@ -1139,9 +1139,6 @@ MonoBehaviour:
   - {fileID: 313613597}
   - {fileID: 858258454}
   - {fileID: 318051446}
-  random1: 0
-  random2: 0
-  random3: 0
 --- !u!114 &2020416373
 MonoBehaviour:
   m_ObjectHideFlags: 0
