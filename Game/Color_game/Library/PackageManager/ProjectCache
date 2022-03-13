@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637814635449732979
-    m_Hash: 228985270
+      ticks: 637827762281099100
+    m_Hash: 2983194938
   m_LockFileStatus:
     m_FilePath: D:/School/Projekt_lab/GITHUB/Game/Color_game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637814635624590317
-    m_Hash: 1587512919
+      ticks: 637827762281149110
+    m_Hash: 2075457518
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -147,6 +147,87 @@ m_PackageAssets:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
         revision: 5ca1fd4ca9f999e087d19e98afaf99905a582771
+        path: 
+    - packageId: com.unity.device-simulator@3.0.3-preview
+      testable: 0
+      isDirectDependency: 1
+      version: 3.0.3-preview
+      source: 1
+      resolvedPath: D:\School\Projekt_lab\GITHUB\Game\Color_game\Library\PackageCache\com.unity.device-simulator@3.0.3-preview
+      assetPath: Packages/com.unity.device-simulator
+      name: com.unity.device-simulator
+      displayName: Device Simulator
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Device Simulator is an alternative to the traditional Unity editor
+        Game window. By simulating Screen and SystemInfo class behavior, Device Simulator
+        aims to give an accurate picture of how an app will look on a device.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-preview
+        - 1.1.0-preview
+        - 1.2.0-preview
+        - 1.3.0-preview
+        - 2.0.0-preview
+        - 2.1.0-preview
+        - 2.1.1-preview
+        - 2.2.0-preview
+        - 2.2.1-preview
+        - 2.2.2-preview
+        - 2.2.3-preview
+        - 2.2.4-preview
+        - 3.0.0-preview
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview
+        compatible:
+        - 1.0.0-preview
+        - 1.1.0-preview
+        - 1.2.0-preview
+        - 1.3.0-preview
+        - 2.0.0-preview
+        - 2.1.0-preview
+        - 2.1.1-preview
+        - 2.2.0-preview
+        - 2.2.1-preview
+        - 2.2.2-preview
+        - 2.2.3-preview
+        - 2.2.4-preview
+        - 3.0.0-preview
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - Device
+      - Simulator
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637723169670000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/com.unity.device-simulator.git
+        revision: 45f5dce42e9c1f891f83d5d31a3d4180027c5d24
         path: 
     - packageId: com.unity.ide.rider@2.0.7
       testable: 0
@@ -626,6 +707,7 @@ m_PackageAssets:
         - 2.1.6
         - 2.2.0-preview.1
         - 2.2.0-preview.2
+        - 2.2.0-preview.3
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -645,11 +727,13 @@ m_PackageAssets:
         - 3.0.6
         - 3.2.0-pre.1
         - 3.2.0-pre.2
+        - 3.2.0-pre.3
         - 4.0.0-pre.1
         compatible:
         - 3.0.6
         - 3.2.0-pre.1
         - 3.2.0-pre.2
+        - 3.2.0-pre.3
         verified: 3.0.6
       dependencies:
       - name: com.unity.ugui
@@ -778,6 +862,8 @@ m_PackageAssets:
         - 1.6.4
         - 1.7.0-pre.1
         - 1.7.0-pre.2
+        - 1.7.0
+        - 1.7.1
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -804,6 +890,8 @@ m_PackageAssets:
         - 1.6.4
         - 1.7.0-pre.1
         - 1.7.0-pre.2
+        - 1.7.0
+        - 1.7.1
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -2675,9 +2763,21 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
+        - 2.0.2
         compatible:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
+        - 2.0.2
         verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
@@ -2697,7 +2797,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637429759280000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2730,8 +2830,24 @@ m_PackageAssets:
       versions:
         all:
         - 1.0.1
+        - 1.1.0-pre.7
+        - 1.1.0-pre.8
+        - 1.1.0-pre.9
+        - 1.1.0-pre.10
+        - 1.1.0-pre.11
+        - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
         compatible:
         - 1.0.1
+        - 1.1.0-pre.7
+        - 1.1.0-pre.8
+        - 1.1.0-pre.9
+        - 1.1.0-pre.10
+        - 1.1.0-pre.11
+        - 1.1.0-pre.41
+        - 1.1.0-pre.69
+        - 1.2.0
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
@@ -2752,7 +2868,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637604883250000000
       documentationUrl: 
       hasRepository: 1
       repository:
