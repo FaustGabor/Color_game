@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 25167a9fb9238e24ba2f5d10c23ba937
+  - enabled: 1
+    path: Assets/Scenes/Gray_scale.unity
+    guid: 5a479d668c9cfd64ebf0a1600000b7a8
   m_configObjects: {}

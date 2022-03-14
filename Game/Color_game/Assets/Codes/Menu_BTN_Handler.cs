@@ -18,4 +18,9 @@ public class Menu_BTN_Handler : MonoBehaviour
     {
         SceneManager.LoadScene("Color_Organizer");
     }
+
+    public void Load_Gray_Scale()
+    {
+        SceneManager.LoadScene("Gray_Scale");
+    }
 }
