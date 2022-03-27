@@ -61,6 +61,7 @@
     <Compile Include="Assets\Codes\Gray_tutorial.cs" />
     <Compile Include="Assets\Codes\Menu_BTN_Handler.cs" />
     <Compile Include="Assets\Codes\Menu_color_change.cs" />
+    <Compile Include="Assets\Codes\Change_Material_Color.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
