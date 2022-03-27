@@ -1,0 +1,4 @@
+Yellow Vivid: 255-210-0 -> FFD200
+Yellow Pale: 210-192-55 -> D2C037
+Yellow Dark: 55-45-0 -> 372D00
+Yellow Muted: 128-104-14 -> 80680E

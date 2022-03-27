@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gray_Tutorial.unity
     guid: 7e36b291f1a222746ad296dc333576e0
+  - enabled: 1
+    path: Assets/Scenes/Diamond_Game.unity
+    guid: bbd21f9280e591d44b7b7a85360ce326
   m_configObjects: {}
