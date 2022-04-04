@@ -1,4 +1,11 @@
-Yellow Vivid: 255-210-0 -> FFD200
-Yellow Pale: 210-192-55 -> D2C037
-Yellow Dark: 55-45-0 -> 372D00
-Yellow Muted: 128-104-14 -> 80680E
+Yellow Vivid: 255-210-0 -> FFD200		155
+Yellow Pale: 210-192-55 -> D2C037		148
+Yellow Dark: 55-45-0 -> 372D00			33
+Yellow Muted: 128-104-14 -> 80680E		82
+
+
+Violet Vivid:  360963					54
+Violet Pale:  9F72AD					148
+Violet Dark:  12011F					16
+Violet Muted:  33263C					49
+	
