@@ -6,6 +6,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
 {
     [SerializeField] private GameObject selected_obj;
     [SerializeField] private GameObject background;
+    private bool adjust_pos = false;
 
     void Update()
     {
@@ -23,7 +24,9 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 else
                 {
                     selected_obj.transform.position = hit.point;
+                    selected_obj.GetComponent<Color_handler>().adjust_pos = true;
                     selected_obj = null;
+                    adjust_pos = true;
                     background.SetActive(false);
                 }
             }
