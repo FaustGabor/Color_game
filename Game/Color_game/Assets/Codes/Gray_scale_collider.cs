@@ -9,7 +9,15 @@ public class Gray_scale_collider : MonoBehaviour
     {
         if (other.gameObject.tag != "Background")
         {
-            other.gameObject.GetComponent<Color_handler>().Add_to_collided_list(this.gameObject);
+            other.gameObject.GetComponent<Color_cube>().Add_to_collided_list(this.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag != "Background")
+        {
+            other.gameObject.GetComponent<Color_cube>().Remove_to_collided_list(this.gameObject);
         }
     }
 }

@@ -18,13 +18,16 @@ public class Drag_And_Drop_3D : MonoBehaviour
             {
                 if (selected_obj == null)
                 {
-                    selected_obj = hit.transform.gameObject;
-                    background.SetActive(true);
+                    if (hit.transform.gameObject.tag != "Grey_scale")
+                    {
+                        selected_obj = hit.transform.gameObject;
+                        background.SetActive(true);
+                    }
                 }
                 else
                 {
-                    selected_obj.transform.position = hit.point;
-                    selected_obj.GetComponent<Color_handler>().adjust_pos = true;
+                    selected_obj.transform.position = new Vector3(selected_obj.transform.position.x, selected_obj.transform.position.y, hit.point.z);
+                    selected_obj.GetComponent<Color_cube>().adjust_pos = true;
                     selected_obj = null;
                     adjust_pos = true;
                     background.SetActive(false);
