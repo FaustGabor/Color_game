@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game_handler : MonoBehaviour
-{
-
+{ 
     List<GameObject> Vivid_colors;
     List<GameObject> Pale_colors;
     List<GameObject> Muted_colors;
@@ -14,13 +13,9 @@ public class Game_handler : MonoBehaviour
     [SerializeField] List<GameObject> spawned_obj;
 
     public GameObject timer;
+    public GameObject btn_handler;
 
-    private void Update()
-    {
-        Check_right_positions();
-    }
-
-    public void Check_right_positions()
+    public bool Check_right_positions()
     {
         if (spawned_obj.Count > 0)
         {
@@ -28,16 +23,20 @@ public class Game_handler : MonoBehaviour
             {
                 if (!item.GetComponent<Color_cube>().at_right_position)
                 {
-                    return;
+                    return false;
                 }
             }
             Completed();
         }
+        return true;
     }
 
     private void Completed() 
     {
-        timer.GetComponent<Score_timer>().Save_Time();
-        SceneManager.LoadScene("Menu");
+        if (!SceneManager.GetActiveScene().name.Contains("Tutorial"))
+        {
+            timer.GetComponent<Score_timer>().Save_Time();
+        }
+        btn_handler.GetComponent<Game_BTN_handler>().Load_Win();
     }
 }

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Diamond_Game.unity
     guid: bbd21f9280e591d44b7b7a85360ce326
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 2b8fb194ddbbfdf4d8d465fe231fb697
   m_configObjects: {}
