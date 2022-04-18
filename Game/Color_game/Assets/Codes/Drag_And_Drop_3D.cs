@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Drag_And_Drop_3D : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class Drag_And_Drop_3D : MonoBehaviour
     [SerializeField] private GameObject background;
     private bool adjust_pos = false;
 
-    void Update()
+
+    void GreyScalePart()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -34,5 +36,44 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 }
             }
         }
+    }
+
+    void DiamondPart()
+    {
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (selected_obj == null)
+                {
+                    if (hit.transform.gameObject.tag != "Ghost_Cubes")
+                    {
+                        selected_obj = hit.transform.gameObject;
+                        
+                    }
+                }
+                else
+                {
+                    if(selected_obj.name == hit.transform.name)
+                    {
+                        Debug.Log("Good");
+                        
+                    }
+                    Debug.Log("NotGood");
+                    selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
+                    selected_obj = null;
+                }
+            }
+        }
+    }
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Diamond_Game")
+            DiamondPart();
+        else
+            GreyScalePart();
     }
 }

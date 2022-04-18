@@ -23,20 +23,33 @@ public class Random_OBJ_Placemant : MonoBehaviour
     void RandomPlacement()
     {
         List<GameObject> colorcubes = this.gameObject.GetComponent<Game_handler>().all_cubes;
+        List<GameObject> ghostcubes = this.gameObject.GetComponent<Game_handler>().ghost_cubes;
         
-        List<Vector3> positions = new List<Vector3>();
+        List<Vector3> positionsCC = new List<Vector3>();
+        List<Vector3> positionsGC = new List<Vector3>();
 
         foreach (var item in colorcubes)
         {
-            positions.Add(item.transform.position);
+            positionsCC.Add(item.transform.position);
         }
 
-        ShufflePos(positions);
-
-
-        for (int i = 0; i < positions.Count; i++)
+        foreach (var item in ghostcubes)
         {
-            colorcubes[i].transform.position = positions[i];
+            positionsGC.Add(item.transform.position);
+        }
+
+        ShufflePos(positionsCC);
+        ShufflePos(positionsGC);
+
+
+        for (int i = 0; i < positionsCC.Count; i++)
+        {
+            colorcubes[i].transform.position = positionsCC[i];
+        }
+
+        for (int i = 0; i < positionsGC.Count; i++)
+        {
+            ghostcubes[i].transform.position = positionsGC[i];
         }
     }
 

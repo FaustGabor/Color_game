@@ -12,6 +12,7 @@ public class Game_handler : MonoBehaviour
 
     [SerializeField] List<GameObject> spawned_obj;
     public List<GameObject> all_cubes;
+    public List<GameObject> ghost_cubes;
 
 
     public GameObject timer;
