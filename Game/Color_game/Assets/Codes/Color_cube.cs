@@ -6,6 +6,7 @@ public class Color_cube : MonoBehaviour
 {
     [SerializeField] private string color_name;
     [SerializeField] private string color_hexa_num;
+
     [SerializeField] private string gray_partner;
     public bool at_right_position;
 

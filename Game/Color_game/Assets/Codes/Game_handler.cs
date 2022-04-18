@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game_handler : MonoBehaviour
-{ 
-    List<GameObject> Vivid_colors;
-    List<GameObject> Pale_colors;
-    List<GameObject> Muted_colors;
-    List<GameObject> Dark_colors;
+{
+    [SerializeField] List<GameObject> Vivid_colors;
+    [SerializeField] List<GameObject> Pale_colors;
+    [SerializeField] List<GameObject> Muted_colors;
+    [SerializeField] List<GameObject> Dark_colors;
 
     [SerializeField] List<GameObject> spawned_obj;
+    public List<GameObject> all_cubes;
+
 
     public GameObject timer;
     public GameObject btn_handler;
