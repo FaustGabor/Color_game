@@ -1820,9 +1820,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b84539a03f2644189ffd86546107a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vivid_colors: []
+  Pale_colors: []
+  Muted_colors: []
+  Dark_colors: []
   spawned_obj:
   - {fileID: 1903250806}
+  all_cubes: []
   timer: {fileID: 0}
+  btn_handler: {fileID: 1989198269}
 --- !u!114 &1111255646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3305,8 +3311,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b84539a03f2644189ffd86546107a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vivid_colors: []
+  Pale_colors: []
+  Muted_colors: []
+  Dark_colors: []
   spawned_obj: []
+  all_cubes: []
   timer: {fileID: 0}
+  btn_handler: {fileID: 0}
 --- !u!54 &1903250809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3355,7 +3367,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ccb17c3ea6545dd42a2467558bfc0f5d, type: 2}
+  - {fileID: 2100000, guid: c061fb2dd3d98814fa4423e9f4710089, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
