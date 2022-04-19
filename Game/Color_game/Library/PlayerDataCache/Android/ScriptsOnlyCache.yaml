@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Change_Material_Color
     - Color_cube
     - Drag_And_Drop_3D
     - Game_BTN_handler
@@ -9,7 +8,10 @@ ScriptsOnlyBuild:
     - Gray_scale_collider
     - Menu_BTN_Handler
     - Menu_color_change
+    - Random_OBJ_Placemant
+    - Rotate_image
     - Score_timer
+    - Spawn_cubes_for_grayscale
     Unity.DeviceSimulator.Editor.dll:
     - UnityEditor.DeviceSimulation.DeviceInfoAsset
     - UnityEditor.DeviceSimulation.SimulatorWindow
@@ -122,17 +124,55 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 1508}
+    - Class: 114
+      Script: {instanceID: 1754}
+    - Class: 114
+      Script: {instanceID: 2168}
+    - Class: 114
+      Script: {instanceID: 2342}
+    - Class: 114
+      Script: {instanceID: 2454}
+    - Class: 114
+      Script: {instanceID: 2496}
+    - Class: 114
+      Script: {instanceID: 2570}
+    - Class: 114
+      Script: {instanceID: 2632}
+    - Class: 114
+      Script: {instanceID: 2824}
+    - Class: 114
+      Script: {instanceID: 2916}
+    - Class: 114
+      Script: {instanceID: 3056}
+    - Class: 114
+      Script: {instanceID: 3384}
+    - Class: 114
+      Script: {instanceID: 4340}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 215
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/Gray_Tutorial.unity:
     - Class: 1
@@ -143,16 +183,30 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1470}
     - Class: 114
       Script: {instanceID: 1508}
     - Class: 114
@@ -174,7 +228,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 3384}
+    - Class: 114
+      Script: {instanceID: 4102}
+    - Class: 114
+      Script: {instanceID: 4264}
+    - Class: 114
+      Script: {instanceID: 4340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,6 +244,8 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 215
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -247,11 +309,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 3382}
+      Script: {instanceID: 3384}
     - Class: 114
-      Script: {instanceID: 4258}
+      Script: {instanceID: 3812}
     - Class: 114
-      Script: {instanceID: 4334}
+      Script: {instanceID: 4264}
+    - Class: 114
+      Script: {instanceID: 4340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -314,9 +378,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3884}
     - Class: 114
-      Script: {instanceID: 4148}
+      Script: {instanceID: 4154}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -324,6 +388,67 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Win.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1508}
+    - Class: 114
+      Script: {instanceID: 1754}
+    - Class: 114
+      Script: {instanceID: 2168}
+    - Class: 114
+      Script: {instanceID: 2342}
+    - Class: 114
+      Script: {instanceID: 2454}
+    - Class: 114
+      Script: {instanceID: 2496}
+    - Class: 114
+      Script: {instanceID: 2574}
+    - Class: 114
+      Script: {instanceID: 2632}
+    - Class: 114
+      Script: {instanceID: 2824}
+    - Class: 114
+      Script: {instanceID: 2916}
+    - Class: 114
+      Script: {instanceID: 3042}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -492,7 +617,7 @@ ScriptsOnlyBuild:
     className: Score_timer
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7c9ff97cd828496630a144d610e63d4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game_BTN_handler
@@ -598,6 +723,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu_color_change
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Random_OBJ_Placemant
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -738,6 +869,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 121c560d502e4cbdb1eb2300f449af74
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Spawn_cubes_for_grayscale
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -768,6 +905,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rotate_image
+  - hash:
+      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -792,7 +935,7 @@ ScriptsOnlyBuild:
     className: Change_Material_Color
   - hash:
       serializedVersion: 2
-      Hash: df642219edc1889ac779fc218c03005c
+      Hash: 0fc59d25e518ae9629e1037721706266
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game_handler
@@ -827,4 +970,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Gray_scale.unity
   - Assets/Scenes/Gray_Tutorial.unity
   - Assets/Scenes/Diamond_Game.unity
+  - Assets/Scenes/Win.unity
   playerPath: "C:/Users/FG/Desktop/\xDAj mappa/Color_Game/Color_game.apk"

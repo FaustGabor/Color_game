@@ -11,8 +11,6 @@ public class Score_timer : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(PlayerPrefs.GetFloat("GrayScale")+ "gray");
-        Debug.Log(PlayerPrefs.GetFloat("Diamond") + "diamon");
     }
 
     void Update()

@@ -20,7 +20,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
             {
                 if (selected_obj == null)
                 {
-                    if (hit.transform.gameObject.tag != "Grey_scale")
+                    if (hit.transform.gameObject.tag != "Grey_scale" && hit.transform.gameObject.tag != "Spawn")
                     {
                         selected_obj = hit.transform.gameObject;
                         background.SetActive(true);
@@ -28,7 +28,11 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 }
                 else
                 {
-                    selected_obj.transform.position = new Vector3(selected_obj.transform.position.x, selected_obj.transform.position.y, hit.point.z);
+                    float z = hit.point.z;
+                    if (z > 4.37) z = 4.37f;
+                    if (z < -2.03) z = -2.03f;
+
+                    selected_obj.transform.position = new Vector3(selected_obj.transform.position.x, selected_obj.transform.position.y, z);
                     selected_obj.GetComponent<Color_cube>().adjust_pos = true;
                     selected_obj = null;
                     adjust_pos = true;
@@ -52,7 +56,6 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     if (hit.transform.gameObject.tag != "Ghost_Cubes")
                     {
                         selected_obj = hit.transform.gameObject;
-                        
                     }
                 }
                 else
@@ -62,7 +65,9 @@ public class Drag_And_Drop_3D : MonoBehaviour
                         Debug.Log("Good");
                         
                     }
-                    Debug.Log("NotGood");
+                    else
+                        Debug.Log("NotGood");
+
                     selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
                     selected_obj = null;
                 }
