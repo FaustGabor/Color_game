@@ -34,8 +34,11 @@ public class Game_BTN_handler : MonoBehaviour
 
     public void Finish()
     {
-        if(arrow != null)arrow.SetActive(false);
-        if(!game_handler.GetComponent<Game_handler>().Check_right_positions())
+        if (arrow != null)
+        {
+            arrow.SetActive(false);
+        }
+        if (!game_handler.GetComponent<Game_handler>().Check_right_positions())
         {
             help.SetActive(true);
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";

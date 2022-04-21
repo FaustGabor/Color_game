@@ -29,8 +29,8 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 else
                 {
                     float z = hit.point.z;
-                    if (z > 4.37) z = 4.37f;
-                    if (z < -2.03) z = -2.03f;
+                    if (z > 84.158) z = 84.158f;
+                    if (z < 77.757) z = 77.757f;
 
                     selected_obj.transform.position = new Vector3(selected_obj.transform.position.x, selected_obj.transform.position.y, z);
                     selected_obj.GetComponent<Color_cube>().adjust_pos = true;

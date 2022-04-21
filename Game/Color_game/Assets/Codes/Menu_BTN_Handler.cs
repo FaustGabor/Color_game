@@ -44,7 +44,7 @@ public class Menu_BTN_Handler : MonoBehaviour
 
     public void Load_Color_Organizer()
     {
-        SceneManager.LoadScene("Color_Organizer");
+        SceneManager.LoadScene("Diamond_Game");
     }
 
     public void Load_Gray_Scale()
