@@ -145,7 +145,6 @@ public class Game_handler : MonoBehaviour
         return null;
     }
 
-
     public bool Check_right_positions()
     {
         if (spawned_obj_left.Count > 0 || spawned_obj_right.Count > 0)
@@ -181,6 +180,16 @@ public class Game_handler : MonoBehaviour
 
     private void Start()
     {
-        all_cubes.OrderBy(x => Guid.NewGuid()).ToList();
+        System.Random r = new System.Random();
+        int random = 0;
+
+        for (int i = 0; i < all_cubes.Count; i++)
+        {
+            random = r.Next(0, all_cubes.Count);
+
+            GameObject temp = all_cubes[i];
+            all_cubes[i] = all_cubes[random];
+            all_cubes[random] = temp;
+        }
     }
 }
