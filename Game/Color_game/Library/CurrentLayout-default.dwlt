@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Simulator
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -39,9 +39,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 510
+    x: 578
     y: 0
-    width: 875
+    width: 805
     height: 612
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 881, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 1
-  controlID: 118
+  controlID: 153
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_MinSize: {x: 881, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 0
-  controlID: 119
+  controlID: 154
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1385
+    x: 1383
     y: 0
-    width: 535
+    width: 537
     height: 947
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -142,7 +142,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 308
+    width: 288
     height: 612
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -168,7 +168,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 612
-    width: 1385
+    width: 1383
     height: 335
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
@@ -271,12 +271,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1385
+    width: 1383
     height: 947
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 120
+  controlID: 83
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -297,12 +297,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1385
+    width: 1383
     height: 612
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 121
+  controlID: 84
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,9 +318,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 308
+    x: 288
     y: 0
-    width: 202
+    width: 290
     height: 612
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -351,7 +351,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 685
-    width: 1384
+    width: 1382
     height: 314
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -375,14 +375,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Suli\Color_game\Game\Color_game
+  m_LastProjectPath: D:\School\Projekt_lab\GITHUB\Game\Color_game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e8410000
-    m_LastClickedID: 16872
-    m_ExpandedIDs: 00000000204100002241000000ca9a3b
+    m_SelectedIDs: 58460000
+    m_LastClickedID: 18008
+    m_ExpandedIDs: 0000000090450000924500005646000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -410,7 +410,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002041000022410000
+    m_ExpandedIDs: 000000009045000092450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -486,9 +486,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1385
+    x: 1383
     y: 73
-    width: 534
+    width: 536
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -525,15 +525,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 307
+    width: 287
     height: 591
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14420000
+      m_SelectedIDs: 94130000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9c13ffff0a17ffffaa17ffffd417ffffec18ffff1619ffff201cffff6c20ffff7a21ffff0e22ffffde22ffff8e23ffffde24ffffbe25ffff7226ffffb028ffffde28ffffe428ffff3029ffff3829ffff4229ffff4629ffff5229ffffae2affffdc2affffe22affff2e2bffff362bffff402bffff442bffff502bffffdc2bffff0a2cffffac2cfffffe2cffff0e2dffff262dffff302dffff402dffff9a36ffffe237ffffae38ffff4c39ffff4c3affff383cffff403dffff383effff0e40ffffea41ffff8642ffff2a43ffff2244ffffc0f7ffff0cf9ffff10fbffff5a3f000070420000a4420000d4430000dc430000e6430000f4430000fe4300001c4400003444000046440000644400006e440000764400007e440000a2440000aa440000b44400000845000054450000644500009045000098450000a4450000b2450000ba450000c4450000de450000ec450000264600002e46000036460000504600006e460000884600009046000098460000c0460000ca460000fc46000004470000144700002847000030470000384700004e47000096470000a0470000a8470000c6470000d84700000a480000124800001a480000424800004c4800008a480000a2480000dc480000e6480000ee480000fc4800000e49000022490000344900003e490000504900005a49000064490000764900007e490000924900009a490000ac490000b4490000
+      m_ExpandedIDs: b2e4ffff74e6ffffb2f6ffff04fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -577,9 +577,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 308
+    x: 288
     y: 73
-    width: 200
+    width: 288
     height: 591
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 8.317896
     speed: 2
-    m_Value: 8.709839
+    m_Value: 8.317896
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -695,7 +695,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 685
-    width: 1384
+    width: 1382
     height: 314
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &19
@@ -718,9 +718,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 510
+    x: 578
     y: 73
-    width: 873
+    width: 803
     height: 591
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames:
@@ -747,7 +747,7 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 43
+    scale: 29
     fitToScreenEnabled: 0
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
