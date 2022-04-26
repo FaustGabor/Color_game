@@ -9,6 +9,7 @@ public class Color_cube : MonoBehaviour
 
     public string gray_partner;
     public bool at_right_position;
+    public string[] partners;
 
     // ----------------------------------- GRAY SCALE ---------------------
     private float timer;
@@ -52,16 +53,39 @@ public class Color_cube : MonoBehaviour
 
     public void Check_Right_Position_GS()
     {
-        foreach (var item in collided_obj)
+        partners = gray_partner.Split(',');
+
+        if (partners.Length == 1)
         {
-            if (gray_partner.Contains(item.name))
+            foreach (var item in collided_obj)
             {
+                if (!partners[0].Contains(item.name))
+                {
+                    at_right_position = false;
+                    break;
+                }
                 at_right_position = true;
+            }
+        }
+        else
+        {
+
+            if (collided_obj.Count == 1) 
+            { 
+                at_right_position = false;
             }
             else
             {
+                if (partners[0].Contains(collided_obj[0].name) || partners[0].Contains(collided_obj[1].name))
+                {
+                    if (partners[1].Contains(collided_obj[0].name) || partners[1].Contains(collided_obj[1].name))
+                    {
+                        at_right_position = true;
+                        return;
+                    }
+                }
+
                 at_right_position = false;
-                break;
             }
         }
     }

@@ -23,7 +23,8 @@ public class Game_handler : MonoBehaviour
 
     public GameObject Next_cube(bool left)
     {
-        int index = 0;
+        int index = -1;
+        if (left) index = 0;
         bool find = true;
 
         if (left)
@@ -35,11 +36,14 @@ public class Game_handler : MonoBehaviour
                 {
                     find = true;
                     index++;
+
+                    string[] partners = all_cubes[index].GetComponent<Color_cube>().gray_partner.Split(',');
+
                     foreach (var item in spawned_obj_left)
                     {
-                        if (item.GetComponent<Color_cube>().gray_partner.Length > all_cubes[index].GetComponent<Color_cube>().gray_partner.Length)
+                        foreach (var item2 in partners)
                         {
-                            if (!item.GetComponent<Color_cube>().gray_partner.Contains(all_cubes[index].GetComponent<Color_cube>().gray_partner))
+                            if (!item.GetComponent<Color_cube>().gray_partner.Contains(item2))
                             {
                                 find = true;
                             }
@@ -49,25 +53,15 @@ public class Game_handler : MonoBehaviour
                                 break;
                             }
                         }
-                        else
-                        {
-                            if (!all_cubes[index].GetComponent<Color_cube>().gray_partner.Contains(item.GetComponent<Color_cube>().gray_partner))
-                            {
-                                find = true;
-                            }
-                            else
-                            {
-                                find = false;
-                                break;
-                            }
-                        }
+
+                        if (find == false) break;
                     }
 
                     if (find)
                     {
                         foreach (var item in spawned_obj_right)
                         {
-                            if(item.name == all_cubes[index].name)
+                            if(item.name.Contains(all_cubes[index].name))
                             { find = false; }
                         }
                     }
@@ -80,7 +74,6 @@ public class Game_handler : MonoBehaviour
 
             if (find)
             {
-                spawned_obj_left.Add(all_cubes[index]);
                 return all_cubes[index];
             }
         }
@@ -93,11 +86,14 @@ public class Game_handler : MonoBehaviour
                 {
                     find = true;
                     index++;
+
+                    string[] partners = all_cubes[index].GetComponent<Color_cube>().gray_partner.Split(',');
+
                     foreach (var item in spawned_obj_right)
                     {
-                        if (item.GetComponent<Color_cube>().gray_partner.Length > all_cubes[index].GetComponent<Color_cube>().gray_partner.Length)
+                        foreach (var item2 in partners)
                         {
-                            if (!item.GetComponent<Color_cube>().gray_partner.Contains(all_cubes[index].GetComponent<Color_cube>().gray_partner))
+                            if (!item.GetComponent<Color_cube>().gray_partner.Contains(item2))
                             {
                                 find = true;
                             }
@@ -107,25 +103,15 @@ public class Game_handler : MonoBehaviour
                                 break;
                             }
                         }
-                        else
-                        {
-                            if (!all_cubes[index].GetComponent<Color_cube>().gray_partner.Contains(item.GetComponent<Color_cube>().gray_partner))
-                            {
-                                find = true;
-                            }
-                            else
-                            {
-                                find = false;
-                                break;
-                            }
-                        }
-                    }
+
+                        if (find == false) break;
+                    } 
 
                     if (find)
                     {
                         foreach (var item in spawned_obj_left)
                         {
-                            if (item.name == all_cubes[index].name)
+                            if (item.name.Contains(all_cubes[index].name))
                             { find = false; }
                         }
                     }
@@ -137,12 +123,23 @@ public class Game_handler : MonoBehaviour
 
             if (find)
             {
-                spawned_obj_right.Add(all_cubes[index]);
                 return all_cubes[index];
             }
         }
 
         return null;
+    }
+
+    public void Add_Cube(bool left, GameObject obj)
+    {
+        if (left)
+        {
+            spawned_obj_left.Add(obj);
+        }
+        else
+        {
+            spawned_obj_right.Add(obj);
+        }
     }
 
     public bool Check_right_positions()

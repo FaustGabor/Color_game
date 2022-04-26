@@ -20,7 +20,7 @@ public class Spawn_cubes_for_grayscale : MonoBehaviour
     {
         GameObject spawn_obj = game_handler.GetComponent<Game_handler>().Next_cube(left);
         if(spawn_obj != null)
-        Instantiate(spawn_obj, this.transform.position+Vector3.up, this.transform.rotation);
+        game_handler.GetComponent<Game_handler>().Add_Cube(left, Instantiate(spawn_obj, this.transform.position + Vector3.up, this.transform.rotation));
     }
 
     private void OnTriggerExit(Collider other)

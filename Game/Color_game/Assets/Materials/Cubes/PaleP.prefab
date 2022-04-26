@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color_name: 
   color_hexa_num: 
-  gray_partner: Gray1
+  gray_partner: Gray6,Gray7
   at_right_position: 0
   collided_obj: []
   adjust_pos: 0
