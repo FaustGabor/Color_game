@@ -28,10 +28,6 @@ public class Score_timer : MonoBehaviour
         {
             PlayerPrefs.SetFloat("GrayScale", timer);
         }
-        if (SceneManager.GetActiveScene().name.Contains("Diamond"))
-        {
-            PlayerPrefs.SetFloat("Diamond", timer);
-        }
         PlayerPrefs.Save();
     }
 }

@@ -15,6 +15,7 @@ public class Game_BTN_handler : MonoBehaviour
     public GameObject muted; // diamond tutorial
     public GameObject dark; // diamond tutorial
     public GameObject every_color; // diamond tutorial
+    public GameObject finishdia; // diamondgame
 
     private int state = 0; // diamond tutorial
 
@@ -151,7 +152,8 @@ public class Game_BTN_handler : MonoBehaviour
     public void Help() // grey scale tutorial
     {
         help.SetActive(true);
-        arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(341f,-614f,0f);
+        if(SceneManager.GetActiveScene().name != "Diamond_Game")
+            arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(341f,-614f,0f);
     }
 
     public void End_Help() // grey scale tutorial
@@ -171,5 +173,21 @@ public class Game_BTN_handler : MonoBehaviour
             help.SetActive(true);
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
         }
+    }
+
+    public void Close_Help()
+    {
+        help.SetActive(false);
+    }
+
+    public void Finish_Dia()
+    {
+        finishdia.SetActive(true);
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().scoreofdiamond;
+        if (SceneManager.GetActiveScene().name.Contains("Diamond"))
+        {
+            PlayerPrefs.SetFloat("Diamond", GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().scoreofdiamond);
+        }
+        PlayerPrefs.Save();
     }
 }

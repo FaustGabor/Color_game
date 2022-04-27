@@ -34,7 +34,7 @@ public class Menu_BTN_Handler : MonoBehaviour
         tutorial.SetActive(false);
         score.SetActive(true);
 
-        score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Diamond game:\n" + PlayerPrefs.GetFloat("Diamond",999).ToString() + " mp\n\n Grey scale game:\n" + PlayerPrefs.GetFloat("GrayScale",999).ToString() + " mp";
+        score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Diamond game:\n" + PlayerPrefs.GetFloat("Diamond",999).ToString() + " point\n\n Grey scale game:\n" + PlayerPrefs.GetFloat("GrayScale",999).ToString() + " mp";
     }
 
     public void Exit()

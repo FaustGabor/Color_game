@@ -8,6 +8,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
     [SerializeField] private GameObject selected_obj;
     [SerializeField] private GameObject background;
     private bool adjust_pos = false;
+    public int scoreofdiamond = 0;
 
 
     void GreyScalePart()
@@ -45,6 +46,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
     void DiamondPart()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
 
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
@@ -60,10 +62,16 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 }
                 else
                 {
+                    if(hit.transform.gameObject.tag == "Drag")
+                    {
+                        selected_obj = null;
+                        Debug.Log("Over");
+                        return;
+                    }
                     if(selected_obj.name == hit.transform.name)
                     {
                         Debug.Log("Good");
-                        
+                        scoreofdiamond++;
                     }
                     else
                         Debug.Log("NotGood");
