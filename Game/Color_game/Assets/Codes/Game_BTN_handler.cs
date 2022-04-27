@@ -6,9 +6,137 @@ using TMPro;
 
 public class Game_BTN_handler : MonoBehaviour
 {
-    public GameObject arrow;
-    public GameObject help;
-    public GameObject game_handler;
+    public GameObject arrow; // grey scale tutorial
+    public GameObject help; // grey scale tutorial
+    public GameObject game_handler; // grey scale
+    public GameObject text; // diamond tutorial
+    public GameObject vivid; // diamond tutorial
+    public GameObject pale; // diamond tutorial
+    public GameObject muted; // diamond tutorial
+    public GameObject dark; // diamond tutorial
+    public GameObject every_color; // diamond tutorial
+
+    private int state = 0; // diamond tutorial
+
+    public void Tutorial_next()
+    {
+        switch (state)
+        {
+            case 0: 
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see 9 colors. Yellow, Orange, Red, Pink, Violet, Blue, Teal, Green and Apple Green";
+                    vivid.SetActive(true);
+                    break; 
+                }
+            case 1:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see the same colors, but they are much paler. These are the Pale colors";
+                    vivid.SetActive(false);
+                    pale.SetActive(true);
+                    break;
+                }
+            case 2:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "See, they are paler. The previous colors are much more vivid. The previous colors are the Vivid colors";
+                    vivid.SetActive(true);
+                    vivid.transform.position += new Vector3(0, 0, 0.2f);
+                    pale.SetActive(true);
+                    break;
+                }
+            case 3:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Now the lost some of their whiteness, and the are almost dark. They are the Muted colors";
+                    vivid.SetActive(false);
+                    pale.SetActive(false);
+                    muted.SetActive(true);
+                    break;
+                }
+            case 4:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "But these colors are still darker. They one are called Dark colors.";
+                    dark.SetActive(true);
+                    muted.SetActive(false);
+                    break;
+                }
+            case 5:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "See, they are darker than the Muted colors.";
+                    muted.SetActive(true);
+                    muted.transform.position += new Vector3(0, 0, 0.2f);
+                    break;
+                }
+
+            case 6:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Vivids:";
+                    every_color.SetActive(false);
+                    vivid.SetActive(true);
+                    pale.SetActive(false);
+                    muted.SetActive(false);
+                    dark.SetActive(false);
+
+                    vivid.transform.position = Vector3.zero;
+                    pale.transform.position = Vector3.zero;
+                    muted.transform.position = Vector3.zero;
+                    dark.transform.position = Vector3.zero;
+                    break;
+                }
+            case 7:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Pales:";
+                    vivid.SetActive(false);
+                    pale.SetActive(true);
+                    muted.SetActive(false);
+                    dark.SetActive(false);
+
+                    vivid.transform.position = Vector3.zero;
+                    pale.transform.position = Vector3.zero;
+                    muted.transform.position = Vector3.zero;
+                    dark.transform.position = Vector3.zero;
+                    break;
+                }
+            case 8:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Muteds:";
+                    vivid.SetActive(false);
+                    pale.SetActive(false);
+                    muted.SetActive(true);
+                    dark.SetActive(false);
+
+                    vivid.transform.position = Vector3.zero;
+                    pale.transform.position = Vector3.zero;
+                    muted.transform.position = Vector3.zero;
+                    dark.transform.position = Vector3.zero;
+                    break;
+                }
+            case 9:
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "Darks:";
+                    vivid.SetActive(false);
+                    pale.SetActive(false);
+                    muted.SetActive(false);
+                    dark.SetActive(true);
+
+                    vivid.transform.position = Vector3.zero;
+                    pale.transform.position = Vector3.zero;
+                    muted.transform.position = Vector3.zero;
+                    dark.transform.position = Vector3.zero;
+                    break;
+                }
+            default: 
+                {
+                    text.GetComponent<TextMeshProUGUI>().text = "There is nothing more to learn. Go back to the Menu";
+                    every_color.SetActive(true);
+                    vivid.SetActive(false);
+                    pale.SetActive(false);
+                    muted.SetActive(false);
+                    dark.SetActive(false);
+                    state = 5;
+                    break;
+                }
+        }
+        state++;
+    }
 
     public void Load_Menu()
     {
@@ -20,13 +148,13 @@ public class Game_BTN_handler : MonoBehaviour
         SceneManager.LoadScene("Win");
     }
 
-    public void Help()
+    public void Help() // grey scale tutorial
     {
         help.SetActive(true);
         arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(341f,-614f,0f);
     }
 
-    public void End_Help()
+    public void End_Help() // grey scale tutorial
     {
         help.SetActive(false);
         help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game, you have to match the colored objects wit their gray partner.\n\nClick on the purple square, and click next to the scale.\n\nMove the colored square up/down on the scale, and find the gray square that match the color.";

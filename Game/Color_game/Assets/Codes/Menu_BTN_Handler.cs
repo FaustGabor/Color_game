@@ -63,6 +63,6 @@ public class Menu_BTN_Handler : MonoBehaviour
     }
     public void Load_Tutorial_Color_Organizer()
     {
-        SceneManager.LoadScene("Color_Organizer_T");
+        SceneManager.LoadScene("Diamond_tutorial");
     }
 }
