@@ -21,6 +21,8 @@ public class Game_handler : MonoBehaviour
     public GameObject timer;
     public GameObject btn_handler;
 
+    public GameObject green_check_picture;
+
     public GameObject Next_cube(bool left)
     {
         int index = -1;
@@ -187,6 +189,28 @@ public class Game_handler : MonoBehaviour
             GameObject temp = all_cubes[i];
             all_cubes[i] = all_cubes[random];
             all_cubes[random] = temp;
+        }
+    }
+    public void Check_right_colors()
+    {
+        foreach (var item in spawned_obj_right)
+        {
+            if (item.GetComponent<Color_cube>().at_right_position)
+            {
+                item.GetComponent<BoxCollider>().enabled = false;
+                GameObject obj =  Instantiate(green_check_picture,item.transform.position + new Vector3(1f,0,0), Quaternion.identity);
+                obj.transform.position += new Vector3(0, 0, -0.15f);
+            }
+        }
+
+        foreach (var item in spawned_obj_left)
+        {
+            if (item.GetComponent<Color_cube>().at_right_position)
+            {
+                item.GetComponent<BoxCollider>().enabled = false;
+                GameObject obj = Instantiate(green_check_picture, item.transform.position + new Vector3(-1f, 0, 0), green_check_picture.transform.rotation);
+                obj.transform.position += new Vector3(0, 0, -0.15f);
+            }
         }
     }
 }

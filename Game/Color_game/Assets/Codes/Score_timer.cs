@@ -26,7 +26,8 @@ public class Score_timer : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Contains("Gray"))
         {
-            PlayerPrefs.SetFloat("GrayScale", timer);
+            if (PlayerPrefs.GetFloat("GrayScale", 999) > timer)
+            { PlayerPrefs.SetFloat("GrayScale", timer); }
         }
         PlayerPrefs.Save();
     }

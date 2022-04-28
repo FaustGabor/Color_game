@@ -9,6 +9,7 @@ public class Game_BTN_handler : MonoBehaviour
     public GameObject arrow; // grey scale tutorial
     public GameObject help; // grey scale tutorial
     public GameObject game_handler; // grey scale
+    public GameObject menu_window; // grey scale
     public GameObject text; // diamond tutorial
     public GameObject vivid; // diamond tutorial
     public GameObject pale; // diamond tutorial
@@ -25,7 +26,7 @@ public class Game_BTN_handler : MonoBehaviour
         {
             case 0: 
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see 9 colors. Yellow, Orange, Red, Pink, Violet, Blue, Teal, Green and Apple Green";
+                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see 9 colors. Yellow, Orange, Red, Magenta, Violet, Blue, Teal, Green and Lime";
                     vivid.SetActive(true);
                     break; 
                 }
@@ -56,7 +57,7 @@ public class Game_BTN_handler : MonoBehaviour
                 {
                     text.GetComponent<TextMeshProUGUI>().text = "But these colors are still darker. They one are called Dark colors.";
                     dark.SetActive(true);
-                    muted.SetActive(false);
+                    //muted.SetActive(false);
                     break;
                 }
             case 5:
@@ -153,7 +154,7 @@ public class Game_BTN_handler : MonoBehaviour
     {
         help.SetActive(true);
         if(SceneManager.GetActiveScene().name != "Diamond_Game")
-            arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(341f,-614f,0f);
+            if(arrow != null)arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(341f,-614f,0f);
     }
 
     public void End_Help() // grey scale tutorial
@@ -172,6 +173,7 @@ public class Game_BTN_handler : MonoBehaviour
         {
             help.SetActive(true);
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
+            if(menu_window != null) menu_window.SetActive(false);
         }
     }
 
@@ -189,5 +191,20 @@ public class Game_BTN_handler : MonoBehaviour
             PlayerPrefs.SetFloat("Diamond", GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().scoreofdiamond);
         }
         PlayerPrefs.Save();
+    }
+
+    public void Reveal_Menu()
+    {
+        menu_window.SetActive(true);
+    }
+
+    public void Hide_Menu()
+    {
+        menu_window.SetActive(false);
+    }
+    public void Check_Colors()
+    {
+        game_handler.GetComponent<Game_handler>().Check_right_colors();
+        menu_window.SetActive(false);
     }
 }
