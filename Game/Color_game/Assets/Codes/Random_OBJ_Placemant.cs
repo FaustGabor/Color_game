@@ -19,12 +19,15 @@ public class Random_OBJ_Placemant : MonoBehaviour
             pos[n] = value;
         }
     }
+    public List<GameObject> colorcubes = new List<GameObject>();
+    public List<GameObject> ghostcubes = new List<GameObject>();
 
+    public Dictionary<string, Vector3> orginalpositions = new Dictionary<string, Vector3>();
     void RandomPlacement()
     {
-        List<GameObject> colorcubes = this.gameObject.GetComponent<Game_handler>().all_cubes;
-        List<GameObject> ghostcubes = this.gameObject.GetComponent<Game_handler>().ghost_cubes;
-        
+        colorcubes = this.gameObject.GetComponent<Game_handler>().all_cubes;
+        ghostcubes = this.gameObject.GetComponent<Game_handler>().ghost_cubes;
+
         List<Vector3> positionsCC = new List<Vector3>();
         List<Vector3> positionsGC = new List<Vector3>();
 
@@ -41,7 +44,6 @@ public class Random_OBJ_Placemant : MonoBehaviour
         ShufflePos(positionsCC);
         ShufflePos(positionsGC);
 
-
         for (int i = 0; i < positionsCC.Count; i++)
         {
             colorcubes[i].transform.position = positionsCC[i];
@@ -50,6 +52,11 @@ public class Random_OBJ_Placemant : MonoBehaviour
         for (int i = 0; i < positionsGC.Count; i++)
         {
             ghostcubes[i].transform.position = positionsGC[i];
+        }
+
+        foreach (var item in colorcubes)
+        {
+            orginalpositions.Add(item.name, item.transform.position);
         }
     }
 

@@ -8,7 +8,8 @@ public class Drag_And_Drop_3D : MonoBehaviour
     [SerializeField] private GameObject selected_obj;
     [SerializeField] private GameObject background;
     private bool adjust_pos = false;
-    public int scoreofdiamond = 0;
+    public List<GameObject> badcubes = new List<GameObject>();
+    public List<GameObject> goodcubes = new List<GameObject>();
 
 
     void GreyScalePart()
@@ -71,11 +72,22 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     if(selected_obj.name == hit.transform.name)
                     {
                         Debug.Log("Good");
-                        scoreofdiamond++;
+                        if(badcubes.Contains(selected_obj))
+                        {
+                            badcubes.Remove(selected_obj);
+                        }
+                        if (!goodcubes.Contains(selected_obj))
+                            goodcubes.Add(selected_obj);
                     }
                     else
+                    {
+                        if (!badcubes.Contains(selected_obj))
+                            badcubes.Add(selected_obj);
+                        if (goodcubes.Contains(selected_obj))
+                            goodcubes.Remove(selected_obj);
                         Debug.Log("NotGood");
-
+                    }
+                        
                     selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
                     selected_obj = null;
                 }

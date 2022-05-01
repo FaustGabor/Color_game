@@ -185,10 +185,11 @@ public class Game_BTN_handler : MonoBehaviour
     public void Finish_Dia()
     {
         finishdia.SetActive(true);
-        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().scoreofdiamond;
+        menu_window.SetActive(false);
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count;
         if (SceneManager.GetActiveScene().name.Contains("Diamond"))
         {
-            PlayerPrefs.SetFloat("Diamond", GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().scoreofdiamond);
+            PlayerPrefs.SetFloat("Diamond", GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count);
         }
         PlayerPrefs.Save();
     }
@@ -204,6 +205,7 @@ public class Game_BTN_handler : MonoBehaviour
     }
     public void Check_Colors()
     {
+
         game_handler.GetComponent<Game_handler>().Check_right_colors();
         menu_window.SetActive(false);
     }

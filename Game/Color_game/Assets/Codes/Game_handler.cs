@@ -193,24 +193,44 @@ public class Game_handler : MonoBehaviour
     }
     public void Check_right_colors()
     {
-        foreach (var item in spawned_obj_right)
+        if (SceneManager.GetActiveScene().name == "Gray_scale")
         {
-            if (item.GetComponent<Color_cube>().at_right_position)
+            foreach (var item in spawned_obj_right)
             {
-                item.GetComponent<BoxCollider>().enabled = false;
-                GameObject obj =  Instantiate(green_check_picture,item.transform.position + new Vector3(1f,0,0), Quaternion.identity);
-                obj.transform.position += new Vector3(0, 0, -0.15f);
+                if (item.GetComponent<Color_cube>().at_right_position)
+                {
+                    item.GetComponent<BoxCollider>().enabled = false;
+                    GameObject obj = Instantiate(green_check_picture, item.transform.position + new Vector3(1f, 0, 0), Quaternion.identity);
+                    obj.transform.position += new Vector3(0, 0, -0.15f);
+                }
+            }
+
+            foreach (var item in spawned_obj_left)
+            {
+                if (item.GetComponent<Color_cube>().at_right_position)
+                {
+                    item.GetComponent<BoxCollider>().enabled = false;
+                    GameObject obj = Instantiate(green_check_picture, item.transform.position + new Vector3(-1f, 0, 0), green_check_picture.transform.rotation);
+                    obj.transform.position += new Vector3(0, 0, -0.15f);
+                }
             }
         }
-
-        foreach (var item in spawned_obj_left)
+        if (SceneManager.GetActiveScene().name == "Diamond_Game")
         {
-            if (item.GetComponent<Color_cube>().at_right_position)
+            List<GameObject> badones = GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().badcubes;
+
+            foreach (var item in badones)
             {
-                item.GetComponent<BoxCollider>().enabled = false;
-                GameObject obj = Instantiate(green_check_picture, item.transform.position + new Vector3(-1f, 0, 0), green_check_picture.transform.rotation);
-                obj.transform.position += new Vector3(0, 0, -0.15f);
+                foreach (var item2 in GameObject.Find("EventHandler").GetComponent<Random_OBJ_Placemant>().orginalpositions)
+                {
+                    if(item.name == item2.Key)
+                    {
+                        item.transform.position = item2.Value;
+                    }
+                }
             }
+            GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().badcubes.Clear();
         }
     }
+
 }
