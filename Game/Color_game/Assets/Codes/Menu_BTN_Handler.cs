@@ -10,6 +10,7 @@ public class Menu_BTN_Handler : MonoBehaviour
     public GameObject start_menu;
     public GameObject tutorial;
     public GameObject score;
+    public GameObject info;
 
     public void Change_To_Games()
     {
@@ -35,6 +36,23 @@ public class Menu_BTN_Handler : MonoBehaviour
         score.SetActive(true);
 
         score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Diamond game:\n" + PlayerPrefs.GetFloat("Diamond",999).ToString() + " point\n\n Grey scale game:\n" + PlayerPrefs.GetFloat("GrayScale",999).ToString() + " mp";
+    }
+    public void Change_To_Info()
+    {
+        info.SetActive(true);
+        start_menu.SetActive(false);
+        tutorial.SetActive(false);
+        score.SetActive(false);
+        game_selector.SetActive(false);
+
+    }
+    public void Change_To_Menu() 
+    {
+        start_menu.SetActive(true);
+        info.SetActive(false);
+        tutorial.SetActive(false);
+        score.SetActive(false);
+        game_selector.SetActive(false);
     }
 
     public void Exit()
