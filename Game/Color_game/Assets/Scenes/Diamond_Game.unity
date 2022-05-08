@@ -13902,7 +13902,7 @@ GameObject:
   - component: {fileID: 1559747375}
   - component: {fileID: 1559747374}
   m_Layer: 0
-  m_Name: Muted
+  m_Name: MutedR
   m_TagString: Ghost_Cubes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

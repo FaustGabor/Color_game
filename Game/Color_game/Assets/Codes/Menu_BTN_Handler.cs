@@ -77,10 +77,6 @@ public class Menu_BTN_Handler : MonoBehaviour
 
     public void Load_Tutorial_Colors()
     {
-        SceneManager.LoadScene("Color_Tutorial");
-    }
-    public void Load_Tutorial_Color_Organizer()
-    {
         SceneManager.LoadScene("Diamond_tutorial");
     }
 }

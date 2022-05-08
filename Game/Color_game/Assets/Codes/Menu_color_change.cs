@@ -84,6 +84,7 @@ public class Menu_color_change : MonoBehaviour
 
         foreach (var item in texts)
         {
+            if(item != null)
             item.GetComponent<TextMeshProUGUI>().color = new UnityEngine.Color(random1 / 255f, random2 / 255f, random3 / 255f, 255f);
         }
     }
