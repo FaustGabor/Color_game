@@ -200,7 +200,7 @@ public class Game_handler : MonoBehaviour
                 if (item.GetComponent<Color_cube>().at_right_position)
                 {
                     item.GetComponent<BoxCollider>().enabled = false;
-                    GameObject obj = Instantiate(green_check_picture, item.transform.position + new Vector3(1f, 0, 0), Quaternion.identity);
+                    GameObject obj = Instantiate(green_check_picture, item.transform.position + new Vector3(1f, 0, 0), green_check_picture.transform.rotation);
                     obj.transform.position += new Vector3(0, 0, -0.15f);
                 }
             }
