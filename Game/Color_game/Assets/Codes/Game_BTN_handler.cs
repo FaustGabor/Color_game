@@ -26,13 +26,13 @@ public class Game_BTN_handler : MonoBehaviour
         {
             case 0: 
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see 9 colors. Yellow, Orange, Red, Magenta, Violet, Blue, Teal, Green and Lime";
+                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see nine colors representing nine hue families: Yellow, Orange, Red, Magenta, Violet, Blue, Turquoise, Green and Lime. ";
                     vivid.SetActive(true);
                     break; 
                 }
             case 1:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see the same colors, but they are much paler. These are the Pale colors";
+                    text.GetComponent<TextMeshProUGUI>().text = "Now you can see that the colours have lost some of their whiteness and they are darker. They are the muted colors.";
                     vivid.SetActive(false);
                     pale.SetActive(true);
                     break;
@@ -47,7 +47,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 3:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Now the lost some of their whiteness, and the are almost dark. They are the Muted colors";
+                    text.GetComponent<TextMeshProUGUI>().text = "Now you can see that the colours have lost some of their whiteness and they are darker. They are the muted colors.";
                     vivid.SetActive(false);
                     pale.SetActive(false);
                     muted.SetActive(true);
@@ -55,7 +55,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 4:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "But these colors are still darker. They one are called Dark colors.";
+                    text.GetComponent<TextMeshProUGUI>().text = "But these colors are darker still. They are the dark colors. ";
                     dark.SetActive(true);
                     //muted.SetActive(false);
                     break;
