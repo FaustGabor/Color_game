@@ -217,8 +217,10 @@ public class Game_handler : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "Diamond_Game")
         {
+            //A rossz helyen lévõ kockák lsitája
             List<GameObject> badones = GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().badcubes;
 
+            //A rossz helyen lévõ kockák visszarakása az eredeti helyükre
             foreach (var item in badones)
             {
                 foreach (var item2 in GameObject.Find("EventHandler").GetComponent<Random_OBJ_Placemant>().orginalpositions)

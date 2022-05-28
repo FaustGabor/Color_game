@@ -63,26 +63,33 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 }
                 else
                 {
+                    //Ne lesennek egymásra rakni a kockákat
                     if(hit.transform.gameObject.tag == "Drag")
                     {
                         selected_obj = null;
                         Debug.Log("Over");
                         return;
                     }
+                    //A jó helyen lévõ kockák
                     if(selected_obj.name == hit.transform.name)
                     {
                         Debug.Log("Good");
+                        //Ha eddig rossz helyen volt akkor azt abból a listávól kitörlöm
                         if(badcubes.Contains(selected_obj))
                         {
                             badcubes.Remove(selected_obj);
                         }
+                        //Ha még nem szerepelt a jó helyen lévõk között akkor hozzáadom
                         if (!goodcubes.Contains(selected_obj))
                             goodcubes.Add(selected_obj);
                     }
+                    //A rossz helyen lévõ kockák
                     else
                     {
+                        //Ha még nem szerepelt a rossz helyen lévõk között akkor hozzáadom
                         if (!badcubes.Contains(selected_obj))
                             badcubes.Add(selected_obj);
+                        //Ha eddig jó helyen volt de át lett rakva rosszra akkor kitörlöm a jók közül
                         if (goodcubes.Contains(selected_obj))
                             goodcubes.Remove(selected_obj);
                         Debug.Log("NotGood");
