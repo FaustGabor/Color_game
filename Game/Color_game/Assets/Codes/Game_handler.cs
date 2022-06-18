@@ -168,7 +168,7 @@ public class Game_handler : MonoBehaviour
         return true;
     }
 
-    private void Completed() 
+    public void Completed() 
     {
         if (!SceneManager.GetActiveScene().name.Contains("Tutorial"))
         {

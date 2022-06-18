@@ -192,6 +192,8 @@ public class Game_BTN_handler : MonoBehaviour
             PlayerPrefs.SetFloat("Diamond", GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count);
         }
         PlayerPrefs.Save();
+
+        game_handler.GetComponent<Game_handler>().Completed();
     }
 
     public void Reveal_Menu()
@@ -205,7 +207,6 @@ public class Game_BTN_handler : MonoBehaviour
     }
     public void Check_Colors()
     {
-
         game_handler.GetComponent<Game_handler>().Check_right_colors();
         menu_window.SetActive(false);
     }

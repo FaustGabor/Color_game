@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Gray_Tutorial.unity
     guid: 7e36b291f1a222746ad296dc333576e0
   - enabled: 1
-    path: Assets/Scenes/Diamond_tutorial.unity
+    path: Assets/Scenes/Colour_tutorial.unity
     guid: 227ed1680fec23341bf77b625a399e19
   - enabled: 1
     path: Assets/Scenes/Diamond_Game.unity
