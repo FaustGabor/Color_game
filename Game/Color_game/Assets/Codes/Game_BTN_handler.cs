@@ -163,13 +163,13 @@ public class Game_BTN_handler : MonoBehaviour
         help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game, you have to match the colored objects wit their gray partner.\n\nClick on the purple square, and click next to the scale.\n\nMove the colored square up/down on the scale, and find the gray square that match the color.";
     }
 
-    public void Finish()
+    public void Finish() // grey scale finish game
     {
         if (arrow != null)
         {
             arrow.SetActive(false);
         }
-        if (!game_handler.GetComponent<Game_handler>().Check_right_positions())
+        if (!game_handler.GetComponent<Game_handler>().Check_right_positions()) // Ha igaz, akkor a Check_right_positions függvény már átvisz minket a következõ scene-re
         {
             help.SetActive(true);
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
@@ -195,7 +195,6 @@ public class Game_BTN_handler : MonoBehaviour
         }
         PlayerPrefs.Save();
 
-        game_handler.GetComponent<Game_handler>().Completed();
     }
 
     public void Reveal_Menu()

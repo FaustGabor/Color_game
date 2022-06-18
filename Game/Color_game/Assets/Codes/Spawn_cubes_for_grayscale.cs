@@ -18,7 +18,7 @@ public class Spawn_cubes_for_grayscale : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject spawn_obj = game_handler.GetComponent<Game_handler>().Next_cube(left);
+        GameObject spawn_obj = game_handler.GetComponent<Game_handler>().Next_cube(left); // lekéri a következõ kockát
         if(spawn_obj != null)
         game_handler.GetComponent<Game_handler>().Add_Cube(left, Instantiate(spawn_obj, this.transform.position + Vector3.up, this.transform.rotation));
     }

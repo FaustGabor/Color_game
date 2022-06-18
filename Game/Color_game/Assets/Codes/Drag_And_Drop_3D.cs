@@ -20,7 +20,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (selected_obj == null)
+                if (selected_obj == null) // Színes kockára kattintás esetén lementi a kockát
                 {
                     if (hit.transform.gameObject.tag != "Grey_scale" && hit.transform.gameObject.tag != "Spawn")
                     {
@@ -28,14 +28,14 @@ public class Drag_And_Drop_3D : MonoBehaviour
                         background.SetActive(true);
                     }
                 }
-                else
+                else // Lementett kockát lerakja a kattintás helyére (de úgy hogy a kattintásnál csak a Z koordinátát nézi [a skála mellett marad])
                 {
                     float z = hit.point.z;
                     if (z > 84.158) z = 84.158f;
                     if (z < 77.757) z = 77.757f;
 
                     selected_obj.transform.position = new Vector3(selected_obj.transform.position.x, selected_obj.transform.position.y, z);
-                    selected_obj.GetComponent<Color_cube>().adjust_pos = true;
+                    selected_obj.GetComponent<Color_cube>().adjust_pos = true; // emiatt kerül jó helyre, és megnézi hogy a megfelelõ partner mellett van-e
                     selected_obj = null;
                     adjust_pos = true;
                     background.SetActive(false);

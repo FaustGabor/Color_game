@@ -23,7 +23,7 @@ public class Game_handler : MonoBehaviour
 
     public GameObject green_check_picture;
 
-    public GameObject Next_cube(bool left)
+    public GameObject Next_cube(bool left) // gery scale
     {
         int index = -1;
         if (left) index = 0;
@@ -39,9 +39,9 @@ public class Game_handler : MonoBehaviour
                     find = true;
                     index++;
 
-                    string[] partners = all_cubes[index].GetComponent<Color_cube>().gray_partner.Split(',');
+                    string[] partners = all_cubes[index].GetComponent<Color_cube>().gray_partner.Split(','); // index-edik kocka szürke partnereinek lementése
 
-                    foreach (var item in spawned_obj_left)
+                    foreach (var item in spawned_obj_left) // megnézi hogy a kiválasztott szürke partnerek helyén, van-e már másik kocka ha igen akkor másik kockát keres
                     {
                         foreach (var item2 in partners)
                         {
@@ -61,7 +61,7 @@ public class Game_handler : MonoBehaviour
 
                     if (find)
                     {
-                        foreach (var item in spawned_obj_right)
+                        foreach (var item in spawned_obj_right) // megnézi hogy a választott kocka nincs-e ott a másik oldalon már
                         {
                             if(item.name.Contains(all_cubes[index].name))
                             { find = false; }
@@ -144,7 +144,7 @@ public class Game_handler : MonoBehaviour
         }
     }
 
-    public bool Check_right_positions()
+    public bool Check_right_positions() // megnézi hogy minden kocka a jó helyen van-e
     {
         if (spawned_obj_left.Count > 0 || spawned_obj_right.Count > 0)
         {
@@ -182,7 +182,7 @@ public class Game_handler : MonoBehaviour
         System.Random r = new System.Random();
         int random = 0;
 
-        for (int i = 0; i < all_cubes.Count; i++)
+        for (int i = 0; i < all_cubes.Count; i++) // Kocka lista randomizálása
         {
             random = r.Next(0, all_cubes.Count);
 
@@ -193,7 +193,7 @@ public class Game_handler : MonoBehaviour
     }
     public void Check_right_colors()
     {
-        if (SceneManager.GetActiveScene().name == "Gray_scale")
+        if (SceneManager.GetActiveScene().name == "Gray_scale") // ha a kocka jó helyen van, akkor egy pipát rak melléjük
         {
             foreach (var item in spawned_obj_right)
             {

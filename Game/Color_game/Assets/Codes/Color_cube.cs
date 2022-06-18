@@ -51,7 +51,7 @@ public class Color_cube : MonoBehaviour
         }
     }
 
-    public void Check_Right_Position_GS()
+    public void Check_Right_Position_GS() // Megnézi hogy a collided obj a jó partner-e
     {
         partners = gray_partner.Split(',');
 
