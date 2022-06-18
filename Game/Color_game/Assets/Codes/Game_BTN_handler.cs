@@ -186,6 +186,8 @@ public class Game_BTN_handler : MonoBehaviour
     {
         finishdia.SetActive(true);
         menu_window.SetActive(false);
+
+        //A jó helyen lévõ kockák megszámolása majd kiíratás mint pontszám
         finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count;
         if (SceneManager.GetActiveScene().name.Contains("Diamond"))
         {
