@@ -72,8 +72,6 @@ public class Game_handler : MonoBehaviour
                 while (index < 35 && find == false);
             }
 
-            Debug.Log("left" + index);
-
             if (find)
             {
                 return all_cubes[index];
@@ -120,8 +118,6 @@ public class Game_handler : MonoBehaviour
                 }
                 while (index < 35 && find == false);
             }
-
-            Debug.Log("right" + index);
 
             if (find)
             {

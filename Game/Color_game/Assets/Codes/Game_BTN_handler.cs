@@ -154,13 +154,14 @@ public class Game_BTN_handler : MonoBehaviour
     {
         help.SetActive(true);
         if(SceneManager.GetActiveScene().name != "Diamond_Game")
-            if(arrow != null)arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(341f,-614f,0f);
+            if(arrow != null)arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f,0f);
     }
 
     public void End_Help() // grey scale tutorial
     {
         help.SetActive(false);
-        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game, you have to match the colored objects wit their gray partner.\n\nClick on the purple square, and click next to the scale.\n\nMove the colored square up/down on the scale, and find the gray square that match the color.";
+        help.transform.GetChild(3).gameObject.SetActive(true);
+        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game you have to match the coloured squares with their grey partners.\n\nMove the coloured square up / down on the scale and find the color’s grey partner. ";
     }
 
     public void Finish() // grey scale finish game
@@ -173,7 +174,8 @@ public class Game_BTN_handler : MonoBehaviour
         {
             help.SetActive(true);
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
-            if(menu_window != null) menu_window.SetActive(false);
+            help.transform.GetChild(3).gameObject.SetActive(false);
+            if (menu_window != null) menu_window.SetActive(false);
         }
     }
 
