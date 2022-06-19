@@ -17,6 +17,7 @@ public class Game_handler : MonoBehaviour
 
     public List<GameObject> all_cubes;
     public List<GameObject> ghost_cubes;
+    private List<GameObject> selected_cubes;
 
     public GameObject timer;
     public GameObject btn_handler;
@@ -25,6 +26,8 @@ public class Game_handler : MonoBehaviour
 
     public GameObject Next_cube(bool left) // gery scale
     {
+        if (selected_cubes == null) selected_cubes = all_cubes;
+
         int index = -1;
         if (left) index = 0;
         bool find = true;
@@ -39,7 +42,7 @@ public class Game_handler : MonoBehaviour
                     find = true;
                     index++;
 
-                    string[] partners = all_cubes[index].GetComponent<Color_cube>().gray_partner.Split(','); // index-edik kocka szürke partnereinek lementése
+                    string[] partners = selected_cubes[index].GetComponent<Color_cube>().gray_partner.Split(','); // index-edik kocka szürke partnereinek lementése
 
                     foreach (var item in spawned_obj_left) // megnézi hogy a kiválasztott szürke partnerek helyén, van-e már másik kocka ha igen akkor másik kockát keres
                     {
@@ -63,18 +66,18 @@ public class Game_handler : MonoBehaviour
                     {
                         foreach (var item in spawned_obj_right) // megnézi hogy a választott kocka nincs-e ott a másik oldalon már
                         {
-                            if(item.name.Contains(all_cubes[index].name))
+                            if(item.name.Contains(selected_cubes[index].name))
                             { find = false; }
                         }
                     }
                     
                 }
-                while (index < 35 && find == false);
+                while (index < selected_cubes.Count-1 && find == false);
             }
 
             if (find)
             {
-                return all_cubes[index];
+                return selected_cubes[index];
             }
         }
         else
@@ -87,7 +90,7 @@ public class Game_handler : MonoBehaviour
                     find = true;
                     index++;
 
-                    string[] partners = all_cubes[index].GetComponent<Color_cube>().gray_partner.Split(',');
+                    string[] partners = selected_cubes[index].GetComponent<Color_cube>().gray_partner.Split(',');
 
                     foreach (var item in spawned_obj_right)
                     {
@@ -111,17 +114,17 @@ public class Game_handler : MonoBehaviour
                     {
                         foreach (var item in spawned_obj_left)
                         {
-                            if (item.name.Contains(all_cubes[index].name))
+                            if (item.name.Contains(selected_cubes[index].name))
                             { find = false; }
                         }
                     }
                 }
-                while (index < 35 && find == false);
+                while (index < selected_cubes.Count - 1 && find == false);
             }
 
             if (find)
             {
-                return all_cubes[index];
+                return selected_cubes[index];
             }
         }
 
@@ -228,6 +231,18 @@ public class Game_handler : MonoBehaviour
                 }
             }
             GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().badcubes.Clear();
+        }
+    }
+
+    public void Select_cube_list(string list)
+    {
+        switch (list)
+        {
+            case "vivid": selected_cubes = new List<GameObject>(Vivid_colors); break;
+            case "muted": selected_cubes = new List<GameObject>(Muted_colors); break;
+            case "pale": selected_cubes = new List<GameObject>(Pale_colors); break;
+            case "dark": selected_cubes = new List<GameObject>(Dark_colors); break;
+            default: selected_cubes = all_cubes; break;
         }
     }
 

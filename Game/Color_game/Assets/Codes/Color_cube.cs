@@ -69,7 +69,6 @@ public class Color_cube : MonoBehaviour
         }
         else
         {
-
             if (collided_obj.Count == 1) 
             { 
                 at_right_position = false;
@@ -104,7 +103,7 @@ public class Color_cube : MonoBehaviour
         // ------ GREY SCALE--------
         timer += Time.deltaTime;
 
-        if (timer > 0.2) // colliders need time to register object
+        if (timer > 0.3) // colliders need time to register object
         {
             timer = 0;
 

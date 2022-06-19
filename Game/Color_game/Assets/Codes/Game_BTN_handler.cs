@@ -17,6 +17,8 @@ public class Game_BTN_handler : MonoBehaviour
     public GameObject dark; // diamond tutorial
     public GameObject every_color; // diamond tutorial
     public GameObject finishdia; // diamondgame
+    public GameObject game_type; // grey scale
+    public GameObject spawners; // grey scale
 
     private int state = 0; // diamond tutorial
 
@@ -160,8 +162,8 @@ public class Game_BTN_handler : MonoBehaviour
     public void End_Help() // grey scale tutorial
     {
         help.SetActive(false);
-        help.transform.GetChild(3).gameObject.SetActive(true);
-        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game you have to match the coloured squares with their grey partners.\n\nMove the coloured square up / down on the scale and find the color’s grey partner. ";
+        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game you have to match the coloured squares with their grey partners.\n\nMove the coloured square up / down on the scale and find the color’s grey partner.";
+        if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     public void Finish() // grey scale finish game
@@ -174,8 +176,9 @@ public class Game_BTN_handler : MonoBehaviour
         {
             help.SetActive(true);
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
-            help.transform.GetChild(3).gameObject.SetActive(false);
             if (menu_window != null) menu_window.SetActive(false);
+            if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(false);
+            
         }
     }
 
@@ -212,5 +215,40 @@ public class Game_BTN_handler : MonoBehaviour
     {
         game_handler.GetComponent<Game_handler>().Check_right_colors();
         menu_window.SetActive(false);
+    }
+
+    public void Set_grayscale_to_vivid()
+    {
+        game_handler.GetComponent<Game_handler>().Select_cube_list("vivid");
+        game_type.SetActive(false);
+        spawners.SetActive(true);
+    }
+
+    public void Set_grayscale_to_dark()
+    {
+        game_handler.GetComponent<Game_handler>().Select_cube_list("dark");
+        game_type.SetActive(false);
+        spawners.SetActive(true);
+    }
+
+    public void Set_grayscale_to_pale()
+    {
+        game_handler.GetComponent<Game_handler>().Select_cube_list("pale");
+        game_type.SetActive(false);
+        spawners.SetActive(true);
+    }
+
+    public void Set_grayscale_to_muted()
+    {
+        game_handler.GetComponent<Game_handler>().Select_cube_list("muted");
+        game_type.SetActive(false);
+        spawners.SetActive(true);
+    }
+
+    public void Set_grayscale_to_all()
+    {
+        game_handler.GetComponent<Game_handler>().Select_cube_list("");
+        game_type.SetActive(false);
+        spawners.SetActive(true);
     }
 }
