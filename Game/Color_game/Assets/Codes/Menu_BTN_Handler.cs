@@ -35,7 +35,7 @@ public class Menu_BTN_Handler : MonoBehaviour
         tutorial.SetActive(false);
         score.SetActive(true);
 
-        score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Diamond game:\n" + PlayerPrefs.GetFloat("Diamond",999).ToString() + " point\n\n Grey scale game:\n" + PlayerPrefs.GetFloat("GrayScale",999).ToString() + " mp";
+        score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Diamond game:\n" + PlayerPrefs.GetFloat("Diamond",999).ToString() + " point\n\n Grey scale game:\n\nAll colours: " + PlayerPrefs.GetFloat("GrayScale",999).ToString() + " mp" + "\nVivid: " + PlayerPrefs.GetFloat("GrayScaleVivid", 999).ToString() + " mp" + "\nPale: " + PlayerPrefs.GetFloat("GrayScalePale", 999).ToString() + " mp" + "\nMuted: " + PlayerPrefs.GetFloat("GrayScaleMuted", 999).ToString() + " mp" + "\nDark: " + PlayerPrefs.GetFloat("GrayScaleDark", 999).ToString() + " mp";
     }
     public void Change_To_Info()
     {
@@ -77,6 +77,6 @@ public class Menu_BTN_Handler : MonoBehaviour
 
     public void Load_Tutorial_Colors()
     {
-        SceneManager.LoadScene("Diamond_tutorial");
+        SceneManager.LoadScene("Colour_tutorial");
     }
 }

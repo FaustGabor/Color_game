@@ -26,8 +26,41 @@ public class Score_timer : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Contains("Gray"))
         {
-            if (PlayerPrefs.GetFloat("GrayScale", 999) > timer)
-            { PlayerPrefs.SetFloat("GrayScale", timer); }
+            string selected_colours = GameObject.Find("Game_handler").GetComponent<Game_handler>().selected_colour;
+
+            switch (selected_colours)
+            { 
+                case "vivid":
+                    {
+                        if (PlayerPrefs.GetFloat("GrayScaleVivid", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScaleVivid", timer); }
+                        break;
+                    } 
+                case "muted":
+                    {
+                        if (PlayerPrefs.GetFloat("GrayScaleMuted", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScaleMuted", timer); }
+                        break;
+                    }
+                case "pale":
+                    {
+                        if (PlayerPrefs.GetFloat("GrayScalePale", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScalePale", timer); }
+                        break;
+                    }
+                case "dark":
+                    {
+                        if (PlayerPrefs.GetFloat("GrayScaleDark", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScaleDark", timer); }
+                        break;
+                    }
+                default:
+                    {
+                        if (PlayerPrefs.GetFloat("GrayScale", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScale", timer); }
+                        break;
+                    }
+            }
         }
         PlayerPrefs.Save();
     }

@@ -34,7 +34,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 1:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Now you can see that the colours have lost some of their whiteness and they are darker. They are the muted colors.";
+                    text.GetComponent<TextMeshProUGUI>().text = "Now you can see that the colours have lost some of their colourfulness. They are the pale colors.";
                     vivid.SetActive(false);
                     pale.SetActive(true);
                     break;

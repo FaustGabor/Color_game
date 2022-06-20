@@ -706,7 +706,7 @@ ScriptsOnlyBuild:
     className: Score_timer
   - hash:
       serializedVersion: 2
-      Hash: 269a9bf05446cc9b7b2ae48a3963bfab
+      Hash: 16996c13cefef9332292ce38c45f6bc2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game_BTN_handler
@@ -1018,7 +1018,7 @@ ScriptsOnlyBuild:
     className: Change_Material_Color
   - hash:
       serializedVersion: 2
-      Hash: 655d32be1d710c3cee9f90faf9310b08
+      Hash: 1400ea6741d767875e84d319d4c82a5a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Game_handler

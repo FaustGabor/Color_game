@@ -23,6 +23,7 @@ public class Game_handler : MonoBehaviour
     public GameObject btn_handler;
 
     public GameObject green_check_picture;
+    public string selected_colour;
 
     public GameObject Next_cube(bool left) // gery scale
     {
@@ -176,20 +177,6 @@ public class Game_handler : MonoBehaviour
         btn_handler.GetComponent<Game_BTN_handler>().Load_Win();
     }
 
-    private void Start()
-    {
-        System.Random r = new System.Random();
-        int random = 0;
-
-        for (int i = 0; i < all_cubes.Count; i++) // Kocka lista randomizálása
-        {
-            random = r.Next(0, all_cubes.Count);
-
-            GameObject temp = all_cubes[i];
-            all_cubes[i] = all_cubes[random];
-            all_cubes[random] = temp;
-        }
-    }
     public void Check_right_colors()
     {
         if (SceneManager.GetActiveScene().name == "Gray_scale") // ha a kocka jó helyen van, akkor egy pipát rak melléjük
@@ -243,6 +230,19 @@ public class Game_handler : MonoBehaviour
             case "pale": selected_cubes = new List<GameObject>(Pale_colors); break;
             case "dark": selected_cubes = new List<GameObject>(Dark_colors); break;
             default: selected_cubes = all_cubes; break;
+        }
+        selected_colour = list;
+
+        System.Random r = new System.Random();
+        int random = 0;
+
+        for (int i = 0; i < selected_cubes.Count; i++) // Kocka lista randomizálása
+        {
+            random = r.Next(0, selected_cubes.Count);
+
+            GameObject temp = selected_cubes[i];
+            selected_cubes[i] = selected_cubes[random];
+            selected_cubes[random] = temp;
         }
     }
 
