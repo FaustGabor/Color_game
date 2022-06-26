@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Texts_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 5abedcfb35e60c749ab4762deefaf92e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11115896832
+    m_Localized: "Created by:\n\nFaust G\xE1bor\nPaul Green-Armytage\nPolg\xE1r Don\xE1t\nPill\xE9r
+      Attila\nRobert Hirschler\nMaggie Maggio\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 269707321344
+    m_Localized: 'This game is developed for the Association
+
+      Internationale
+      de la Couleur (AIC).'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470217562988544
+    m_Localized: Diamond Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470448757219328
+    m_Localized: Grey scale game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470538586628096
+    m_Localized: Vidiv
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470591917203456
+    m_Localized: Pale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470662675111936
+    m_Localized: Muted
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470988866134016
+    m_Localized: Dark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471475506061312
+    m_Localized: point,ms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472137266569216
+    m_Localized: All colours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474450995650560
+    m_Localized: Grey scale tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475263537192960
+    m_Localized: Colours Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475671051575296
+    m_Localized: Tutorials
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475742388297728
+    m_Localized: Scores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475786399129600
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

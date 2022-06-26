@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Texts Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Texts
+  m_TableCollectionNameGuidString: 5abedcfb35e60c749ab4762deefaf92e
+  m_Entries:
+  - m_Id: 11115896832
+    m_Key: Creators
+    m_Metadata:
+      m_Items: []
+  - m_Id: 269707321344
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470217562988544
+    m_Key: DiamondGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470448757219328
+    m_Key: GreySlaceGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470538586628096
+    m_Key: Vivid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470591917203456
+    m_Key: Pale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470662675111936
+    m_Key: Muted
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470988866134016
+    m_Key: Dark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471475506061312
+    m_Key: PointMs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472137266569216
+    m_Key: AllColours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474450995650560
+    m_Key: GreyTutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475263537192960
+    m_Key: ColourTutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475671051575296
+    m_Key: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475742388297728
+    m_Key: Scores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475786399129600
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1656145614584

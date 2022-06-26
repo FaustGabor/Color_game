@@ -892,7 +892,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 5daf7896ea0adafbf673692fa564143b
+      Hash: d731845976785dda7f5823e8e24c1a39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Drag_And_Drop_3D

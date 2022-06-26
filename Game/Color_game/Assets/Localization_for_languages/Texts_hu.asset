@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Texts_hu
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: hu
+  m_SharedData: {fileID: 11400000, guid: 5abedcfb35e60c749ab4762deefaf92e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11115896832
+    m_Localized: "Gy\xE1rtotta:\n\nFaust G\xE1bor\nPaul Green-Armytage\nPolg\xE1r
+      Don\xE1t\nPill\xE9r Attila\nRobert Hirschler\nMaggie Maggio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 269707321344
+    m_Localized: "Ez a j\xE1t\xE9k az Association\nInternationale de la Couleur (AIC)
+      sz\xE1m\xE1ra lett k\xE9sz\xEDtve."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470217562988544
+    m_Localized: "Trap\xE9z j\xE1t\xE9k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470448757219328
+    m_Localized: "Sz\xFCrke sk\xE1l\xE1s j\xE1t\xE9k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470538586628096
+    m_Localized: "\xC9l\xE9nk"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470591917203456
+    m_Localized: "Fak\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470662675111936
+    m_Localized: Tompa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470988866134016
+    m_Localized: "S\xF6t\xE9t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471475506061312
+    m_Localized: pont,mp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472137266569216
+    m_Localized: "Minden sz\xEDn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474450995650560
+    m_Localized: "Sz\xFCrke sk\xE1la bemutat\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475263537192960
+    m_Localized: "Sz\xEDn bemutat\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475671051575296
+    m_Localized: "Bemutat\xF3k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475742388297728
+    m_Localized: Pontok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475786399129600
+    m_Localized: "Kil\xE9p\xE9s"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -6,11 +6,12 @@ using TMPro;
 
 public class Menu_BTN_Handler : MonoBehaviour
 {
-    public GameObject game_selector;
-    public GameObject start_menu;
-    public GameObject tutorial;
-    public GameObject score;
-    public GameObject info;
+    [SerializeField] private GameObject game_selector;
+    [SerializeField] private GameObject start_menu;
+    [SerializeField] private GameObject tutorial;
+    [SerializeField] private GameObject score;
+    [SerializeField] private GameObject info;
+    [SerializeField] private GameObject language;
 
     public void Change_To_Games()
     {
@@ -35,7 +36,7 @@ public class Menu_BTN_Handler : MonoBehaviour
         tutorial.SetActive(false);
         score.SetActive(true);
 
-        score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = "Diamond game:\n" + PlayerPrefs.GetFloat("Diamond",999).ToString() + " point\n\n Grey scale game:\n\nAll colours: " + PlayerPrefs.GetFloat("GrayScale",999).ToString() + " mp" + "\nVivid: " + PlayerPrefs.GetFloat("GrayScaleVivid", 999).ToString() + " mp" + "\nPale: " + PlayerPrefs.GetFloat("GrayScalePale", 999).ToString() + " mp" + "\nMuted: " + PlayerPrefs.GetFloat("GrayScaleMuted", 999).ToString() + " mp" + "\nDark: " + PlayerPrefs.GetFloat("GrayScaleDark", 999).ToString() + " mp";
+        score.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = language.GetComponent<Language_file>().GetScores();
     }
     public void Change_To_Info()
     {

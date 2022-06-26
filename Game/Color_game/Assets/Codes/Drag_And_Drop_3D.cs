@@ -11,6 +11,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
     public List<GameObject> badcubes = new List<GameObject>();
     public List<GameObject> goodcubes = new List<GameObject>();
 
+    [SerializeField] private GameObject selected_obj_circle;
 
     void GreyScalePart()
     {
@@ -26,6 +27,10 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     {
                         selected_obj = hit.transform.gameObject;
                         background.SetActive(true);
+                        selected_obj_circle.gameObject.SetActive(true);
+                        selected_obj_circle.transform.position = selected_obj.transform.position;
+                        selected_obj_circle.transform.position += Vector3.up;
+                        selected_obj.transform.position += new Vector3(0, 0.5f, 0);
                     }
                 }
                 else // Lementett kockát lerakja a kattintás helyére (de úgy hogy a kattintásnál csak a Z koordinátát nézi [a skála mellett marad])
@@ -34,11 +39,13 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     if (z > 84.158) z = 84.158f;
                     if (z < 77.757) z = 77.757f;
 
+                    selected_obj.transform.position += new Vector3(0, -0.5f, 0);
                     selected_obj.transform.position = new Vector3(selected_obj.transform.position.x, selected_obj.transform.position.y, z);
                     selected_obj.GetComponent<Color_cube>().adjust_pos = true; // emiatt kerül jó helyre, és megnézi hogy a megfelelõ partner mellett van-e
                     selected_obj = null;
                     adjust_pos = true;
                     background.SetActive(false);
+                    selected_obj_circle.gameObject.SetActive(false);
                 }
             }
         }
