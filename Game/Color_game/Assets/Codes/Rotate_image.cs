@@ -6,6 +6,6 @@ public class Rotate_image : MonoBehaviour
 {
     void Update()
     {
-        this.transform.RotateAround(transform.position, Vector3.up, 0.5f);
+        this.transform.RotateAround(transform.position, Vector3.up, 100f*Time.deltaTime);
     }
 }

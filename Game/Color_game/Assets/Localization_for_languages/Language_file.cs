@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Language_file : MonoBehaviour
 {
@@ -16,5 +17,17 @@ public class Language_file : MonoBehaviour
                          + "\n" + LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Muted") + ": " + PlayerPrefs.GetFloat("GrayScaleMuted", 999).ToString() + point_ms.Split(',')[1]
                          + "\n" + LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Dark") + ": " + PlayerPrefs.GetFloat("GrayScaleDark", 999).ToString() + point_ms.Split(',')[1];
         return text;
+    }
+
+    public void SetEN()
+    {
+        Locale lang = LocalizationSettings.AvailableLocales.Locales[0];
+        LocalizationSettings.SelectedLocale = lang;
+    }
+
+    public void SetHU()
+    {
+        Locale lang = LocalizationSettings.AvailableLocales.Locales[1];
+        LocalizationSettings.SelectedLocale = lang;
     }
 }

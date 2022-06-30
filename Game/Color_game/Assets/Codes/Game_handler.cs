@@ -7,17 +7,17 @@ using System.Linq;
 
 public class Game_handler : MonoBehaviour
 {
-    [SerializeField] List<GameObject> Vivid_colors;
-    [SerializeField] List<GameObject> Pale_colors;
-    [SerializeField] List<GameObject> Muted_colors;
-    [SerializeField] List<GameObject> Dark_colors;
+    [SerializeField] List<GameObject> Vivid_colors; // grey scale
+    [SerializeField] List<GameObject> Pale_colors; // grey scale
+    [SerializeField] List<GameObject> Muted_colors; // grey scale
+    [SerializeField] List<GameObject> Dark_colors; // grey scale
 
-    [SerializeField] List<GameObject> spawned_obj_left;
-    [SerializeField] List<GameObject> spawned_obj_right;
+    [SerializeField] List<GameObject> spawned_obj_left; // grey scale
+    [SerializeField] List<GameObject> spawned_obj_right; // grey scale
 
-    public List<GameObject> all_cubes;
-    public List<GameObject> ghost_cubes;
-    private List<GameObject> selected_cubes;
+    public List<GameObject> all_cubes;  // grey scale + Diamond
+    public List<GameObject> ghost_cubes; // Diamond
+    private List<GameObject> selected_cubes; // grey scale
 
     public GameObject timer;
     public GameObject btn_handler;
