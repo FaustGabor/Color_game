@@ -63,7 +63,7 @@ public class Menu_BTN_Handler : MonoBehaviour
 
     public void Load_Color_Organizer()
     {
-        SceneManager.LoadScene("Diamond_Game");
+        SceneManager.LoadScene("Diamond_chooser");
     }
 
     public void Load_Gray_Scale()

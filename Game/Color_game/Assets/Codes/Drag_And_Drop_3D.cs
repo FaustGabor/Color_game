@@ -110,7 +110,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
     }
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Diamond_Game")
+        if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
             DiamondPart();
         else
             GreyScalePart();

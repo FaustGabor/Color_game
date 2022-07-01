@@ -15,6 +15,10 @@ public class Game_handler : MonoBehaviour
     [SerializeField] List<GameObject> spawned_obj_left; // grey scale
     [SerializeField] List<GameObject> spawned_obj_right; // grey scale
 
+    [SerializeField] List<GameObject> coloured_cubes_for_diamond; // diamond
+    [SerializeField] List<GameObject> ghost_cubes_for_diamond; // diamond
+    [SerializeField] int play_dimension; // diamond
+
     public List<GameObject> all_cubes;  // grey scale + Diamond
     public List<GameObject> ghost_cubes; // Diamond
     private List<GameObject> selected_cubes; // grey scale
@@ -132,7 +136,7 @@ public class Game_handler : MonoBehaviour
         return null;
     }
 
-    public void Add_Cube(bool left, GameObject obj)
+    public void Add_Cube(bool left, GameObject obj)  // grey scale
     {
         if (left)
         {
@@ -168,7 +172,7 @@ public class Game_handler : MonoBehaviour
         return true;
     }
 
-    public void Completed() 
+    public void Completed() // grey scale
     {
         if (!SceneManager.GetActiveScene().name.Contains("Tutorial"))
         {
@@ -177,7 +181,7 @@ public class Game_handler : MonoBehaviour
         btn_handler.GetComponent<Game_BTN_handler>().Load_Win();
     }
 
-    public void Check_right_colors()
+    public void Check_right_colors() // grey scale + diamond
     {
         if (SceneManager.GetActiveScene().name == "Gray_scale") // ha a kocka jó helyen van, akkor egy pipát rak melléjük
         {
@@ -201,15 +205,15 @@ public class Game_handler : MonoBehaviour
                 }
             }
         }
-        if (SceneManager.GetActiveScene().name == "Diamond_Game")
+        if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
         {
             //A rossz helyen lévõ kockák lsitája
-            List<GameObject> badones = GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().badcubes;
+            List<GameObject> badones = GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().badcubes;
 
             //A rossz helyen lévõ kockák visszarakása az eredeti helyükre
             foreach (var item in badones)
             {
-                foreach (var item2 in GameObject.Find("EventHandler").GetComponent<Random_OBJ_Placemant>().orginalpositions)
+                foreach (var item2 in GameObject.Find("GameHandler").GetComponent<Random_OBJ_Placemant>().orginalpositions)
                 {
                     if(item.name == item2.Key)
                     {
@@ -217,11 +221,11 @@ public class Game_handler : MonoBehaviour
                     }
                 }
             }
-            GameObject.Find("EventHandler").GetComponent<Drag_And_Drop_3D>().badcubes.Clear();
+            GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().badcubes.Clear();
         }
     }
 
-    public void Select_cube_list(string list)
+    public void Select_cube_list(string list) // grey scale 
     {
         switch (list)
         {
@@ -244,6 +248,31 @@ public class Game_handler : MonoBehaviour
             selected_cubes[i] = selected_cubes[random];
             selected_cubes[random] = temp;
         }
+    }
+
+    public void RandomDiamondColours()
+    {
+        all_cubes.Clear();
+        ghost_cubes.Clear();
+
+        int colour_package_number = coloured_cubes_for_diamond.Count / play_dimension;
+
+        int r = new System.Random().Next(0, colour_package_number);
+
+        for (int i = (r*play_dimension); i < ((r * play_dimension) + play_dimension); i++)
+        {
+            all_cubes.Add(coloured_cubes_for_diamond[i]);
+            ghost_cubes.Add(ghost_cubes_for_diamond[i]);
+
+            coloured_cubes_for_diamond[i].SetActive(true);
+            ghost_cubes_for_diamond[i].SetActive(true);
+        }
+    }
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name.Contains("Diamond_Game") && play_dimension != 0)
+        { RandomDiamondColours(); this.gameObject.GetComponent<Random_OBJ_Placemant>().enabled = true; }
     }
 
 }
