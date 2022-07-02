@@ -15,6 +15,11 @@ public class Diamond_chooser : MonoBehaviour
         SceneManager.LoadScene("Diamond_Game_2x2");
     }
 
+    public void Game3()
+    {
+        SceneManager.LoadScene("Diamond_Game_3x3");
+    }
+
     public void To_menu()
     {
         SceneManager.LoadScene("Menu");

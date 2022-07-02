@@ -90,4 +90,9 @@ public class Menu_BTN_Handler : MonoBehaviour
     {
         language.GetComponent<Language_file>().SetHU();
     }
+
+    private void Start()
+    {
+        Set_Language_EN();
+    }
 }
