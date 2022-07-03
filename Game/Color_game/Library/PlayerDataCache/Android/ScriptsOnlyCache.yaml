@@ -35,7 +35,10 @@ ScriptsOnlyBuild:
     Unity.Localization.dll:
     - UnityEngine.Localization.Components.LocalizeStringEvent
     - UnityEngine.Localization.Locale
+    - UnityEngine.Localization.LocalizationBehaviour
     - UnityEngine.Localization.Settings.LocalizationSettings
+    - UnityEngine.Localization.Tables.SharedTableData
+    - UnityEngine.Localization.VariantsPropertyDriver
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -79,6 +82,8 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -142,6 +147,8 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -213,6 +220,8 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -287,6 +296,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -360,6 +371,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -425,8 +438,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -491,6 +502,8 @@ ScriptsOnlyBuild:
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -573,6 +586,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -644,8 +659,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -712,8 +725,6 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}

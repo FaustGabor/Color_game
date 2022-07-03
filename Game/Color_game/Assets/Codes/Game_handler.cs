@@ -233,6 +233,16 @@ public class Game_handler : MonoBehaviour
             case "muted": selected_cubes = new List<GameObject>(Muted_colors); break;
             case "pale": selected_cubes = new List<GameObject>(Pale_colors); break;
             case "dark": selected_cubes = new List<GameObject>(Dark_colors); break;
+            case "one":
+                {
+                    selected_cubes = new List<GameObject>();
+                    int random_hue = new System.Random().Next(0,8);
+                    selected_cubes.Add(all_cubes[random_hue]);
+                    selected_cubes.Add(all_cubes[random_hue + 9]);
+                    selected_cubes.Add(all_cubes[random_hue + 18]);
+                    selected_cubes.Add(all_cubes[random_hue + 27]);
+                    break;
+                }
             default: selected_cubes = all_cubes; break;
         }
         selected_colour = list;

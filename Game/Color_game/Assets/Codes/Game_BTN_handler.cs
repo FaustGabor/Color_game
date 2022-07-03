@@ -26,11 +26,11 @@ public class Game_BTN_handler : MonoBehaviour
     {
         switch (state)
         {
-            case 0: 
+            case 0:
                 {
                     text.GetComponent<TextMeshProUGUI>().text = "Here you can see nine colors representing nine hue families: Yellow, Orange, Red, Magenta, Violet, Blue, Turquoise, Green and Lime. ";
                     vivid.SetActive(true);
-                    break; 
+                    break;
                 }
             case 1:
                 {
@@ -127,7 +127,7 @@ public class Game_BTN_handler : MonoBehaviour
                     dark.transform.position = Vector3.zero;
                     break;
                 }
-            default: 
+            default:
                 {
                     text.GetComponent<TextMeshProUGUI>().text = "There is nothing more to learn. Go back to the Menu";
                     every_color.SetActive(true);
@@ -155,8 +155,8 @@ public class Game_BTN_handler : MonoBehaviour
     public void Help() // grey scale tutorial
     {
         help.SetActive(true);
-        if(SceneManager.GetActiveScene().name != "Diamond_Game")
-            if(arrow != null)arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f,0f);
+        if (SceneManager.GetActiveScene().name != "Diamond_Game")
+            if (arrow != null) arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
     }
 
     public void End_Help() // grey scale tutorial
@@ -178,7 +178,7 @@ public class Game_BTN_handler : MonoBehaviour
             help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
             if (menu_window != null) menu_window.SetActive(false);
             if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(false);
-            
+
         }
     }
 
@@ -248,6 +248,13 @@ public class Game_BTN_handler : MonoBehaviour
     public void Set_grayscale_to_all()
     {
         game_handler.GetComponent<Game_handler>().Select_cube_list("");
+        game_type.SetActive(false);
+        spawners.SetActive(true);
+    }
+
+    public void Set_grayscale_to_one()
+    {
+        game_handler.GetComponent<Game_handler>().Select_cube_list("one");
         game_type.SetActive(false);
         spawners.SetActive(true);
     }

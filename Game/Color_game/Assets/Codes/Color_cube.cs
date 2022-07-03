@@ -55,6 +55,7 @@ public class Color_cube : MonoBehaviour
     {
         partners = gray_partner.Split(',');
 
+        /*// 0.8-as colliderel, csak a megfelelõ helyekenm fogadja el
         if (partners.Length == 1)
         {
             foreach (var item in collided_obj)
@@ -87,6 +88,98 @@ public class Color_cube : MonoBehaviour
                 at_right_position = false;
             }
         }
+        */
+
+        // 0.8-as colliderel, fél kockával alrébb is elfogadja
+        if (partners.Length == 1)
+        {
+            for (int i = 0; i < collided_obj.Count; i++)
+            {
+                if (partners[0].Contains(collided_obj[i].name))
+                {
+                    at_right_position = true;
+                    break;
+                }
+                at_right_position = false;
+            }
+        }
+        else
+        {
+            if (collided_obj.Count > 1)
+            {
+                if (partners[0].Contains(collided_obj[0].name) || (collided_obj.Count > 1 ? partners[0].Contains(collided_obj[1].name) : false))
+                {
+                    if (partners[1].Contains(collided_obj[0].name) || (collided_obj.Count > 1 ? partners[1].Contains(collided_obj[1].name) : false))
+                    {
+                        at_right_position = true;
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                if (partners[0].Contains(collided_obj[0].name) || (collided_obj.Count > 1 ? partners[0].Contains(collided_obj[1].name) : false))
+                {
+                    at_right_position = true;
+                    return;
+                }
+
+                if (partners[1].Contains(collided_obj[0].name) || (collided_obj.Count > 1 ? partners[1].Contains(collided_obj[1].name) : false))
+                {
+                    at_right_position = true;
+                    return;
+                }
+            }
+
+            at_right_position = false;
+        }
+        
+
+        /*// 1.8-as collider, 1/fél kockával alrébb is elfogadja, de nem jól mûködik az adjust_position
+        if (partners.Length == 1)
+        {
+            for (int i = 0; i < collided_obj.Count; i++)
+            {
+                if (partners[0].Contains(collided_obj[i].name))
+                {
+                    at_right_position = true;
+                    break;
+                }
+                at_right_position = false;
+            }
+        }
+        else
+        {
+            if (collided_obj.Count > 2)
+            {
+                if (partners[0].Contains(collided_obj[0].name) || partners[0].Contains(collided_obj[1].name) || (collided_obj.Count > 2 ? (partners[0].Contains(collided_obj[2].name)) : false))
+                {
+                    if (partners[1].Contains(collided_obj[0].name) || partners[1].Contains(collided_obj[1].name) || (collided_obj.Count > 2 ? (partners[1].Contains(collided_obj[2].name)) : false))
+                    {
+                        at_right_position = true;
+                        return;
+                    }
+                }
+                at_right_position = false;
+            }
+            else
+            {
+                if (partners[0].Contains(collided_obj[0].name) || partners[0].Contains(collided_obj[1].name))
+                {
+                    at_right_position = true;
+                    return;
+                }
+
+                if (partners[1].Contains(collided_obj[0].name) || partners[1].Contains(collided_obj[1].name))
+                {
+                    at_right_position = true;
+                    return;
+                }
+            }
+            at_right_position = false;
+        }
+        */
+        
     }
     // ----------------------------------- END OF GRAY SCALE ---------------------
 
