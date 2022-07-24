@@ -149,13 +149,23 @@ public class Game_BTN_handler : MonoBehaviour
 
     public void Load_Win()
     {
-        SceneManager.LoadScene("Win");
+        if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
+        {
+            if (GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count == 36)
+            {
+                SceneManager.LoadScene("Win");
+            }
+            else
+            {
+                Load_Menu();
+            }
+        }
     }
 
     public void Help() // grey scale tutorial
     {
         help.SetActive(true);
-        if (SceneManager.GetActiveScene().name != "Diamond_Game")
+        if (!SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
             if (arrow != null) arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
     }
 
@@ -193,7 +203,7 @@ public class Game_BTN_handler : MonoBehaviour
         menu_window.SetActive(false);
 
         //A jó helyen lévõ kockák megszámolása majd kiíratás mint pontszám
-        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count;
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count+"/36";
         if (SceneManager.GetActiveScene().name.Contains("Diamond"))
         {
             PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count);

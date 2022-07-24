@@ -4863,7 +4863,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6249,7 +6249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7411765, b: 0.16862746, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16692,6 +16692,9 @@ MonoBehaviour:
   Dark_colors: []
   spawned_obj_left: []
   spawned_obj_right: []
+  coloured_cubes_for_diamond: []
+  ghost_cubes_for_diamond: []
+  play_dimension: 0
   all_cubes:
   - {fileID: 661297603}
   - {fileID: 1515171624}
@@ -17756,9 +17759,9 @@ MonoBehaviour:
     = VividRed\t\tvM = VividMagenta\nmR = MutedRed\t\tmM = MutedMagenta\npR = PaleRed\t\tpM
     = PaleMagenta\ndR = DarkRed\t\tdM = DarkMagenta\n\nvV = VividViolet\t\tvB = VividBlue\nmV
     = MutedViolet\t\tmB = MutedBlue\npV = PaleViolet\t\tpB = PaleBlue\ndV = DarkViolet\t\tdB
-    = DarkBlue\n\nvT = VoidTurquoise\tvL = VividLime\nmT = MutedTurquoise\tmL = MutedLime\npT
-    = PaleTurquoise\tpL = PaleLime\ndT = DarkTurquoise\tdL = DarkLime\n\n\t\tvG =
-    VioletGreen\n\t\tmG = MutedGreen\n\t\tpG = PaleGreen\n\t\tdG = DarkGreen\n"
+    = DarkBlue\n\nvT = VividTurquoise\tvL = VividLime\nmT = MutedTurquoise\tmL =
+    MutedLime\npT = PaleTurquoise\tpL = PaleLime\ndT = DarkTurquoise\tdL = DarkLime\n\n\t\tvG
+    = VividGreen\n\t\tmG = MutedGreen\n\t\tpG = PaleGreen\n\t\tdG = DarkGreen\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
