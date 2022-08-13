@@ -11,7 +11,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
     public List<GameObject> badcubes = new List<GameObject>();
     public List<GameObject> goodcubes = new List<GameObject>();
 
-    [SerializeField] private GameObject selected_obj_circle;
+    [SerializeField] private GameObject selected_obj_shower;
 
     void GreyScalePart()
     {
@@ -27,9 +27,9 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     {
                         selected_obj = hit.transform.gameObject;
                         background.SetActive(true);
-                        selected_obj_circle.gameObject.SetActive(true);
-                        selected_obj_circle.transform.position = selected_obj.transform.position;
-                        selected_obj_circle.transform.position += Vector3.up;
+                        selected_obj_shower.gameObject.SetActive(true);
+                        selected_obj_shower.transform.position = selected_obj.transform.position;
+                        selected_obj_shower.transform.position += Vector3.up/2;
                         selected_obj.transform.position += new Vector3(0, 0.5f, 0);
                     }
                 }
@@ -45,7 +45,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     selected_obj = null;
                     adjust_pos = true;
                     background.SetActive(false);
-                    selected_obj_circle.gameObject.SetActive(false);
+                    selected_obj_shower.gameObject.SetActive(false);
                 }
             }
         }
