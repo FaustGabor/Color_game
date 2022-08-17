@@ -66,6 +66,11 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     if (hit.transform.gameObject.tag != "Ghost_Cubes")
                     {
                         selected_obj = hit.transform.gameObject;
+                        selected_obj.transform.position += Vector3.up / 2;
+
+                        selected_obj_shower.gameObject.SetActive(true);
+                        selected_obj_shower.transform.position = selected_obj.transform.position;
+                        selected_obj_shower.transform.position += Vector3.down * (0.3f);
                     }
                 }
                 else
@@ -73,14 +78,14 @@ public class Drag_And_Drop_3D : MonoBehaviour
                     //Ne lesennek egymásra rakni a kockákat
                     if(hit.transform.gameObject.tag == "Drag")
                     {
+                        selected_obj.transform.position += Vector3.down / 2;
                         selected_obj = null;
-                        Debug.Log("Over");
+                        selected_obj_shower.gameObject.SetActive(false);
                         return;
                     }
                     //A jó helyen lévõ kockák
                     if(selected_obj.name == hit.transform.name)
                     {
-                        Debug.Log("Good");
                         //Ha eddig rossz helyen volt akkor azt abból a listávól kitörlöm
                         if(badcubes.Contains(selected_obj))
                         {
@@ -99,11 +104,12 @@ public class Drag_And_Drop_3D : MonoBehaviour
                         //Ha eddig jó helyen volt de át lett rakva rosszra akkor kitörlöm a jók közül
                         if (goodcubes.Contains(selected_obj))
                             goodcubes.Remove(selected_obj);
-                        Debug.Log("NotGood");
                     }
                         
                     selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
+                    selected_obj.transform.position += Vector3.down / 2;
                     selected_obj = null;
+                    selected_obj_shower.gameObject.SetActive(false);
                 }
             }
         }
