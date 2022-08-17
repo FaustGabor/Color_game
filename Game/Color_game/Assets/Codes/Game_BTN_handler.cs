@@ -192,9 +192,30 @@ public class Game_BTN_handler : MonoBehaviour
         }
     }
 
-    public void Close_Help()
+    public void Close_Help() // diamond
     {
         help.SetActive(false);
+    }
+
+    public void Diamond_Help_back()
+    {
+        if (state == 0) Close_Help();
+        else
+        {
+            help.transform.GetChild(state + 1).gameObject.SetActive(true);
+            help.transform.GetChild(state + 2).gameObject.SetActive(false);
+            state--;
+        }
+    }
+
+    public void Diamond_Help_forward()
+    {
+        if (state < 4)
+        {
+            state++;
+            help.transform.GetChild(state + 1).gameObject.SetActive(false);
+            help.transform.GetChild(state + 2).gameObject.SetActive(true);
+        }
     }
 
     public void Finish_Dia()
