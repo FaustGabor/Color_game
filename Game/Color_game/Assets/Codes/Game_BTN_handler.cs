@@ -160,6 +160,10 @@ public class Game_BTN_handler : MonoBehaviour
                 Load_Menu();
             }
         }
+        else
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
 
     public void Help() // grey scale tutorial
@@ -172,7 +176,7 @@ public class Game_BTN_handler : MonoBehaviour
     public void End_Help() // grey scale tutorial
     {
         help.SetActive(false);
-        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "In this game you have to match the coloured squares with their grey partners.\n\nMove the coloured square up / down on the scale and find the color’s grey partner.";
+        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Match the coloured squares with their grey partners\n(the grey cube on the scale that has a similar shade)\n\nMove the coloured square up / down on the scale and find the color’s grey partner.";
         if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(true);
     }
 

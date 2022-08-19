@@ -648,8 +648,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 679d14c0b7cdbe442bfdfcfbf38c01c5, type: 2}
+  m_sharedMaterial: {fileID: 3317170357259114075, guid: 679d14c0b7cdbe442bfdfcfbf38c01c5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -892,7 +892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &451116739
 Transform:
   m_ObjectHideFlags: 0
@@ -1607,9 +1607,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In this game you have to match the coloured squares with their grey partners.
-    \n\nMove the coloured square up/down on the scale and find the color\u2019s grey
-    partner. "
+  m_text: "Match the coloured squares with their grey partners\n(the grey cube on
+    the scale that has a similar shade)\n\nMove the coloured square up/down on the
+    scale and find the color\u2019s grey partner. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 679d14c0b7cdbe442bfdfcfbf38c01c5, type: 2}
   m_sharedMaterial: {fileID: 3317170357259114075, guid: 679d14c0b7cdbe442bfdfcfbf38c01c5, type: 2}
@@ -3374,7 +3374,6 @@ GameObject:
   - component: {fileID: 1903250811}
   - component: {fileID: 1903250810}
   - component: {fileID: 1903250809}
-  - component: {fileID: 1903250808}
   - component: {fileID: 1903250807}
   m_Layer: 0
   m_Name: Test
@@ -3402,33 +3401,6 @@ MonoBehaviour:
   partners: []
   collided_obj: []
   adjust_pos: 0
---- !u!114 &1903250808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903250806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b84539a03f2644189ffd86546107a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Vivid_colors: []
-  Pale_colors: []
-  Muted_colors: []
-  Dark_colors: []
-  spawned_obj_left: []
-  spawned_obj_right: []
-  coloured_cubes_for_diamond: []
-  ghost_cubes_for_diamond: []
-  play_dimension: 0
-  all_cubes: []
-  ghost_cubes: []
-  timer: {fileID: 0}
-  btn_handler: {fileID: 0}
-  green_check_picture: {fileID: 0}
-  selected_colour: 
 --- !u!54 &1903250809
 Rigidbody:
   m_ObjectHideFlags: 0

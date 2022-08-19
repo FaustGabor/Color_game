@@ -169,7 +169,7 @@ public class Game_handler : MonoBehaviour
             }
             Completed();
         }
-        return true;
+        return false;
     }
 
     public void Completed() // grey scale
