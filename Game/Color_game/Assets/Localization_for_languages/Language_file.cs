@@ -21,6 +21,7 @@ public class Language_file : MonoBehaviour
 
     public void SetEN()
     {
+
         Locale lang = LocalizationSettings.AvailableLocales.Locales[0];
         LocalizationSettings.SelectedLocale = lang;
     }

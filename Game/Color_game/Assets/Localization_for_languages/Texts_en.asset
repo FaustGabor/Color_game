@@ -82,5 +82,219 @@ MonoBehaviour:
     m_Localized: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 20300213462704128
+    m_Localized: Congratulations!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20314108214583296
+    m_Localized: "Match the coloured squares with their grey partners\n(the grey
+      cube on the scale that has a similar shade)\n\nMove the coloured square up/down
+      on the scale and find the color\u2019s grey partner. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20315299992510464
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20316830288519168
+    m_Localized: You have not found the right grey partners yet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20317842072084480
+    m_Localized: Select which colours you want to play with
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20318932108779520
+    m_Localized: One colour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20320198461431808
+    m_Localized: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20320376937455616
+    m_Localized: Check coloures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20354905211346944
+    m_Localized: Match the colours with their initials
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20364489921601536
+    m_Localized: "vY = VividYellow\t\r\nmY = MutedYellow\r\npY = PaleYellow\t\r\ndY
+      = DarkYellow\t\r\n\r\n\r\nvO = VividOrange\r\nmO = MutedOrange\r\npO = PaleOrange\r\ndO
+      = DarkOrange"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368238857625600
+    m_Localized: "vR = VividRed\t\r\nmR = MutedRed\t\r\npR = PaleRed\t\r\ndR = DarkRed\t\r\n\t\r\n\r\nvM
+      = VividMagenta\r\nmM = MutedMagenta\r\npM = PaleMagenta\r\ndM = DarkMagenta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368255857139712
+    m_Localized: "vV = VividViolet\t\r\nmV = MutedViolet\t\r\npV = PaleViolet\t\r\ndV
+      = DarkViolet\t\t\r\n\r\n\r\nvB = VividBlue\r\nmB = MutedBlue\r\npB = PaleBlue\r\ndB
+      = DarkBlue"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368269744480256
+    m_Localized: "vT = VividTurquoise\t\r\nmT = MutedTurquoise\t\r\npT = PaleTurquoise\t\r\ndT
+      = DarkTurquoise\t\r\n\r\n\r\nvL = VividLime\r\nmL = MutedLime\r\npL = PaleLime\r\ndL
+      = DarkLime"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368281635332096
+    m_Localized: "vG = VividGreen\t\r\nmG = MutedGreen\r\npG = PaleGreen\r\ndG =
+      DarkGreen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369675268333568
+    m_Localized: vY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369806621351936
+    m_Localized: mY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369842906275840
+    m_Localized: pY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369890847170560
+    m_Localized: dY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369931833909248
+    m_Localized: vO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369978592010240
+    m_Localized: mO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369981704183808
+    m_Localized: pO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369984006856704
+    m_Localized: dO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370106094657536
+    m_Localized: vR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370107575246848
+    m_Localized: mR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370109286522880
+    m_Localized: pR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370110943272960
+    m_Localized: dR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370216056725504
+    m_Localized: vM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370217252102144
+    m_Localized: mM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370218820771840
+    m_Localized: pM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370220393635840
+    m_Localized: dM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370372420378624
+    m_Localized: vV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370373963882496
+    m_Localized: mV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370375645798400
+    m_Localized: pV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370377336102912
+    m_Localized: dV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370492142592000
+    m_Localized: vB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370498740232192
+    m_Localized: mB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370502745792512
+    m_Localized: pB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370506298368000
+    m_Localized: dB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370510102601728
+    m_Localized: vT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370788067516416
+    m_Localized: mT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370791666229248
+    m_Localized: pT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370798859460608
+    m_Localized: dT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370938450092032
+    m_Localized: vL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370939758714880
+    m_Localized: mL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370941411270656
+    m_Localized: pL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370943034466304
+    m_Localized: dL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371064019165184
+    m_Localized: vG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371065277456384
+    m_Localized: mG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371066883874816
+    m_Localized: pG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371068314132480
+    m_Localized: dG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20427715719929856
+    m_Localized: One type
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

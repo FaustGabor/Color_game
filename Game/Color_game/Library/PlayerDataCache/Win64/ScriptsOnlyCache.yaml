@@ -20,6 +20,7 @@ ScriptsOnlyBuild:
     - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedMode
     - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedPlayMode
     - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptVirtualMode
+    - UnityEditor.AddressableAssets.GUI.AddressableAssetGroupInspector
     - UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
     - UnityEditor.AddressableAssets.Settings.AddressableAssetGroupTemplate
     - UnityEditor.AddressableAssets.Settings.AddressableAssetSettings
@@ -29,13 +30,13 @@ ScriptsOnlyBuild:
     Unity.DeviceSimulator.Editor.dll:
     - UnityEditor.DeviceSimulation.DeviceInfoAsset
     - UnityEditor.DeviceSimulation.SimulatorWindow
+    Unity.Localization.Editor.dll:
+    - UnityEditor.Localization.StringTableCollection
+    - UnityEditor.Localization.UI.LocalizationTablesWindow
     Unity.Localization.dll:
     - UnityEngine.Localization.Components.LocalizeStringEvent
     - UnityEngine.Localization.Locale
-    - UnityEngine.Localization.LocalizationBehaviour
     - UnityEngine.Localization.Settings.LocalizationSettings
-    - UnityEngine.Localization.Tables.SharedTableData
-    - UnityEngine.Localization.VariantsPropertyDriver
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -175,8 +176,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6156}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
@@ -296,6 +295,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1956}
     - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
       Script: {instanceID: 2900}
@@ -369,6 +370,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1956}
     - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
       Script: {instanceID: 2900}
@@ -435,6 +438,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1548}
     - Class: 114
       Script: {instanceID: 1956}
+    - Class: 114
+      Script: {instanceID: 2418}
     - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
@@ -503,6 +508,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1956}
     - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
       Script: {instanceID: 2900}
@@ -527,8 +534,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6156}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -583,6 +588,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1548}
     - Class: 114
       Script: {instanceID: 1956}
+    - Class: 114
+      Script: {instanceID: 2418}
     - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
@@ -690,6 +697,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -724,6 +735,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1956}
     - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
       Script: {instanceID: 2900}
@@ -740,8 +753,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3844}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}

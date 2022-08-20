@@ -75,6 +75,212 @@ MonoBehaviour:
     m_Key: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 20300213462704128
+    m_Key: Congrat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20314108214583296
+    m_Key: Grey help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20315299992510464
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20316830288519168
+    m_Key: 'Grey_exit_text
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20317842072084480
+    m_Key: Select_grey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20318932108779520
+    m_Key: One_colour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20320198461431808
+    m_Key: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20320376937455616
+    m_Key: Check
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20354905211346944
+    m_Key: Diamond help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20364489921601536
+    m_Key: Diamond_help_page1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368238857625600
+    m_Key: Diamond_help_page2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368255857139712
+    m_Key: Diamond_help_page3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368269744480256
+    m_Key: Diamond_help_page4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368281635332096
+    m_Key: Diamond_help_page5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369675268333568
+    m_Key: vY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369806621351936
+    m_Key: mY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369842906275840
+    m_Key: pY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369890847170560
+    m_Key: dY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369931833909248
+    m_Key: vO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369978592010240
+    m_Key: mO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369981704183808
+    m_Key: pO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369984006856704
+    m_Key: dO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370106094657536
+    m_Key: vR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370107575246848
+    m_Key: mR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370109286522880
+    m_Key: pR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370110943272960
+    m_Key: dR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370216056725504
+    m_Key: vM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370217252102144
+    m_Key: mM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370218820771840
+    m_Key: pM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370220393635840
+    m_Key: dM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370372420378624
+    m_Key: vV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370373963882496
+    m_Key: mV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370375645798400
+    m_Key: pV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370377336102912
+    m_Key: dV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370492142592000
+    m_Key: vB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370498740232192
+    m_Key: mB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370502745792512
+    m_Key: pB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370506298368000
+    m_Key: dB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370510102601728
+    m_Key: vT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370788067516416
+    m_Key: mT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370791666229248
+    m_Key: pT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370798859460608
+    m_Key: dT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370938450092032
+    m_Key: vL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370939758714880
+    m_Key: mL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370941411270656
+    m_Key: pL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370943034466304
+    m_Key: dL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371064019165184
+    m_Key: vG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371065277456384
+    m_Key: mG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371066883874816
+    m_Key: pG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371068314132480
+    m_Key: dG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20427715719929856
+    m_Key: One_type
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

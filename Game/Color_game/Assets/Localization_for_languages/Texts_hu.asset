@@ -80,5 +80,221 @@ MonoBehaviour:
     m_Localized: "Kil\xE9p\xE9s"
     m_Metadata:
       m_Items: []
+  - m_Id: 20300213462704128
+    m_Localized: "Gratul\xE1lunk!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20314108214583296
+    m_Localized: "P\xE1ros\xEDtsd \xF6ssze a sz\xEDnes kock\xE9kat a sz\xFCrke partner\xFCkkel\r\n(a
+      sz\xFCrke kock\xE1k a sk\xE1l\xE1n, amelyek hasonl\xF3 az \xE1rnyalata)\r\n\r\nMozgasd
+      a sz\xEDnes kock\xE1kat fel/le a sk\xE1l\xE1n, \xE9s tal\xE1ld meg a sz\xFCrke
+      partner\xE9t."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20315299992510464
+    m_Localized: "Folytat\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20316830288519168
+    m_Localized: "M\xE9g nem tal\xE1ltad meg a megfelel\u0151 sz\xFCrke partnereket."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20317842072084480
+    m_Localized: "V\xE1laszd ki milyen sz\xEDnekkel szeretn\xE9l j\xE1tszani."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20318932108779520
+    m_Localized: "Egy sz\xEDn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20320198461431808
+    m_Localized: "Befelyez\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20320376937455616
+    m_Localized: "Sz\xEDnek ellen\u0151rz\xE9se"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20354905211346944
+    m_Localized: "P\xE1ros\xEDtsd \xF6ssze a sz\xEDneket a megfelel\u0151 kezd\u0151bet\xFCkkel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20364489921601536
+    m_Localized: "\xE9S = \xC9l\xE9nkS\xE1rga\r\ntS = TompaS\xE1rga\r\nfS = Fak\xF3S\xE1rga\r\nsS
+      = S\xF6t\xE9tS\xE1rga\r\n\r\n\r\n\xE9N = \xC9l\xE9nkNarancs\r\ntN = TompaNarancs\r\nfN
+      = Fak\xF3Narancs\r\nsN = S\xF6t\xE9tNarancs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368238857625600
+    m_Localized: "\xE9P = \xC9l\xE9nkPiros\r\ntP = TompaPiros\r\nfP = Fak\xF3Piros\r\nsP
+      = S\xF6t\xE9tPiros\r\n\r\n\r\n\xE9M = \xC9l\xE9nkMagenta\r\ntM = TompaMagenta\r\nfM
+      = Fak\xF3Magenta\r\nsM = S\xF6t\xE9tMagenta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368255857139712
+    m_Localized: "\xE9I = \xC9l\xE9nkIbolya\r\ntI = TompaIbolya\r\nfI = Fak\xF3Ibolya\r\nsI
+      = S\xF6t\xE9tIbolya\r\n\r\n\r\n\xE9K = \xC9l\xE9nkK\xE9k\r\ntK = TompaK\xE9k\r\nfK
+      = Fak\xF3K\xE9k\r\nsK = S\xF6t\xE9tK\xE9k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368269744480256
+    m_Localized: "\xE9T = \xC9l\xE9nkT\xFCrkiz\r\ntT = TompaT\xFCrkiz\r\nfT = Fak\xF3T\xFCrkiz\r\nsT
+      = S\xF6t\xE9tT\xFCrkiz\r\n\r\n\r\n\xE9L = \xC9l\xE9nkLime\r\ntL = TompaLime\r\nfL
+      = Fak\xF3Lime\r\nsL = S\xF6t\xE9Lime"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20368281635332096
+    m_Localized: "\xE9Z = \xC9l\xE9nkZ\xF6ld\r\ntZ = TompaZ\xF6ld\r\nfZ = Fak\xF3Z\xF6ld\r\nsZ
+      = S\xF6t\xE9Z\xF6ld"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369675268333568
+    m_Localized: "\xE9S"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369806621351936
+    m_Localized: tS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369842906275840
+    m_Localized: fS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369890847170560
+    m_Localized: sS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369931833909248
+    m_Localized: "\xE9N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369978592010240
+    m_Localized: tN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369981704183808
+    m_Localized: fN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20369984006856704
+    m_Localized: sN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370106094657536
+    m_Localized: "\xE9P"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370107575246848
+    m_Localized: tP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370109286522880
+    m_Localized: fP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370110943272960
+    m_Localized: sP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370216056725504
+    m_Localized: "\xE9M"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370217252102144
+    m_Localized: tM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370218820771840
+    m_Localized: fM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370220393635840
+    m_Localized: sM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370372420378624
+    m_Localized: "\xE9I"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370373963882496
+    m_Localized: tI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370375645798400
+    m_Localized: fI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370377336102912
+    m_Localized: sI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370492142592000
+    m_Localized: "\xE9K"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370498740232192
+    m_Localized: tK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370502745792512
+    m_Localized: fK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370506298368000
+    m_Localized: sK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370510102601728
+    m_Localized: "\xE9T"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370788067516416
+    m_Localized: tT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370791666229248
+    m_Localized: fT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370798859460608
+    m_Localized: sT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370938450092032
+    m_Localized: "\xE9L"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370939758714880
+    m_Localized: tL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370941411270656
+    m_Localized: fL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20370943034466304
+    m_Localized: sL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371064019165184
+    m_Localized: "\xE9Z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371065277456384
+    m_Localized: tZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371066883874816
+    m_Localized: fZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20371068314132480
+    m_Localized: sZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20427715719929856
+    m_Localized: "Egy t\xEDpus"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

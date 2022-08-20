@@ -168,20 +168,28 @@ public class Game_BTN_handler : MonoBehaviour
 
     public void Help() // grey scale tutorial
     {
+
+
         help.SetActive(true);
         if (!SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
+        {
             if (arrow != null) arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
+            help.transform.GetChild(1).gameObject.SetActive(true);
+            help.transform.GetChild(2).gameObject.SetActive(false);
+        }
     }
 
     public void End_Help() // grey scale tutorial
     {
         help.SetActive(false);
-        help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Match the coloured squares with their grey partners\n(the grey cube on the scale that has a similar shade)\n\nMove the coloured square up / down on the scale and find the color’s grey partner.";
+
         if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(true);
     }
 
     public void Finish() // grey scale finish game
     {
+        help.transform.GetChild(1).gameObject.SetActive(false);
+        help.transform.GetChild(2).gameObject.SetActive(true);
         if (arrow != null)
         {
             arrow.SetActive(false);
@@ -189,7 +197,6 @@ public class Game_BTN_handler : MonoBehaviour
         if (!game_handler.GetComponent<Game_handler>().Check_right_positions()) // Ha igaz, akkor a Check_right_positions függvény már átvisz minket a következõ scene-re
         {
             help.SetActive(true);
-            help.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "You have not found the right grey partners yet.";
             if (menu_window != null) menu_window.SetActive(false);
             if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(false);
 
