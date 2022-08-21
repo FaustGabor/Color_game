@@ -281,6 +281,38 @@ MonoBehaviour:
     m_Key: One_type
     m_Metadata:
       m_Items: []
+  - m_Id: 20741735559667712
+    m_Key: Colour_tutorial_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744099691700224
+    m_Key: Colour_tutorial_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744131283197952
+    m_Key: Colour_tutorial_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744142406492160
+    m_Key: Colour_tutorial_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744199704879104
+    m_Key: Colour_tutorial_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744204045983744
+    m_Key: Colour_tutorial_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744228897234944
+    m_Key: Colour_tutorial_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744239638847488
+    m_Key: Colour_tutorial_8
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

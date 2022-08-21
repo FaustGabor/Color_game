@@ -31,4 +31,24 @@ public class Language_file : MonoBehaviour
         Locale lang = LocalizationSettings.AvailableLocales.Locales[1];
         LocalizationSettings.SelectedLocale = lang;
     }
+
+    public string Get_tutorial_text(int state)
+    {
+        string text = "";
+        switch (state)
+        {
+            case 0: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_2"); break;
+            case 1: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_3"); break;
+            case 2: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_4"); break;
+            case 3: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_5"); break;
+            case 4: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_6"); break;
+            case 5: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_7"); break;
+            case 6: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Vivid"); break;
+            case 7: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Pale"); break;
+            case 8: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Muted"); break;
+            case 9: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Dark"); break;
+            default: text = LocalizationSettings.StringDatabase.GetLocalizedString("Texts", "Colour_tutorial_8"); break;
+        }
+        return text;
+    }
 }

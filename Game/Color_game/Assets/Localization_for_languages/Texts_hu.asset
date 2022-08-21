@@ -296,5 +296,44 @@ MonoBehaviour:
     m_Localized: "Egy t\xEDpus"
     m_Metadata:
       m_Items: []
+  - m_Id: 20741735559667712
+    m_Localized: "Most a sz\xEDnekr\u0151l fogsz l\xE1tni egy bemutat\xF3t.\n\nA
+      nyilra kattintva l\xE9phetsz tov\xE1bb."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744099691700224
+    m_Localized: "Itt l\xE1thatod a kilenc sz\xEDnt, ami az \xE1rnyalatokat mutatja
+      be: S\xE1rga, narancs, Piros, Magenta, Ibolya, K\xE9k, T\xFCrkiz, Z\xF6ld \xE9s
+      Lime."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744131283197952
+    m_Localized: "Itt a sz\xEDnek fak\xF3bbak lettek, mert elvesztettek a tel\xEDtetts\xE9g\xFCkb\u0151l.
+      Ezek a fak\xF3 sz\xEDnek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744142406492160
+    m_Localized: "T\xE9ynleg fak\xF3bbak. Az el\u0151z\u0151 sz\xEDnek sokkal vil\xE1gosabbak
+      voltak. Ezek voltak a vil\xE1gos sz\xEDnek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744199704879104
+    m_Localized: "Itt a sz\xEDnek a feh\xE9rs\xE9g\xFCkb\u0151l vbesztettek el, \xEDgy
+      s\xF6t\xE9tebbek lettek. Ezek a tompa sz\xEDnek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744204045983744
+    m_Localized: "De a mostani sz\xEDnek m\xE9g az el\u0151z\u0151kn\xE9k is s\xF6t\xE9tebbek.
+      Ezek a s\xF6t\xE9t sz\xEDnek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744228897234944
+    m_Localized: "L\xE1tod, ezek s\xF6t\xE9tebbek mint a tompa sz\xEDnek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744239638847488
+    m_Localized: "Megtanult\xE1l mindent. Most nem vissza a men\xFCbe."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -28,20 +28,20 @@ public class Game_BTN_handler : MonoBehaviour
         {
             case 0:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Here you can see nine colors representing nine hue families: Yellow, Orange, Red, Magenta, Violet, Blue, Turquoise, Green and Lime. ";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(true);
                     break;
                 }
             case 1:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Now you can see that the colours have lost some of their colourfulness. They are the pale colors.";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(false);
                     pale.SetActive(true);
                     break;
                 }
             case 2:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "See, they are paler. The previous colors are much more vivid. The previous colors are the Vivid colors";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(true);
                     vivid.transform.position += new Vector3(0, 0, 0.2f);
                     pale.SetActive(true);
@@ -49,7 +49,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 3:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Now you can see that the colours have lost some of their whiteness and they are darker. They are the muted colors.";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(false);
                     pale.SetActive(false);
                     muted.SetActive(true);
@@ -57,14 +57,14 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 4:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "But these colors are darker still. They are the dark colors. ";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     dark.SetActive(true);
                     //muted.SetActive(false);
                     break;
                 }
             case 5:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "See, they are darker than the Muted colors.";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     muted.SetActive(true);
                     muted.transform.position += new Vector3(0, 0, 0.2f);
                     break;
@@ -72,7 +72,7 @@ public class Game_BTN_handler : MonoBehaviour
 
             case 6:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Vivids:";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     every_color.SetActive(false);
                     vivid.SetActive(true);
                     pale.SetActive(false);
@@ -87,7 +87,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 7:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Pales:";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(false);
                     pale.SetActive(true);
                     muted.SetActive(false);
@@ -101,7 +101,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 8:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Muteds:";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(false);
                     pale.SetActive(false);
                     muted.SetActive(true);
@@ -115,7 +115,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             case 9:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "Darks:";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     vivid.SetActive(false);
                     pale.SetActive(false);
                     muted.SetActive(false);
@@ -129,7 +129,7 @@ public class Game_BTN_handler : MonoBehaviour
                 }
             default:
                 {
-                    text.GetComponent<TextMeshProUGUI>().text = "There is nothing more to learn. Go back to the Menu";
+                    text.GetComponent<TextMeshProUGUI>().text = this.gameObject.GetComponent<Language_file>().Get_tutorial_text(state);
                     every_color.SetActive(true);
                     vivid.SetActive(false);
                     pale.SetActive(false);

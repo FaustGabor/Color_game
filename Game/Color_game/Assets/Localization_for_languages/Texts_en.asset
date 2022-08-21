@@ -296,5 +296,45 @@ MonoBehaviour:
     m_Localized: One type
     m_Metadata:
       m_Items: []
+  - m_Id: 20741735559667712
+    m_Localized: 'Now you are going to learn about the colours.
+
+
+      Click the
+      arrow to go forward.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744099691700224
+    m_Localized: 'Here you can see nine colors representing nine hue families: Yellow,
+      Orange, Red, Magenta, Violet, Blue, Turquoise, Green and Lime. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744131283197952
+    m_Localized: Now you can see that the colours have lost some of their colourfulness.
+      They are the pale colors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744142406492160
+    m_Localized: See, they are paler. The previous colors are much more vivid. The
+      previous colors are the Vivid colors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744199704879104
+    m_Localized: Now you can see that the colours have lost some of their whiteness
+      and they are darker. They are the muted colors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744204045983744
+    m_Localized: 'But these colors are darker still. They are the dark colors. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744228897234944
+    m_Localized: See, they are darker than the Muted colors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20744239638847488
+    m_Localized: There is nothing more to learn. Go back to the Menu.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
