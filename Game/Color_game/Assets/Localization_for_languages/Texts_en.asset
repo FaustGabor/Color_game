@@ -336,5 +336,9 @@ MonoBehaviour:
     m_Localized: There is nothing more to learn. Go back to the Menu.
     m_Metadata:
       m_Items: []
+  - m_Id: 22910506990772224
+    m_Localized: Colours Tutorial 2
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

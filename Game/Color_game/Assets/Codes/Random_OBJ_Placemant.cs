@@ -66,10 +66,7 @@ public class Random_OBJ_Placemant : MonoBehaviour
     
     void Start()
     {
-
         RandomPlacement();
-
-
     }
 
     // Update is called once per frame

@@ -335,5 +335,9 @@ MonoBehaviour:
     m_Localized: "Megtanult\xE1l mindent. Most nem vissza a men\xFCbe."
     m_Metadata:
       m_Items: []
+  - m_Id: 22910506990772224
+    m_Localized: "Sz\xEDn bemutat\xF3 2"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

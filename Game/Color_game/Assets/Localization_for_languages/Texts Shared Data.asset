@@ -313,6 +313,10 @@ MonoBehaviour:
     m_Key: Colour_tutorial_8
     m_Metadata:
       m_Items: []
+  - m_Id: 22910506990772224
+    m_Key: ColourTutorial2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

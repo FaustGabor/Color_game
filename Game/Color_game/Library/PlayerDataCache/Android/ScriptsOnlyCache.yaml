@@ -37,9 +37,8 @@ ScriptsOnlyBuild:
     - UnityEngine.Localization.Locale
     - UnityEngine.Localization.LocalizationBehaviour
     - UnityEngine.Localization.Settings.LocalizationSettings
+    - UnityEngine.Localization.Tables.SharedTableData
     - UnityEngine.Localization.VariantsPropertyDriver
-    Unity.ResourceManager.dll:
-    - MonoBehaviourCallbackHooks
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -61,7 +60,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
   sceneClasses:
-    Assets/Scenes/Color_Organizer.unity:
+    Assets/Scenes/Colour_orginazer_Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -80,11 +79,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -95,6 +94,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1956}
     - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
       Script: {instanceID: 2900}
@@ -103,11 +104,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3166}
     - Class: 114
+      Script: {instanceID: 3294}
+    - Class: 114
+      Script: {instanceID: 3298}
+    - Class: 114
       Script: {instanceID: 3392}
     - Class: 114
       Script: {instanceID: 3700}
     - Class: 114
       Script: {instanceID: 3844}
+    - Class: 114
+      Script: {instanceID: 4084}
+    - Class: 114
+      Script: {instanceID: 4620}
+    - Class: 114
+      Script: {instanceID: 6156}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -149,7 +160,72 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1548}
+    - Class: 114
+      Script: {instanceID: 1588}
+    - Class: 114
+      Script: {instanceID: 1956}
+    - Class: 114
+      Script: {instanceID: 2418}
+    - Class: 114
+      Script: {instanceID: 2596}
+    - Class: 114
+      Script: {instanceID: 2900}
+    - Class: 114
+      Script: {instanceID: 3090}
+    - Class: 114
+      Script: {instanceID: 3166}
+    - Class: 114
+      Script: {instanceID: 3298}
+    - Class: 114
+      Script: {instanceID: 3392}
+    - Class: 114
+      Script: {instanceID: 3700}
+    - Class: 114
+      Script: {instanceID: 3844}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 215
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Colours.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -168,20 +244,14 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3298}
-    - Class: 114
       Script: {instanceID: 3392}
     - Class: 114
       Script: {instanceID: 3700}
     - Class: 114
       Script: {instanceID: 3844}
-    - Class: 114
-      Script: {instanceID: 4084}
-    - Class: 114
-      Script: {instanceID: 4620}
-    - Class: 114
-      Script: {instanceID: 6156}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -220,8 +290,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -230,6 +298,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1548}
     - Class: 114
       Script: {instanceID: 1956}
+    - Class: 114
+      Script: {instanceID: 2418}
     - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
@@ -295,8 +365,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -305,6 +373,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1548}
     - Class: 114
       Script: {instanceID: 1956}
+    - Class: 114
+      Script: {instanceID: 2418}
     - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
@@ -369,8 +439,6 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -439,6 +507,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -505,8 +575,6 @@ ScriptsOnlyBuild:
     - Class: 81
       Script: {instanceID: 0}
     - Class: 84
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -589,8 +657,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -664,6 +730,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -734,6 +802,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1419,7 +1489,7 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
-  - Assets/Scenes/Color_Organizer.unity
+  - Assets/Scenes/Colours.unity
   - Assets/Scenes/Gray_scale.unity
   - Assets/Scenes/Gray_Tutorial.unity
   - Assets/Scenes/Colour_tutorial.unity
@@ -1428,4 +1498,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Diamond_Game_2x2.unity
   - Assets/Scenes/Diamond_Game_3x3.unity
   - Assets/Scenes/Win.unity
+  - Assets/Scenes/Colour_orginazer_Game.unity
   playerPath: D:/School/2_felev/Projekt_lab/GITHUB/Build/Game.apk

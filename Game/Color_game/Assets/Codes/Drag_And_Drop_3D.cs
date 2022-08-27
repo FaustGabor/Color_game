@@ -13,6 +13,11 @@ public class Drag_And_Drop_3D : MonoBehaviour
 
     [SerializeField] private GameObject selected_obj_shower;
 
+    private Vector3 drag_start_mouse_position = Vector3.zero;
+    private bool candrag = true;
+    private float drag_start_cubes_position = 0;
+    private GameObject cubes;
+
     void GreyScalePart()
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -71,6 +76,11 @@ public class Drag_And_Drop_3D : MonoBehaviour
                         selected_obj_shower.gameObject.SetActive(true);
                         selected_obj_shower.transform.position = selected_obj.transform.position;
                         selected_obj_shower.transform.position += Vector3.down * (0.3f);
+
+                        if (!SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
+                        {
+                            selected_obj_shower.transform.rotation = hit.transform.rotation;
+                        }
                     }
                 }
                 else
@@ -83,29 +93,38 @@ public class Drag_And_Drop_3D : MonoBehaviour
                         selected_obj_shower.gameObject.SetActive(false);
                         return;
                     }
-                    //A jó helyen lévõ kockák
-                    if(selected_obj.name == hit.transform.name)
+
+                    if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
                     {
-                        //Ha eddig rossz helyen volt akkor azt abból a listávól kitörlöm
-                        if(badcubes.Contains(selected_obj))
+                        //A jó helyen lévõ kockák
+                        if (selected_obj.name == hit.transform.name)
                         {
-                            badcubes.Remove(selected_obj);
+                            //Ha eddig rossz helyen volt akkor azt abból a listávól kitörlöm
+                            if (badcubes.Contains(selected_obj))
+                            {
+                                badcubes.Remove(selected_obj);
+                            }
+                            //Ha még nem szerepelt a jó helyen lévõk között akkor hozzáadom
+                            if (!goodcubes.Contains(selected_obj))
+                                goodcubes.Add(selected_obj);
                         }
-                        //Ha még nem szerepelt a jó helyen lévõk között akkor hozzáadom
-                        if (!goodcubes.Contains(selected_obj))
-                            goodcubes.Add(selected_obj);
+                        //A rossz helyen lévõ kockák
+                        else
+                        {
+                            //Ha még nem szerepelt a rossz helyen lévõk között akkor hozzáadom
+                            if (!badcubes.Contains(selected_obj))
+                                badcubes.Add(selected_obj);
+                            //Ha eddig jó helyen volt de át lett rakva rosszra akkor kitörlöm a jók közül
+                            if (goodcubes.Contains(selected_obj))
+                                goodcubes.Remove(selected_obj);
+                        }
                     }
-                    //A rossz helyen lévõ kockák
-                    else
+
+                    if (!SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
                     {
-                        //Ha még nem szerepelt a rossz helyen lévõk között akkor hozzáadom
-                        if (!badcubes.Contains(selected_obj))
-                            badcubes.Add(selected_obj);
-                        //Ha eddig jó helyen volt de át lett rakva rosszra akkor kitörlöm a jók közül
-                        if (goodcubes.Contains(selected_obj))
-                            goodcubes.Remove(selected_obj);
+                        selected_obj.transform.rotation = hit.transform.rotation;
                     }
-                        
+
                     selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
                     selected_obj.transform.position += Vector3.down / 2;
                     selected_obj = null;
@@ -114,11 +133,107 @@ public class Drag_And_Drop_3D : MonoBehaviour
             }
         }
     }
+
+    void Colour_wheel_Part()
+    {
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (selected_obj == null)
+                {
+                    if (hit.transform.gameObject.tag != "Ghost_Cubes")
+                    {
+                        if (hit.transform.gameObject.name != "Plane")
+                        {
+                            selected_obj = hit.transform.gameObject;
+                            selected_obj.transform.position += Vector3.up / 2;
+
+                            selected_obj_shower.gameObject.SetActive(true);
+                            selected_obj_shower.transform.position = selected_obj.transform.position;
+                            selected_obj_shower.transform.position += Vector3.down * (0.3f);
+                            selected_obj_shower.transform.rotation = hit.transform.rotation;
+                            candrag = false;
+                        }
+                        else
+                        {
+                            drag_start_mouse_position = Input.mousePosition;
+                            drag_start_cubes_position = cubes.transform.position.x;
+                            candrag = true;
+                        }
+                    }
+                }
+                else
+                {
+                    if (hit.transform.gameObject.name == "Plane" || hit.transform.gameObject.tag == "Drag")
+                    {
+                        if (selected_obj.name.Contains("Clone"))
+                        {
+                            string name = selected_obj.name.Split('(')[0];
+                            Destroy(selected_obj);
+                            GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                            GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
+                        }
+                        selected_obj = null;
+                        selected_obj_shower.gameObject.SetActive(false);
+                        return;
+                    }
+                    else
+                    {
+                        if (selected_obj.name.Contains("Clone"))
+                        {
+                            selected_obj.transform.rotation = hit.transform.rotation;
+                            selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
+                            selected_obj.transform.position += Vector3.down / 2;
+                            selected_obj = null;
+                            selected_obj_shower.gameObject.SetActive(false);
+                            return;
+                        }
+                        else
+                        {
+                            GameObject new_obj = Instantiate(selected_obj, new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z), hit.transform.rotation);
+                            new_obj.transform.position += Vector3.down / 2;
+                            selected_obj.transform.GetComponent<MeshRenderer>().enabled = false;
+                            selected_obj.transform.GetComponent<BoxCollider>().enabled = false;
+                            selected_obj = null;
+                            selected_obj_shower.gameObject.SetActive(false);
+                            return;
+                        }
+                    }
+                }
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                if (selected_obj == null && candrag)
+                {
+                    if (hit.transform.gameObject.tag != "Ghost_Cubes")
+                    {
+                        if (hit.transform.gameObject.name == "Plane")
+                        {
+                            cubes.transform.position = new Vector3((drag_start_cubes_position+(drag_start_mouse_position.x - Input.mousePosition.x) / 50 ), 0, 3.72f);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     void Update()
     {
         if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
             DiamondPart();
+        else if (SceneManager.GetActiveScene().name.Contains("Colour_org"))
+            Colour_wheel_Part();
         else
             GreyScalePart();
+    }
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name.Contains("Colour_org")) cubes = GameObject.Find("Cubes");
     }
 }

@@ -81,6 +81,11 @@ public class Menu_BTN_Handler : MonoBehaviour
         SceneManager.LoadScene("Colour_tutorial");
     }
 
+    public void Load_Tutorial_Colors2()
+    {
+        SceneManager.LoadScene("Colour_orginazer_Game");
+    }
+
     public void Set_Language_EN()
     {
         language.GetComponent<Language_file>().SetEN();
