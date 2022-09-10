@@ -300,4 +300,20 @@ public class Game_BTN_handler : MonoBehaviour
         game_type.SetActive(false);
         spawners.SetActive(true);
     }
+
+    public void Move_to_wheel() // colour tutorial 2
+    {
+        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Drag");
+        List<GameObject> cloned_cubes = new List<GameObject>();
+
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            if (cubes[i].name.Contains("Clone")) { cloned_cubes.Add(cubes[i]); }
+        }
+
+        if (cloned_cubes.Count == 9)
+        {
+            game_handler.GetComponent<Colour_Wheel_Handler>().Move_cubes_to_circle(cloned_cubes);
+        }
+    }
 }

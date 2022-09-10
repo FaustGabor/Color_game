@@ -72,6 +72,8 @@
     <Compile Include="Assets\Codes\Change_Material_Color.cs" />
     <Compile Include="Assets\Codes\Game_handler.cs" />
     <Compile Include="Assets\Codes\Diamond_chooser.cs" />
+    <Compile Include="Assets\Codes\CameraEnable.cs" />
+    <Compile Include="Assets\Codes\Colour_Wheel_Handler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

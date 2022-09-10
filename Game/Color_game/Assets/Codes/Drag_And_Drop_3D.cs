@@ -147,10 +147,9 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 {
                     if (hit.transform.gameObject.tag != "Ghost_Cubes")
                     {
-                        if (hit.transform.gameObject.name != "Plane")
+                        if (hit.transform.gameObject.name != "Plane") // kocka kiválasztása
                         {
                             selected_obj = hit.transform.gameObject;
-                            selected_obj.transform.position += Vector3.up / 2;
 
                             selected_obj_shower.gameObject.SetActive(true);
                             selected_obj_shower.transform.position = selected_obj.transform.position;
@@ -158,7 +157,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
                             selected_obj_shower.transform.rotation = hit.transform.rotation;
                             candrag = false;
                         }
-                        else
+                        else // Kockák oldalra mozgatásának engedélyezése
                         {
                             drag_start_mouse_position = Input.mousePosition;
                             drag_start_cubes_position = cubes.transform.position.x;
@@ -168,7 +167,7 @@ public class Drag_And_Drop_3D : MonoBehaviour
                 }
                 else
                 {
-                    if (hit.transform.gameObject.name == "Plane" || hit.transform.gameObject.tag == "Drag")
+                    if (hit.transform.gameObject.name == "Plane" || hit.transform.gameObject.tag == "Drag") // kocka vissza rakása
                     {
                         if (selected_obj.name.Contains("Clone"))
                         {
@@ -179,36 +178,34 @@ public class Drag_And_Drop_3D : MonoBehaviour
                         }
                         selected_obj = null;
                         selected_obj_shower.gameObject.SetActive(false);
-                        return;
                     }
-                    else
+                    else  
                     {
-                        if (selected_obj.name.Contains("Clone"))
+                        if (selected_obj.name.Contains("Clone")) // kocka arrébb rakása a coloure wheel-en
                         {
                             selected_obj.transform.rotation = hit.transform.rotation;
                             selected_obj.transform.position = new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z);
-                            selected_obj.transform.position += Vector3.down / 2;
+                            selected_obj.GetComponent<Color_cube>().gray_partner = hit.transform.name;
                             selected_obj = null;
                             selected_obj_shower.gameObject.SetActive(false);
-                            return;
+                            
                         }
-                        else
+                        else // kocka lerakás a colour wheel-re
                         {
                             GameObject new_obj = Instantiate(selected_obj, new Vector3(hit.transform.gameObject.transform.position.x, selected_obj.transform.position.y, hit.transform.gameObject.transform.position.z), hit.transform.rotation);
-                            new_obj.transform.position += Vector3.down / 2;
+                            new_obj.GetComponent<Color_cube>().gray_partner = hit.transform.name;
                             selected_obj.transform.GetComponent<MeshRenderer>().enabled = false;
                             selected_obj.transform.GetComponent<BoxCollider>().enabled = false;
                             selected_obj = null;
                             selected_obj_shower.gameObject.SetActive(false);
-                            return;
                         }
                     }
                 }
             }
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0)) // Kocka mozgatása oldalra
             {
-                if (selected_obj == null && candrag)
+                if (selected_obj == null && candrag) 
                 {
                     if (hit.transform.gameObject.tag != "Ghost_Cubes")
                     {
