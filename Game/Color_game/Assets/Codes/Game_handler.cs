@@ -208,7 +208,7 @@ public class Game_handler : MonoBehaviour
         if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
         {
             //A rossz helyen lévõ kockák lsitája
-            List<GameObject> badones = GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().badcubes;
+            List<GameObject> badones = GameObject.Find("GameHandler").GetComponent<Move_objects>().badcubes;
 
             //A rossz helyen lévõ kockák visszarakása az eredeti helyükre
             foreach (var item in badones)
@@ -221,7 +221,7 @@ public class Game_handler : MonoBehaviour
                     }
                 }
             }
-            GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().badcubes.Clear();
+            GameObject.Find("GameHandler").GetComponent<Move_objects>().badcubes.Clear();
         }
     }
 

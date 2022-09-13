@@ -151,7 +151,7 @@ public class Game_BTN_handler : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
         {
-            if (GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count == 36)
+            if (GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count == 36)
             {
                 SceneManager.LoadScene("Win");
             }
@@ -168,10 +168,8 @@ public class Game_BTN_handler : MonoBehaviour
 
     public void Help() // grey scale tutorial
     {
-
-
         help.SetActive(true);
-        if (!SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
+        if ( (!SceneManager.GetActiveScene().name.Contains("Diamond_Game")) && (!SceneManager.GetActiveScene().name.Contains("Colour_orginazer")))
         {
             if (arrow != null) arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
             help.transform.GetChild(1).gameObject.SetActive(true);
@@ -235,10 +233,10 @@ public class Game_BTN_handler : MonoBehaviour
         menu_window.SetActive(false);
 
         //A jó helyen lévõ kockák megszámolása majd kiíratás mint pontszám
-        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count+"/36";
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count+"/36";
         if (SceneManager.GetActiveScene().name.Contains("Diamond"))
         {
-            PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Drag_And_Drop_3D>().goodcubes.Count);
+            PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count);
         }
         PlayerPrefs.Save();
 
@@ -315,5 +313,24 @@ public class Game_BTN_handler : MonoBehaviour
         {
             game_handler.GetComponent<Colour_Wheel_Handler>().Move_cubes_to_circle(cloned_cubes);
         }
+    }
+
+    public void Move_back_from_wheel() // colour tutorial 2
+    {
+        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Drag");
+        List<GameObject> cloned_cubes = new List<GameObject>();
+
+        for (int i = 0; i < cubes.Length; i++)
+        {
+            if (cubes[i].name.Contains("Clone")) 
+            {
+                string name = cubes[i].name.Split('(')[0];
+                Destroy(cubes[i]);
+                GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
+            }
+        }
+
+        game_handler.GetComponent<Colour_Wheel_Handler>().Move_cubes_back();
     }
 }

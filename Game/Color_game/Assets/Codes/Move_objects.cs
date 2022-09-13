@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Drag_And_Drop_3D : MonoBehaviour
+public class Move_objects : MonoBehaviour
 {
     [SerializeField] private GameObject selected_obj;
     [SerializeField] private GameObject background;

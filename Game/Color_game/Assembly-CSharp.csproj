@@ -59,21 +59,21 @@
     <Compile Include="Assets\Codes\Color_cube.cs" />
     <Compile Include="Assets\Localization_for_languages\Language_file.cs" />
     <Compile Include="Assets\Codes\Drag_and_Drop.cs" />
+    <Compile Include="Assets\Codes\Colour_Wheel_Handler.cs" />
     <Compile Include="Assets\Codes\Spawn_cubes_for_grayscale.cs" />
     <Compile Include="Assets\Codes\Score_timer.cs" />
     <Compile Include="Assets\Codes\Game_BTN_handler.cs" />
+    <Compile Include="Assets\Codes\CameraEnable.cs" />
     <Compile Include="Assets\Codes\Gray_tutorial.cs" />
     <Compile Include="Assets\Codes\Menu_BTN_Handler.cs" />
     <Compile Include="Assets\Codes\Menu_color_change.cs" />
     <Compile Include="Assets\Codes\Random_OBJ_Placemant.cs" />
-    <Compile Include="Assets\Codes\Drag_And_Drop_3D.cs" />
+    <Compile Include="Assets\Codes\Move_objects.cs" />
     <Compile Include="Assets\Codes\Rotate_image.cs" />
     <Compile Include="Assets\Codes\Gray_scale_collider.cs" />
     <Compile Include="Assets\Codes\Change_Material_Color.cs" />
     <Compile Include="Assets\Codes\Game_handler.cs" />
     <Compile Include="Assets\Codes\Diamond_chooser.cs" />
-    <Compile Include="Assets\Codes\CameraEnable.cs" />
-    <Compile Include="Assets\Codes\Colour_Wheel_Handler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

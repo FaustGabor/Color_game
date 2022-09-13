@@ -340,5 +340,13 @@ MonoBehaviour:
     m_Localized: Colours Tutorial 2
     m_Metadata:
       m_Items: []
+  - m_Id: 28759846091169792
+    m_Localized: 'In the top part you can see all the 36 colours in a line.
+
+
+      Put
+      the most vivid colours to the circle down below.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

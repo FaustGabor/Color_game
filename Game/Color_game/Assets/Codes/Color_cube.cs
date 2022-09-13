@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Color_cube : MonoBehaviour
 {
-    [SerializeField] private string color_name;
+    public string color_name;
     [SerializeField] private string color_hexa_num;
 
     public string gray_partner;
