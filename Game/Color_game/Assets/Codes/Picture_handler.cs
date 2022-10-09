@@ -10,15 +10,12 @@ public class Picture_handler : MonoBehaviour
 
     public Texture2D selected_picture;
     public GameObject colour_ui;
+    public GameObject colour_ui2;
+    public GameObject colour_ui3;
     public GameObject picture_ui;
 
     public List<Color> colours = new List<Color>();
     public List<int> colour_number = new List<int>();
-    public Color most_dominant_c;
-
-    public List<Color> colours_d20 = new List<Color>();
-    public List<Color> colours_d50 = new List<Color>();
-    public List<Color> colours_d10 = new List<Color>();
 
     private void Start()
     {
@@ -30,14 +27,15 @@ public class Picture_handler : MonoBehaviour
             {
                 Color c = selected_picture.GetPixel(i, j);
                 found_similar = false;
+
                 for (int k = 0; k < colours.Count; k++)
                 {
-                    if (Colour_Distance(colours[k], c) < 0.05f) { found_similar = true; similar_index = k; break; }
+                    if (Colour_Distance(colours[k], c) < 0.03f) { found_similar = true; similar_index = k; break; }
                 }
                 if (!found_similar)
                 {
                     colours.Add(c);
-                    colour_number.Add(0);
+                    colour_number.Add(1);
                 }
                 else
                 {
@@ -46,7 +44,8 @@ public class Picture_handler : MonoBehaviour
             }
         }
 
-        
+        /*
+        Color most_dominant_c;
         int max = 0;
         for (int i = 0; i < colour_number.Count; i++)
         {
@@ -56,8 +55,13 @@ public class Picture_handler : MonoBehaviour
                 most_dominant_c = colours[i];
             }
         }
+        */
 
-        colour_ui.GetComponent<RawImage>().color = most_dominant_c;
+        Organize_colours();
+
+        colour_ui.GetComponent<RawImage>().color = colours[0];
+        colour_ui2.GetComponent<RawImage>().color = colours[1];
+        colour_ui3.GetComponent<RawImage>().color = colours[2];
         picture_ui.GetComponent<RawImage>().texture = selected_picture;
 
     }
@@ -73,7 +77,31 @@ public class Picture_handler : MonoBehaviour
         b_dist = Mathf.Abs(first.b - second.b);
 
         return ((r_dist + g_dist + b_dist) / 3);
-        
+    }
+
+    private void Organize_colours()
+    {
+        for (int i = 0; i < colour_number.Count-1; i++)
+        {
+            int max = 0, index = 0;
+
+            for (int j = i; j < colour_number.Count; j++)
+            {
+                if (colour_number[j] > max)
+                {
+                    max = colour_number[j];
+                    index = j;
+                }
+            }
+
+            Color temp_c = colours[i];
+            colours[i] = colours[index];
+            colours[index] = temp_c;
+
+            int temp_n = colour_number[i];
+            colour_number[i] = colour_number[index];
+            colour_number[index] = temp_n;
+        }
     }
 
 }
