@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.WSA;
 
 public class Picture_handler : MonoBehaviour
 {
-    [SerializeField] private Folder picture_folder;
 
     public Texture2D selected_picture;
+    private Texture2D created_picture;
     public GameObject colour_ui;
-    public GameObject colour_ui2;
-    public GameObject colour_ui3;
     public GameObject picture_ui;
 
     public List<Color> colours = new List<Color>();
@@ -59,9 +56,11 @@ public class Picture_handler : MonoBehaviour
 
         Organize_colours();
 
-        colour_ui.GetComponent<RawImage>().color = colours[0];
-        colour_ui2.GetComponent<RawImage>().color = colours[1];
-        colour_ui3.GetComponent<RawImage>().color = colours[2];
+        created_picture = new Texture2D(600, 600);
+
+        Create_picture();
+
+        colour_ui.GetComponent<RawImage>().texture = created_picture;
         picture_ui.GetComponent<RawImage>().texture = selected_picture;
 
     }
@@ -104,4 +103,108 @@ public class Picture_handler : MonoBehaviour
         }
     }
 
+    private void Create_picture()
+    {
+        for (int i = 0; i < 600; i++)
+        {
+            for (int j = 0; j < 600; j++)
+            {
+                created_picture.SetPixel(i, j, colours[0]);
+            }
+        }
+
+        // first diamond looking part 
+        int k = 300;
+        for (int i = 0; i < 300; i++)
+        {
+            for (int j = k; j <= (300 + i); j++)
+            {
+                created_picture.SetPixel(i, j, colours[1]);
+            }
+            k--;
+        }
+
+        k = 300;
+        for (int i = 600; i >= 300; i--)
+        {
+            for (int j = k; j <= (300 + (600 - i)); j++)
+            {
+                created_picture.SetPixel(i, j, colours[1]);
+            }
+            k--;
+        }
+        // first diamond looking part end
+
+        for (int i = 150; i < 450; i++)
+        {
+            for (int j = 150; j < 450; j++)
+            {
+                created_picture.SetPixel(i, j, colours[2]);
+            }
+        }
+
+        // second diamond looking part 
+        k = 300;
+        for (int i = 150; i < 300; i++)
+        {
+            for (int j = k; j <= (300 + (i - 150)); j++)
+            {
+                created_picture.SetPixel(i, j, colours[3]);
+            }
+            k--;
+        }
+
+        
+        k = 300;
+        for (int i = 450; i >= 300; i--)
+        {
+            for (int j = k; j <= (300 + (450 - i)); j++)
+            {
+                created_picture.SetPixel(i, j, colours[3]);
+            }
+            k--;
+        }
+        // second diamond looking part end
+
+        for (int i = 225; i < 375; i++)
+        {
+            for (int j = 225; j < 375; j++)
+            {
+                created_picture.SetPixel(i, j, colours[4]);
+            }
+        }
+
+
+
+
+
+
+        /*
+        for (int i = 300; i < 600; i++)
+        {
+            for (int j = 225; j < 375; j++)
+            {
+                created_picture.SetPixel(i, j, colours[4]);
+            }
+        }
+
+        for (int i = 150; i < 300; i++)
+        {
+            for (int j = 225; j < 375; j++)
+            {
+                created_picture.SetPixel(i, j, colours[4]);
+            }
+        }
+
+        for (int i = 300; i < 450; i++)
+        {
+            for (int j = 225; j < 375; j++)
+            {
+                created_picture.SetPixel(i, j, colours[4]);
+            }
+        }
+        */
+
+        created_picture.Apply();
+    }
 }

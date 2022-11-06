@@ -233,7 +233,11 @@ public class Game_BTN_handler : MonoBehaviour
         menu_window.SetActive(false);
 
         //A jó helyen lévõ kockák megszámolása majd kiíratás mint pontszám
-        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count+"/36";
+        int max_score = 36;
+        if (SceneManager.GetActiveScene().name.Contains("2x2")) max_score = 4;
+        if (SceneManager.GetActiveScene().name.Contains("3x3")) max_score = 9;
+
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count+" / "+max_score;
         if (SceneManager.GetActiveScene().name.Contains("Diamond"))
         {
             PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count);

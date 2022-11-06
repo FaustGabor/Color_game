@@ -7,7 +7,7 @@ public class Drag_and_Drop : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 {
     public Canvas canvas;
 
-    private RectTransform transform;
+    private RectTransform R_transform;
     private Vector2 start_position;
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -17,14 +17,14 @@ public class Drag_and_Drop : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        R_transform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (transform.anchoredPosition != start_position)
+        if (R_transform.anchoredPosition != start_position)
         {
-            transform.anchoredPosition = start_position;
+            R_transform.anchoredPosition = start_position;
         }
     }
 
@@ -34,7 +34,7 @@ public class Drag_and_Drop : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     void Start()
     {
-        transform = GetComponent<RectTransform>();
-        start_position = transform.anchoredPosition;
+        R_transform = GetComponent<RectTransform>();
+        start_position = R_transform.anchoredPosition;
     }
 }

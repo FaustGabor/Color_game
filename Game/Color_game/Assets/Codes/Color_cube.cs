@@ -189,6 +189,8 @@ public class Color_cube : MonoBehaviour
 
         adjust_pos = false;
         timer = 0;
+
+        if (color_name == "") color_name = this.gameObject.name[0].ToString() + this.gameObject.name[this.gameObject.name.Length - 1].ToString();
     }
 
     private void Update()
