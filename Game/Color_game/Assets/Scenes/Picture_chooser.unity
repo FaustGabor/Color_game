@@ -685,7 +685,7 @@ MonoBehaviour:
   picture_ui_d: {fileID: 830495679}
   diff: 0.05
   diff_kmeans: 0.001
-  clusters: 30
+  clusters: 5
   colours: []
   colour_number: []
 --- !u!4 &1333606131

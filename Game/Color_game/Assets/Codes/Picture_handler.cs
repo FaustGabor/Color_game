@@ -65,7 +65,7 @@ public class Picture_handler : MonoBehaviour
 
                 for (int j = 0; j < i; j++)
                 {
-                    if (Colour_Distance_with_E(center_c[i], center_c[j]) < 0.1) is_ok = false;
+                    if (Colour_Distance_with_E_W(center_c[i], center_c[j]) < 0.1) is_ok = false;
                 }
                 cycle++;
             }
@@ -104,7 +104,7 @@ public class Picture_handler : MonoBehaviour
                     float min_dist = 100;
                     for (int k = 0; k < center_c.Length; k++)
                     {
-                        float distance = Colour_Distance_with_E(center_c[k], c);
+                        float distance = Colour_Distance_with_E_W(center_c[k], c);
                         if (min_dist > distance)
                         {
                             min_dist = distance;
@@ -136,7 +136,7 @@ public class Picture_handler : MonoBehaviour
 
                         for (int j = 0; j < i; j++)
                         {
-                            if (Colour_Distance_with_E(center_c[i], center_c[j]) < 0.1) is_ok = false;
+                            if (Colour_Distance_with_E_W(center_c[i], center_c[j]) < 0.1) is_ok = false;
                         }
                         cycle++;
                     }
@@ -157,7 +157,7 @@ public class Picture_handler : MonoBehaviour
                     b = b / cluster_colours[i].Count;
 
                     Color c = new Color(r, g, b);
-                    clu_dif += Colour_Distance_with_E(c, center_c[i]);
+                    clu_dif += Colour_Distance_with_E_W(c, center_c[i]);
                     center_c[i] = c;
                 }
             }
@@ -184,7 +184,7 @@ public class Picture_handler : MonoBehaviour
                 center_c[i] = center_c[index];
                 center_c[index] = temp;
 
-
+                Debug.Log(i+". max: "+max);
             }
 
             // fill colours list with first cluster
@@ -194,14 +194,16 @@ public class Picture_handler : MonoBehaviour
                 colours.Add(center_c[i]);
             }
 
-            /*
+
             // fill colours list with first cluster
-            colours.Clear();
-            for (int i = 0; i < cluster_colours[0].Count; i++)
+            //colours.Clear();
+            for (int i = 0; i < cluster_colours.Count; i++)
             {
-                colours.Add(cluster_colours[0][i]);
+                for (int j = 0; j < cluster_colours[i].Count; j++)
+                {
+                    colours.Add(cluster_colours[i][j]);
+                }
             }
-            */
 
         } while (clu_dif > diff_kmeans);
     }
@@ -257,7 +259,23 @@ public class Picture_handler : MonoBehaviour
 
         dist = Mathf.Sqrt( Mathf.Pow((first.r-second.r),2) + Mathf.Pow((first.g - second.g),2) + Mathf.Pow((first.b - second.b),2) );
 
-        return Math.Abs(dist);
+        return dist;
+    }
+
+    private float Colour_Distance_with_E_W(Color first, Color second)
+    {
+        float dist = 0;
+        float r = first.r - second.r;
+        float g = first.g - second.g;
+        float b = first.b - second.b;
+        float r_check = (first.r + second.r) / 2;
+
+        if(r_check > 0.5f)
+            dist = Mathf.Sqrt( (2 * Mathf.Pow((r), 2)) + (4 * Mathf.Pow((g), 2)) + (3 * Mathf.Pow((b), 2)));
+        else
+            dist = Mathf.Sqrt( (3 * Mathf.Pow((r), 2)) + (4 * Mathf.Pow((g), 2)) + (2 * Mathf.Pow((b), 2)));
+
+        return dist;
     }
 
     private void Organize_colours()
