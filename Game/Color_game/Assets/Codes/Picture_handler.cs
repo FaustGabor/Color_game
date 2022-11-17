@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +19,9 @@ public class Picture_handler : MonoBehaviour
     public int clusters;
 
     public List<Color> colours = new List<Color>();
+    public List<Color> colours_cl = new List<Color>();
     public List<float> colour_number = new List<float>();
+    public List<float> colour_number_cl = new List<float>();
 
 
     private Texture2D created_picture_statistics;
@@ -35,7 +38,7 @@ public class Picture_handler : MonoBehaviour
 
         created_picture_statistics = new Texture2D(600, 600);
 
-        created_picture_statistics = Create_picture(600);
+        created_picture_statistics = Create_picture(600,0);
 
         colour_ui.GetComponent<RawImage>().texture = selected_picture;
         picture_ui_s.GetComponent<RawImage>().texture = created_picture_statistics;
@@ -76,7 +79,7 @@ public class Picture_handler : MonoBehaviour
 
         Calculate_clusters(center_c);
 
-        created_picture_dominants = Create_picture(600);
+        created_picture_dominants = Create_picture(600,1);
 
         picture_ui_d.GetComponent<RawImage>().texture = created_picture_dominants;
     }
@@ -187,25 +190,102 @@ public class Picture_handler : MonoBehaviour
                 Debug.Log(i+". max: "+max);
             }
 
-            // fill colours list with first cluster
-            colours.Clear();
-            for (int i = 0; i < center_c.Length; i++)
-            {
-                colours.Add(center_c[i]);
-            }
+        } while (clu_dif > diff_kmeans);
 
+        // fill colours list with centrals
+        for (int i = 0; i < center_c.Length; i++)
+        {
+            float min_dist = 10;
+            int min_index = 0;
 
-            // fill colours list with first cluster
-            //colours.Clear();
-            for (int i = 0; i < cluster_colours.Count; i++)
+            for (int k = 0; k < cluster_colours[i].Count; k++)
             {
-                for (int j = 0; j < cluster_colours[i].Count; j++)
+                float dist = Colour_Distance_with_E(center_c[i], cluster_colours[i][k]);
+                if (dist < min_dist)
                 {
-                    colours.Add(cluster_colours[i][j]);
+                    min_dist = dist;
+                    min_index = k;
                 }
             }
 
-        } while (clu_dif > diff_kmeans);
+            Color temp = cluster_colours[i][0];
+            cluster_colours[i][0] = cluster_colours[i][min_index];
+            cluster_colours[i][min_index] = temp;
+
+            colours_cl.Add(cluster_colours[i][0]);
+        }
+
+
+        // fill colours list with clusters
+        // colours.Clear();
+        /*
+        for (int i = 0; i < cluster_colours.Count; i++)
+        {
+            for (int j = 0; j < cluster_colours[i].Count; j++)
+            {
+                colours_cl.Add(cluster_colours[i][j]);
+            }
+        }
+        */
+
+
+        Get_Colour_Statistics_for_clusters();
+        Organize_colours_in_clusters();
+    }
+
+    private void Get_Colour_Statistics_for_clusters()
+    {
+
+        for (int k = 0; k < colours_cl.Count; k++)
+        {
+            colour_number_cl.Add(0);
+        }
+
+        int similar_index = -1;
+        for (int i = 0; i < selected_picture.width; i++)
+        {
+            for (int j = 0; j < selected_picture.height; j++)
+            {
+                Color c = selected_picture.GetPixel(i, j);
+                float distance = 0;
+
+                for (int k = 0; k < colours_cl.Count; k++)
+                {
+                    distance = Colour_Distance_with_E(colours_cl[k], c);
+                    if (distance < diff) { similar_index = k; break; }
+                }
+                if (similar_index != -1)
+                {
+                    colour_number_cl[similar_index]++;
+                }
+            }
+        }
+    }
+
+    private void Organize_colours_in_clusters()
+    {
+        for (int i = 0; i < colour_number_cl.Count; i++)
+        {
+            float max = 0;
+            int index = 0;
+
+            for (int j = i; j < colour_number_cl.Count; j++)
+            {
+                if (colour_number_cl[j] > max)
+                {
+                    max = colour_number_cl[j];
+                    index = j;
+                }
+            }
+
+            Color temp_c = colours_cl[i];
+            colours_cl[i] = colours_cl[index];
+            colours_cl[index] = temp_c;
+
+            float temp_n = colour_number_cl[i];
+            colour_number_cl[i] = colour_number_cl[index];
+            colour_number_cl[index] = temp_n;
+        }
     }
 
     private void Get_Colour_Statistics()
@@ -304,14 +384,15 @@ public class Picture_handler : MonoBehaviour
         }
     }
 
-    private Texture2D Create_picture(int size)
+    private Texture2D Create_picture(int size, int list_index)
     {
         Texture2D created_picture = new Texture2D(size, size);
         for (int i = 0; i < 600; i++)
         {
             for (int j = 0; j < 600; j++)
             {
-                created_picture.SetPixel(i, j, colours[0]);
+                if(list_index == 0) created_picture.SetPixel(i, j, colours[0]);
+                else created_picture.SetPixel(i, j, colours_cl[0]);
             }
         }
 
@@ -321,7 +402,8 @@ public class Picture_handler : MonoBehaviour
         {
             for (int j = k; j <= (300 + i); j++)
             {
-                created_picture.SetPixel(i, j, colours[1]);
+                if (list_index == 0) created_picture.SetPixel(i, j, colours[1]);
+                else created_picture.SetPixel(i, j, colours_cl[1]);
             }
             k--;
         }
@@ -331,7 +413,8 @@ public class Picture_handler : MonoBehaviour
         {
             for (int j = k; j <= (300 + (600 - i)); j++)
             {
-                created_picture.SetPixel(i, j, colours[1]);
+                if (list_index == 0) created_picture.SetPixel(i, j, colours[1]);
+                else created_picture.SetPixel(i, j, colours_cl[1]);
             }
             k--;
         }
@@ -341,7 +424,10 @@ public class Picture_handler : MonoBehaviour
         {
             for (int j = 150; j < 450; j++)
             {
-                created_picture.SetPixel(i, j, colours[2]);
+                if (list_index == 0)
+                    created_picture.SetPixel(i, j, colours[2]);
+                else
+                    created_picture.SetPixel(i, j, colours_cl[2]);
             }
         }
 
@@ -351,7 +437,10 @@ public class Picture_handler : MonoBehaviour
         {
             for (int j = k; j <= (300 + (i - 150)); j++)
             {
-                created_picture.SetPixel(i, j, colours[3]);
+                if (list_index == 0)
+                    created_picture.SetPixel(i, j, colours[3]);
+                else
+                    created_picture.SetPixel(i, j, colours_cl[3]);
             }
             k--;
         }
@@ -361,7 +450,10 @@ public class Picture_handler : MonoBehaviour
         {
             for (int j = k; j <= (300 + (450 - i)); j++)
             {
-                created_picture.SetPixel(i, j, colours[3]);
+                if (list_index == 0)
+                    created_picture.SetPixel(i, j, colours[3]);
+                else
+                    created_picture.SetPixel(i, j, colours_cl[3]);
             }
             k--;
         }
@@ -371,7 +463,10 @@ public class Picture_handler : MonoBehaviour
         {
             for (int j = 225; j < 375; j++)
             {
-                created_picture.SetPixel(i, j, colours[4]);
+                if (list_index == 0)    
+                    created_picture.SetPixel(i, j, colours[4]);
+                else
+                    created_picture.SetPixel(i, j, colours_cl[4]);
             }
         }
 

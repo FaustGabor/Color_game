@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8372c3185cfc15544941e72ce1fe844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected_picture: {fileID: 2800000, guid: 6857014ff1631254db83778b01ae9d2a, type: 3}
+  selected_picture: {fileID: 2800000, guid: 9cddc945cb0a1a84fad5b3c144c622c0, type: 3}
   colour_ui: {fileID: 231445504}
   picture_ui_s: {fileID: 11450601}
   picture_ui_d: {fileID: 830495679}
@@ -687,7 +687,9 @@ MonoBehaviour:
   diff_kmeans: 0.001
   clusters: 5
   colours: []
+  colours_cl: []
   colour_number: []
+  colour_number_cl: []
 --- !u!4 &1333606131
 Transform:
   m_ObjectHideFlags: 0
