@@ -81,7 +81,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20300213462704128
-    m_Localized: "Gratul\xE1lunk!"
+    m_Localized: "Gratul\xE1lunk! Nyert\xE9l"
     m_Metadata:
       m_Items: []
   - m_Id: 20314108214583296
@@ -340,9 +340,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28759846091169792
-    m_Localized: "A k\xE9perny\u0151 tetej\xE9n l\xE1thatod mind a 36 sz\xEDnt egy
-      sorban.\n\nTedd a leg\xE9l\xE9nkebb sz\xEDneket a k\xF6z\xE9pen l\xE9v\u0151
-      k\xF6rbe k\xF6zbe."
+    m_Localized: "A k\xE9perny\u0151 tetej\xE9n l\xE1thatod mind a 36 sz\xEDnt.\n\nTedd
+      a leg\xE9l\xE9nkebb sz\xEDneket a k\xF6rbe.\n\n???"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60642536301993984
+    m_Localized: "Nem minden kocka a j\xF3 jellemb\u0151l val\xF3 amik a k\xF6rben
+      vannak (\xE9l\xE9nk/fak\xF3/tompa/s\xF6t\xE9t)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60643399829495808
+    m_Localized: "Nincs el\xE9g kocka a k\xF6rben."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60672414749499392
+    m_Localized: "A sz\xEDnek sorrendje nem j\xF3."
     m_Metadata:
       m_Items: []
   references:

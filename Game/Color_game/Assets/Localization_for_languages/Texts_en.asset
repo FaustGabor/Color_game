@@ -83,7 +83,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20300213462704128
-    m_Localized: Congratulations!
+    m_Localized: Congratulations! You Won
     m_Metadata:
       m_Items: []
   - m_Id: 20314108214583296
@@ -341,11 +341,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28759846091169792
-    m_Localized: 'In the top part you can see all the 36 colours in a line.
+    m_Localized: 'In the top part you can see all the 36 colours.
 
 
-      Put
-      the most vivid colours to the circle down below.'
+      Put the
+      most vivid colours in to the circle.
+
+
+      ???'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60642536301993984
+    m_Localized: Not all the cubes in the circle are of the right character (vivid/pale/muted/dark)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60643399829495808
+    m_Localized: There is not enough cubes in the circle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60672414749499392
+    m_Localized: The order of coloures are not right.
     m_Metadata:
       m_Items: []
   references:

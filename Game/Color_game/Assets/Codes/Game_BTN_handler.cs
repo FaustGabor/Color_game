@@ -301,36 +301,11 @@ public class Game_BTN_handler : MonoBehaviour
 
     public void Move_to_wheel() // colour tutorial 2
     {
-        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Drag");
-        List<GameObject> cloned_cubes = new List<GameObject>();
-
-        for (int i = 0; i < cubes.Length; i++)
-        {
-            if (cubes[i].name.Contains("Clone")) { cloned_cubes.Add(cubes[i]); }
-        }
-
-        if (cloned_cubes.Count == 9)
-        {
-            game_handler.GetComponent<Colour_Wheel_Handler>().Move_cubes_to_circle(cloned_cubes);
-        }
+        game_handler.GetComponent<Colour_Wheel_Handler>().Move_cubes_to_circle();
     }
 
     public void Move_back_from_wheel() // colour tutorial 2
     {
-        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Drag");
-        List<GameObject> cloned_cubes = new List<GameObject>();
-
-        for (int i = 0; i < cubes.Length; i++)
-        {
-            if (cubes[i].name.Contains("Clone")) 
-            {
-                string name = cubes[i].name.Split('(')[0];
-                Destroy(cubes[i]);
-                GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
-                GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
-            }
-        }
-
         game_handler.GetComponent<Colour_Wheel_Handler>().Move_cubes_back();
     }
 }
