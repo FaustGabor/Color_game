@@ -357,5 +357,9 @@ MonoBehaviour:
     m_Localized: "A sz\xEDnek sorrendje nem j\xF3."
     m_Metadata:
       m_Items: []
+  - m_Id: 61015908118634496
+    m_Localized: "Egy jellemz\u0151"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

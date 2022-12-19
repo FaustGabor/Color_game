@@ -363,5 +363,9 @@ MonoBehaviour:
     m_Localized: The order of coloures are not right.
     m_Metadata:
       m_Items: []
+  - m_Id: 61015908118634496
+    m_Localized: One character
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

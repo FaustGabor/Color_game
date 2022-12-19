@@ -257,34 +257,22 @@ public class Game_BTN_handler : MonoBehaviour
         menu_window.SetActive(false);
     }
 
-    public void Set_grayscale_to_vivid()
+    public void Set_grayscale_to_character()
     {
-        game_handler.GetComponent<Game_handler>().Select_cube_list("vivid");
+        System.Random r = new System.Random();
+        int random_num = r.Next(0, 40);
+        switch (random_num/10)
+        {
+            case 0: game_handler.GetComponent<Game_handler>().Select_cube_list("vivid"); break;
+            case 1: game_handler.GetComponent<Game_handler>().Select_cube_list("dark"); break;
+            case 2: game_handler.GetComponent<Game_handler>().Select_cube_list("pale"); break;
+            case 3: game_handler.GetComponent<Game_handler>().Select_cube_list("muted"); break;
+            default: game_handler.GetComponent<Game_handler>().Select_cube_list("vivid"); break;
+        }
+        
         game_type.SetActive(false);
         spawners.SetActive(true);
     }
-
-    public void Set_grayscale_to_dark()
-    {
-        game_handler.GetComponent<Game_handler>().Select_cube_list("dark");
-        game_type.SetActive(false);
-        spawners.SetActive(true);
-    }
-
-    public void Set_grayscale_to_pale()
-    {
-        game_handler.GetComponent<Game_handler>().Select_cube_list("pale");
-        game_type.SetActive(false);
-        spawners.SetActive(true);
-    }
-
-    public void Set_grayscale_to_muted()
-    {
-        game_handler.GetComponent<Game_handler>().Select_cube_list("muted");
-        game_type.SetActive(false);
-        spawners.SetActive(true);
-    }
-
     public void Set_grayscale_to_all()
     {
         game_handler.GetComponent<Game_handler>().Select_cube_list("");

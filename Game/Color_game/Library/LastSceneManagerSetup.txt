@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Colour_orginazer_Game.unity
+- path: Assets/Scenes/Gray_scale.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
