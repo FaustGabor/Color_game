@@ -19,8 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11115896832
-    m_Localized: "Created by:\n\nFaust G\xE1bor\nPaul Green-Armytage\nPolg\xE1r Don\xE1t\nPill\xE9r
-      Attila\nRobert Hirschler\nMaggie Maggio\n"
+    m_Localized: "Created by:\n\nFaust G\xE1bor\n\nAssistance:\nPaul Green-Armytage\nRobert
+      Hirschler\nMaggie Maggio\n"
     m_Metadata:
       m_Items: []
   - m_Id: 269707321344
@@ -365,6 +365,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 61015908118634496
     m_Localized: One character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65641180029722624
+    m_Localized: Games
     m_Metadata:
       m_Items: []
   references:

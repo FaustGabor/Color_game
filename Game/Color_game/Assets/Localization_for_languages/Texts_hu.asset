@@ -19,8 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11115896832
-    m_Localized: "Gy\xE1rtotta:\n\nFaust G\xE1bor\nPaul Green-Armytage\nPolg\xE1r
-      Don\xE1t\nPill\xE9r Attila\nRobert Hirschler\nMaggie Maggio"
+    m_Localized: "Gy\xE1rtotta:\n\nFaust G\xE1bor\n\nT\xE1mogatt\xE1k:\nPaul Green-Armytage\nRobert
+      Hirschler\nMaggie Maggio"
     m_Metadata:
       m_Items: []
   - m_Id: 269707321344
@@ -359,6 +359,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 61015908118634496
     m_Localized: "Egy jellemz\u0151"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65641180029722624
+    m_Localized: "J\xE1t\xE9kok"
     m_Metadata:
       m_Items: []
   references:

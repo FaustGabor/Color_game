@@ -136,6 +136,8 @@ public class Game_BTN_handler : MonoBehaviour
                     muted.SetActive(false);
                     dark.SetActive(false);
                     state = 5;
+                    PlayerPrefs.SetString("tutorial", "Done");
+                    PlayerPrefs.Save();
                     break;
                 }
         }
