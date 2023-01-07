@@ -68,13 +68,57 @@ public class Colour_Wheel_Handler : MonoBehaviour
             switch (circle_index)
             {
                 case 0:
-                    if (!cloned_cubes[i].name.Contains("Vivid")) all_one_chacacter = false; break;  
+                    {
+                        if (!cloned_cubes[i].name.Contains("Vivid"))
+                        {
+                            all_one_chacacter = false;
+
+                            string name = cloned_cubes[i].name.Split('(')[0];
+                            Destroy(cloned_cubes[i]);
+                            GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                            GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
+                        }
+                        break;
+                    }
                 case 1:
-                    if (!cloned_cubes[i].name.Contains("Pale")) all_one_chacacter = false; break;
+                    {
+                        if (!cloned_cubes[i].name.Contains("Pale"))
+                        {
+                            all_one_chacacter = false;
+
+                            string name = cloned_cubes[i].name.Split('(')[0];
+                            Destroy(cloned_cubes[i]);
+                            GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                            GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
+                        }
+                        break;
+                    }
                 case 2:
-                    if (!cloned_cubes[i].name.Contains("Muted")) all_one_chacacter = false; break;
+                    {
+                        if (!cloned_cubes[i].name.Contains("Muted"))
+                        {
+                            all_one_chacacter = false;
+
+                            string name = cloned_cubes[i].name.Split('(')[0];
+                            Destroy(cloned_cubes[i]);
+                            GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                            GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
+                        }
+                        break;
+                    }
                 case 3:
-                    if (!cloned_cubes[i].name.Contains("Dark")) all_one_chacacter = false; break;
+                    {
+                        if (!cloned_cubes[i].name.Contains("Dark"))
+                        {
+                            all_one_chacacter = false;
+
+                            string name = cloned_cubes[i].name.Split('(')[0];
+                            Destroy(cloned_cubes[i]);
+                            GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                            GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
+                        }
+                        break;
+                    }
                 default: break;
             }
         }
@@ -98,6 +142,12 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     if (!cloned_cubes[number_order[i]-1].name[cloned_cubes[number_order[i] - 1].name.Length - 8].Equals(colour_order[i-1]))
                     {
                         order_is_right = false;
+
+                        // put wrong cubes back
+                        string name = cloned_cubes[number_order[i] - 1].name.Split('(')[0];
+                        Destroy(cloned_cubes[number_order[i] - 1]);
+                        GameObject.Find(name).transform.GetComponent<MeshRenderer>().enabled = true;
+                        GameObject.Find(name).transform.GetComponent<BoxCollider>().enabled = true;
                     }
                 }
 
