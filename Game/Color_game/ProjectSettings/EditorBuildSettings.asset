@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Colour_orginazer_Game.unity
     guid: ff3ddf34f668ef846a84cd6f5c387d28
+  - enabled: 1
+    path: Assets/Scenes/Picture_chooser.unity
+    guid: 436ec698e55c7534baf99eba0cf3287b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 9334d97287e33284cb4fc58cdc63a934, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: cb6b5573f7829c641ac94beb93c38eef, type: 2}

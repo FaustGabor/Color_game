@@ -87,6 +87,11 @@ public class Menu_BTN_Handler : MonoBehaviour
         SceneManager.LoadScene("Gray_Scale");
     }
 
+    public void Load_Picture_Game()
+    {
+        SceneManager.LoadScene("Picture_chooser");
+    }
+
     public void Load_Tutorial_Gray_Scale()
     {
         SceneManager.LoadScene("Gray_Tutorial");
@@ -115,7 +120,6 @@ public class Menu_BTN_Handler : MonoBehaviour
         PlayerPrefs.SetString("lang", "HU");
         PlayerPrefs.Save();
     }
-
     
     private void Start()
     {
