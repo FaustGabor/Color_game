@@ -29,29 +29,20 @@ public class Score_timer : MonoBehaviour
             string selected_colours = GameObject.Find("Game_handler").GetComponent<Game_handler>().selected_colour;
 
             switch (selected_colours)
-            { 
+            {
                 case "vivid":
-                    {
-                        if (PlayerPrefs.GetFloat("GrayScaleVivid", 999) > timer)
-                        { PlayerPrefs.SetFloat("GrayScaleVivid", timer); }
-                        break;
-                    } 
                 case "muted":
-                    {
-                        if (PlayerPrefs.GetFloat("GrayScaleMuted", 999) > timer)
-                        { PlayerPrefs.SetFloat("GrayScaleMuted", timer); }
-                        break;
-                    }
                 case "pale":
-                    {
-                        if (PlayerPrefs.GetFloat("GrayScalePale", 999) > timer)
-                        { PlayerPrefs.SetFloat("GrayScalePale", timer); }
-                        break;
-                    }
                 case "dark":
                     {
-                        if (PlayerPrefs.GetFloat("GrayScaleDark", 999) > timer)
-                        { PlayerPrefs.SetFloat("GrayScaleDark", timer); }
+                        if (PlayerPrefs.GetFloat("GrayScaleType", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScaleType", timer); }
+                        break;
+                    }
+                case "one":
+                    {
+                        if (PlayerPrefs.GetFloat("GrayScaleOne", 999) > timer)
+                        { PlayerPrefs.SetFloat("GrayScaleOne", timer); }
                         break;
                     }
                 default:

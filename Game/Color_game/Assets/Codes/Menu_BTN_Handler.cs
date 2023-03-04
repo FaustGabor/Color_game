@@ -41,7 +41,7 @@ public class Menu_BTN_Handler : MonoBehaviour
         score.SetActive(true);
         title_screen.SetActive(false);
 
-        score.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = language.GetComponent<Language_file>().GetScores();
+        score.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = language.GetComponent<Language_file>().GetScores();
     }
     public void Change_To_Info()
     {

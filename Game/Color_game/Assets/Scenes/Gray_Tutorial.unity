@@ -2547,7 +2547,7 @@ GameObject:
   - component: {fileID: 1276394477}
   - component: {fileID: 1276394476}
   m_Layer: 5
-  m_Name: Help
+  m_Name: Help_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

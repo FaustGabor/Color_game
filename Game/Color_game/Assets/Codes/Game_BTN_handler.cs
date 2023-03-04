@@ -153,7 +153,11 @@ public class Game_BTN_handler : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Contains("Diamond_Game"))
         {
-            if (GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count == 36)
+            int score = 36;
+            if (SceneManager.GetActiveScene().name.Contains("2x2")) score = 4;
+            if (SceneManager.GetActiveScene().name.Contains("3x3")) score = 9;
+
+            if (GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count == score)
             {
                 SceneManager.LoadScene("Win");
             }
@@ -173,9 +177,13 @@ public class Game_BTN_handler : MonoBehaviour
         help.SetActive(true);
         if ( (!SceneManager.GetActiveScene().name.Contains("Diamond_Game")) && (!SceneManager.GetActiveScene().name.Contains("Colour_orginazer")))
         {
-            if (arrow != null) arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
+            if (arrow != null)
+            {
+                arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
+                help.transform.GetChild(2).gameObject.SetActive(false);
+            }
             help.transform.GetChild(1).gameObject.SetActive(true);
-            help.transform.GetChild(2).gameObject.SetActive(false);
+            
         }
     }
 
@@ -183,7 +191,7 @@ public class Game_BTN_handler : MonoBehaviour
     {
         help.SetActive(false);
 
-        if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(true);
+        if (help.transform.childCount >= 4) help.transform.GetChild(2).gameObject.SetActive(true);
     }
 
     public void Finish() // grey scale finish game
@@ -198,8 +206,6 @@ public class Game_BTN_handler : MonoBehaviour
         {
             help.SetActive(true);
             if (menu_window != null) menu_window.SetActive(false);
-            if (help.transform.childCount >= 4) help.transform.GetChild(3).gameObject.SetActive(false);
-
         }
     }
 
@@ -234,14 +240,17 @@ public class Game_BTN_handler : MonoBehaviour
         finishdia.SetActive(true);
         menu_window.SetActive(false);
 
+        int score = 36;
+        if (SceneManager.GetActiveScene().name.Contains("2x2")) score = 4;
+        if (SceneManager.GetActiveScene().name.Contains("3x3")) score = 9;
+
         //A jó helyen lévõ kockák megszámolása majd kiíratás mint pontszám
-        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count+"/36";
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count + "/" + score.ToString();
         if (SceneManager.GetActiveScene().name.Contains("Diamond"))
         {
             PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count);
         }
         PlayerPrefs.Save();
-
     }
 
     public void Reveal_Menu()
