@@ -28,7 +28,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
     private float timer;
     private int time_to_wait;
 
-    private List<GameObject> Short_Cubes(List<GameObject> cubes)
+    private List<GameObject> Sort_Cubes(List<GameObject> cubes)
     {
         int min, index;
 
@@ -127,20 +127,30 @@ public class Colour_Wheel_Handler : MonoBehaviour
         {
             if (all_one_chacacter)
             {
-                cloned_cubes = Short_Cubes(cloned_cubes);
+                // sort cubes for moveing
+                cloned_cubes = Sort_Cubes(cloned_cubes);
 
                 // check order of colours
                 bool order_is_right = true;
 
-                int yellow_index = int.Parse(cloned_cubes.Find(x => x.name.Contains("Y")).GetComponent<Color_cube>().gray_partner);
-                char[] colour_order = { 'O', 'R', 'P', 'V', 'B', 'T', 'G', 'A' };
+                char[] colour_order = {'Y', 'O', 'R', 'P', 'V', 'B', 'T', 'G', 'A' };
                 int[] number_order = { 6, 5, 4, 9, 1, 8, 7, 3, 2 };
-                yellow_index = Array.IndexOf(number_order, yellow_index);
 
-                for (int i = 1; i < 9; i++)
+                foreach (var item in cloned_cubes)
                 {
-                    if (!cloned_cubes[number_order[i]-1].name[cloned_cubes[number_order[i] - 1].name.Length - 8].Equals(colour_order[i-1]))
+                    char temp_name = item.name[item.name.Length - 8];
+                    int i = 0;
+                    for (i = 0; i < colour_order.Length; i++)
                     {
+                        if (colour_order[i].Equals(temp_name))
+                        {
+                            break;
+                        }
+                    }
+
+                    if (int.Parse(item.GetComponent<Color_cube>().gray_partner) != number_order[i])
+                    {
+
                         order_is_right = false;
 
                         // put wrong cubes back
@@ -214,7 +224,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                         default: break;
                     }
 
-                    Change_text_in_circle();
+                    Change_text_in_circle_to_original();
                 }
                 else
                 {
@@ -226,6 +236,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     text.transform.GetChild(5).gameObject.SetActive(false);
                     text.transform.GetChild(6).gameObject.SetActive(true);
                     text.transform.GetChild(7).gameObject.SetActive(false);
+                    text.transform.GetChild(8).gameObject.SetActive(false);
                     problem_with_circle_so_wait = true;
                     time_to_wait = 6;
                 }
@@ -240,6 +251,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                 text.transform.GetChild(5).gameObject.SetActive(false);
                 text.transform.GetChild(6).gameObject.SetActive(false);
                 text.transform.GetChild(7).gameObject.SetActive(false);
+                text.transform.GetChild(8).gameObject.SetActive(false);
                 problem_with_circle_so_wait = true;
                 time_to_wait = 6;
             }
@@ -254,6 +266,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
             text.transform.GetChild(5).gameObject.SetActive(true);
             text.transform.GetChild(6).gameObject.SetActive(false);
             text.transform.GetChild(7).gameObject.SetActive(false);
+            text.transform.GetChild(8).gameObject.SetActive(false);
             problem_with_circle_so_wait = true;
             time_to_wait = 3;
         }
@@ -345,10 +358,10 @@ public class Colour_Wheel_Handler : MonoBehaviour
             default: break;
         }
 
-        Change_text_in_circle();
+        Change_text_in_circle_to_original();
     }
 
-    public void Change_text_in_circle()
+    public void Change_text_in_circle_to_original()
     {
         switch (circle_index)
         {
@@ -362,6 +375,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     text.transform.GetChild(5).gameObject.SetActive(false);
                     text.transform.GetChild(6).gameObject.SetActive(false);
                     text.transform.GetChild(7).gameObject.SetActive(false);
+                    text.transform.GetChild(8).gameObject.SetActive(true);
                     break; 
                 }
             case 1:
@@ -374,6 +388,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     text.transform.GetChild(5).gameObject.SetActive(false);
                     text.transform.GetChild(6).gameObject.SetActive(false);
                     text.transform.GetChild(7).gameObject.SetActive(false);
+                    text.transform.GetChild(8).gameObject.SetActive(true);
                     break;
                 }
             case 2:
@@ -386,6 +401,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     text.transform.GetChild(5).gameObject.SetActive(false);
                     text.transform.GetChild(6).gameObject.SetActive(false);
                     text.transform.GetChild(7).gameObject.SetActive(false);
+                    text.transform.GetChild(8).gameObject.SetActive(true);
                     break;
                 }
             case 3:
@@ -398,6 +414,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     text.transform.GetChild(5).gameObject.SetActive(false);
                     text.transform.GetChild(6).gameObject.SetActive(false);
                     text.transform.GetChild(7).gameObject.SetActive(false);
+                    text.transform.GetChild(8).gameObject.SetActive(true);
                     break;
                 }
             case 4:
@@ -410,6 +427,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
                     text.transform.GetChild(5).gameObject.SetActive(false);
                     text.transform.GetChild(6).gameObject.SetActive(false);
                     text.transform.GetChild(7).gameObject.SetActive(true);
+                    text.transform.GetChild(8).gameObject.SetActive(true);
                     break;
                 }
             default: break;
@@ -426,7 +444,7 @@ public class Colour_Wheel_Handler : MonoBehaviour
             {
                 timer = 0;
                 problem_with_circle_so_wait = false;
-                Change_text_in_circle();
+                Change_text_in_circle_to_original();
             }
         }
     }
