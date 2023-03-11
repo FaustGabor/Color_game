@@ -365,5 +365,45 @@ MonoBehaviour:
     m_Localized: "J\xE1t\xE9kok"
     m_Metadata:
       m_Items: []
+  - m_Id: 91767290710663168
+    m_Localized: S
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767330502025216
+    m_Localized: N
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767369852985344
+    m_Localized: P
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767421073825792
+    m_Localized: I
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767524119486464
+    m_Localized: K
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767559070621696
+    m_Localized: T
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767585004003328
+    m_Localized: Z
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767622090039296
+    m_Localized: L
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91767984637288448
+    m_Localized: M
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92522301577175040
+    m_Localized: "Gener\xE1lt k\xE9pek mutat\xE1sa"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

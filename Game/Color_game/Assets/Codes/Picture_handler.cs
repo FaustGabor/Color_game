@@ -11,9 +11,9 @@ public class Picture_handler : MonoBehaviour
 {
 
     private Picture_calculator pc;
-
+    public List<Texture2D> picture_list;
     public Texture2D selected_picture;
-    public GameObject original_picutre_ui;
+    public List<GameObject> original_picutres_ui;
     public GameObject picture_ui_s;
     public GameObject picture_ui_d;
 
@@ -469,9 +469,19 @@ public class Picture_handler : MonoBehaviour
 
     private void Start()
     {
+        if (selected_picture == null)
+        {
+            System.Random r = new System.Random();
+            int num = r.Next(0, picture_list.Count - 1);
+            selected_picture = picture_list[num];
+        }
+
         pc = new Picture_calculator(selected_picture.GetPixels());
 
-        original_picutre_ui.GetComponent<RawImage>().texture = selected_picture;
+        foreach (var item in original_picutres_ui)
+        {
+            item.GetComponent<RawImage>().texture = selected_picture;
+        }
 
         picture_thread = new Thread(pc.Strat_generation);
 
