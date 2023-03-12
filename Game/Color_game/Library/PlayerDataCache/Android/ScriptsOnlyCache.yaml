@@ -41,6 +41,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Localization.Locale
     - UnityEngine.Localization.LocalizationBehaviour
     - UnityEngine.Localization.Settings.LocalizationSettings
+    - UnityEngine.Localization.Tables.SharedTableData
     - UnityEngine.Localization.VariantsPropertyDriver
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -1084,7 +1085,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 6f582875dfae434564be4f5f76233719
+      Hash: c36d83c7529cf57804e8df11ef5a53ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Picture_handler
@@ -1222,7 +1223,7 @@ ScriptsOnlyBuild:
     className: CameraEnable
   - hash:
       serializedVersion: 2
-      Hash: 8814a3cccc9eeb61c64d6ba2ad9faeae
+      Hash: a9aaabf4c19cf60921fa30b4ad2fe37f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Picture_BTN_handler
