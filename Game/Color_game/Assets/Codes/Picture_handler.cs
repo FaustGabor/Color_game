@@ -490,8 +490,6 @@ public class Picture_handler : MonoBehaviour
 
     private void Update()
     {
-        cube.transform.RotateAround(cube.transform.position, 0.01f);
-
         if (picture_thread != null)
         {
             if (!picture_thread.IsAlive)

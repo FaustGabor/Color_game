@@ -340,8 +340,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28759846091169792
-    m_Localized: "A k\xE9perny\u0151 tetej\xE9n l\xE1thatod mind a 36 sz\xEDnt.\n\nTedd
-      a leg\xE9l\xE9nkebb sz\xEDneket a k\xF6rbe.\n\n???"
+    m_Localized: "A k\xE9perny\u0151 tetej\xE9n l\xE1thatod mind a 36 sz\xEDnt.\n\nEl\u0151sz\xF6r
+      tedd a leg\xE9l\xE9nkebb sz\xEDneket a k\xF6rben l\xE9v\u0151 hely\xFCkre."
     m_Metadata:
       m_Items: []
   - m_Id: 60642536301993984
@@ -403,6 +403,23 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 92522301577175040
     m_Localized: "Gener\xE1lt k\xE9pek mutat\xE1sa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94710989006512128
+    m_Localized: "V\xE1lazd ki az 5 legdomin\xE1nsabb sz\xEDnt a k\xE9pr\u0151l.
+      Kattints a k\xE9pre a sz\xEDn kiv\xE1laszt\xE1s\xE1ra, majd a nyil gombra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94711353952903168
+    m_Localized: "V\xE1laszd ki hova akarod rakni a kiv\xE1lasztott sz\xEDnt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96185540584349696
+    m_Localized: "Statisztika alapj\xE1n:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96185555042115584
+    m_Localized: "Oszt\xE1lyoz\xE1s alapj\xE1n:"
     m_Metadata:
       m_Items: []
   references:

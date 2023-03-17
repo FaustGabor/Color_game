@@ -381,6 +381,22 @@ MonoBehaviour:
     m_Key: Show_generated
     m_Metadata:
       m_Items: []
+  - m_Id: 94710989006512128
+    m_Key: Picture_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94711353952903168
+    m_Key: Picture_text_dom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96185540584349696
+    m_Key: Stat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96185555042115584
+    m_Key: Cluster
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

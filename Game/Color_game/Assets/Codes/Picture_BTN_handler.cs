@@ -209,7 +209,7 @@ public class Picture_BTN_handler : MonoBehaviour
                 for (int j = 225; j < 375; j++)
                 {
                     tile_picture.SetPixel(i, j, tile_coloures[4]);
-                    //tile_picture.SetPixel(i, j, Color.black);
+                    //tile_picture.SetPixel(i, j, Color.white);
                 }
             }
         }

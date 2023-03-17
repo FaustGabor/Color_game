@@ -344,11 +344,8 @@ MonoBehaviour:
     m_Localized: 'In the top part you can see all the 36 colours.
 
 
-      Put the
-      most vivid colours in to the circle.
-
-
-      ???'
+      First put
+      the most vivid colours in to the circle to their right place.'
     m_Metadata:
       m_Items: []
   - m_Id: 60642536301993984
@@ -409,6 +406,23 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 92522301577175040
     m_Localized: Show generated pictures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94710989006512128
+    m_Localized: Select the 5 most dominant coloures in the picture. Click on the
+      picture to select colour, and then on the arrow button.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94711353952903168
+    m_Localized: Select where you would like to put the selected colour.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96185540584349696
+    m_Localized: 'Statistic based:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96185555042115584
+    m_Localized: 'Class based:'
     m_Metadata:
       m_Items: []
   references:
