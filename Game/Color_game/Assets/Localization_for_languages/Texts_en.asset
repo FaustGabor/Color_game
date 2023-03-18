@@ -67,7 +67,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 475263537192960
-    m_Localized: Colours Tutorial
+    m_Localized: Colour introduction
     m_Metadata:
       m_Items: []
   - m_Id: 475671051575296
@@ -333,11 +333,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20744239638847488
-    m_Localized: There is nothing more to learn. Go back to the Menu.
+    m_Localized: There is nothing more to learn. You can go back to the Menu.
     m_Metadata:
       m_Items: []
   - m_Id: 22910506990772224
-    m_Localized: Colours Tutorial 2
+    m_Localized: Sorting tutorial
     m_Metadata:
       m_Items: []
   - m_Id: 28759846091169792
@@ -423,6 +423,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 96185555042115584
     m_Localized: 'Class based:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96493698380931072
+    m_Localized: Dominant coloures game
     m_Metadata:
       m_Items: []
   references:

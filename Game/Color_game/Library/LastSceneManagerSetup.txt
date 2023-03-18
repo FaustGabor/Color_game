@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Picture_chooser.unity
+- path: Assets/Scenes/Colour_orginazer_Game.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

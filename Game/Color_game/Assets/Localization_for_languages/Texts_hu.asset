@@ -81,7 +81,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20300213462704128
-    m_Localized: "Gratul\xE1lunk! Nyert\xE9l"
+    m_Localized: "Gratul\xE1lok! Nyert\xE9l"
     m_Metadata:
       m_Items: []
   - m_Id: 20314108214583296
@@ -332,11 +332,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20744239638847488
-    m_Localized: "Megtanult\xE1l mindent. Most nem vissza a men\xFCbe."
+    m_Localized: "Megtanult\xE1l mindent. Most m\xE1r vissza mehetsz a men\xFCbe"
     m_Metadata:
       m_Items: []
   - m_Id: 22910506990772224
-    m_Localized: "Sz\xEDn bemutat\xF3 2"
+    m_Localized: "Kiv\xE1logat\xE1s bemutat\xF3"
     m_Metadata:
       m_Items: []
   - m_Id: 28759846091169792
@@ -420,6 +420,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 96185555042115584
     m_Localized: "Oszt\xE1lyoz\xE1s alapj\xE1n:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96493698380931072
+    m_Localized: "Domin\xE1ns sz\xEDnek j\xE1t\xE9k"
     m_Metadata:
       m_Items: []
   references:

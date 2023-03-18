@@ -24,6 +24,7 @@ ScriptsOnlyBuild:
     - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedMode
     - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptPackedPlayMode
     - UnityEditor.AddressableAssets.Build.DataBuilders.BuildScriptVirtualMode
+    - UnityEditor.AddressableAssets.GUI.AddressableAssetGroupInspector
     - UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
     - UnityEditor.AddressableAssets.Settings.AddressableAssetGroupTemplate
     - UnityEditor.AddressableAssets.Settings.AddressableAssetSettings
