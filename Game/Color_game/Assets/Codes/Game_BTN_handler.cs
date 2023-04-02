@@ -180,10 +180,10 @@ public class Game_BTN_handler : MonoBehaviour
             if (arrow != null)
             {
                 arrow.GetComponent<RectTransform>().anchoredPosition = new Vector3(400f, -614f, 0f);
-                help.transform.GetChild(2).gameObject.SetActive(false);
+                
             }
+            help.transform.GetChild(2).gameObject.SetActive(false);
             help.transform.GetChild(1).gameObject.SetActive(true);
-            
         }
     }
 
@@ -245,11 +245,9 @@ public class Game_BTN_handler : MonoBehaviour
         if (SceneManager.GetActiveScene().name.Contains("3x3")) score = 9;
 
         //A jó helyen lévõ kockák megszámolása majd kiíratás mint pontszám
-        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your score is: " + GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count + "/" + score.ToString();
-        if (SceneManager.GetActiveScene().name.Contains("Diamond"))
-        {
-            PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count);
-        }
+        finishdia.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text =GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count + "/" + score.ToString();
+
+        PlayerPrefs.SetFloat("Diamond", GameObject.Find("GameHandler").GetComponent<Move_objects>().goodcubes.Count);
         PlayerPrefs.Save();
     }
 

@@ -130,11 +130,11 @@ public class Menu_BTN_Handler : MonoBehaviour
 
         if (PlayerPrefs.GetString("tutorial") == "Done")
         {
-            start_menu.transform.GetChild(2).GetComponent<Button>().interactable = true;
+            start_menu.transform.GetChild(1).GetComponent<Button>().interactable = true;
         }
         else
         {
-            start_menu.transform.GetChild(2).GetComponent<Button>().interactable = false;
+            start_menu.transform.GetChild(1).GetComponent<Button>().interactable = false;
         }
     }
 }

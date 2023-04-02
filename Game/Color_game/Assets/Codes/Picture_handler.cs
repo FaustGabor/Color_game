@@ -128,7 +128,7 @@ public class Picture_handler : MonoBehaviour
         }
 
         #endregion
-        // ------------------------------ Cluster functions ------------------------------------------
+        // ------------------------------ Cluster functions --------------------------------------------
         #region Cluster
 
         // First cluster centarls
@@ -318,7 +318,7 @@ public class Picture_handler : MonoBehaviour
         }
 
         #endregion
-        // ------------------------------ Distance functions ------------------------------------------
+        // ------------------------------ Distance functions -------------------------------------------
         #region Distance
         private float Colour_Distance(Color first, Color second)
         {
@@ -359,7 +359,7 @@ public class Picture_handler : MonoBehaviour
             return dist;
         }
         #endregion
-        // ------------------------------ Output generator functions ------------------------------------------
+        // ------------------------------ Output generator functions -----------------------------------
         private void Generate_outputs(int list_index)
         {
             for (int i = 0; i < 600; i++)
